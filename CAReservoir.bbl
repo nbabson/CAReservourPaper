@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{jaeger2001echo}
+H.~Jaeger, ``The “echo state” approach to analysing and training recurrent
+  neural networks-with an erratum note,'' {\em Bonn, Germany: German National
+  Research Center for Information Technology GMD Technical Report}, vol.~148,
+  no.~34, p.~13, 2001.
+
+\bibitem{maass2002real}
+W.~Maass, T.~Natschl{\"a}ger, and H.~Markram, ``Real-time computing without
+  stable states: A new framework for neural computation based on
+  perturbations,'' {\em Neural Computation}, vol.~14, no.~11, pp.~2531--2560,
+  2002.
+
+\bibitem{lukovsevicius2007overview}
+M.~Luko{\v{s}}evicius and H.~Jaeger, ``Overview of reservoir recipes,'' tech.
+  rep., School Eng. Sci., Jacobs Univ, Bremen, Germany, 2007.
+
+\bibitem{tanaka2018recent}
+G.~Tanaka, T.~Yamane, J.~B. H{\'e}roux, R.~Nakane, N.~Kanazawa, S.~Takeda,
+  H.~Numata, D.~Nakano, and A.~Hirose, ``Recent advances in physical reservoir
+  computing: a review,'' {\em arXiv preprint arXiv:1808.04962}, 2018.
+
+\bibitem{langton1990computation}
+C.~G. Langton, ``Computation at the edge of chaos: phase transitions and
+  emergent computation,'' {\em Physica D: Nonlinear Phenomena}, vol.~42,
+  no.~1-3, pp.~12--37, 1990.
+
+\bibitem{legenstein2007edge}
+R.~Legenstein and W.~Maass, ``Edge of chaos and prediction of computational
+  performance for neural circuit models,'' {\em Neural Networks}, vol.~20,
+  no.~3, pp.~323--334, 2007.
+
+\bibitem{wolfram2002new}
+S.~Wolfram, {\em A new kind of science}, vol.~5.
+\newblock Wolfram media Champaign, IL, 2002.
+
+\bibitem{cook2004universality}
+M.~Cook, ``Universality in elementary cellular automata,'' {\em Complex
+  systems}, vol.~15, no.~1, pp.~1--40, 2004.
+
+\bibitem{nichele2017deep}
+S.~Nichele and A.~Molund, ``Deep reservoir computing using cellular automata,''
+  {\em arXiv preprint arXiv:1703.02806}, 2017.
+
+\bibitem{bye2016investigation}
+E.~T. Bye, ``Investigation of elementary cellular automata for reservoir
+  computing,'' Master's thesis, NTNU, 2016.
+
+\bibitem{yilmaz2014reservoir}
+O.~Yilmaz, ``Reservoir computing using cellular automata,'' {\em arXiv preprint
+  arXiv:1410.0162}, 2014.
+
+\bibitem{nichele2017reservoir}
+S.~Nichele and M.~S. Gundersen, ``Reservoir computing using non-uniform binary
+  cellular automata,'' {\em arXiv preprint arXiv:1702.03812}, 2017.
+
+\bibitem{hochreiter1997long}
+S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' {\em Neural
+  computation}, vol.~9, no.~8, pp.~1735--1780, 1997.
+
+\bibitem{jaeger2012long}
+H.~Jaeger, ``Long short-term memory in echo state networks: Details of a
+  simulation study,'' tech. rep., Jacobs University Bremen, 2012.
+
+\end{thebibliography}

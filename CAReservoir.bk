@@ -1,0 +1,315 @@
+
+\documentclass{article}
+%\documentclass[xcolor=table]{beamer}
+ \usepackage{booktabs}
+ \usepackage{multirow}
+ \usepackage[table,xcdraw]{xcolor}
+
+\usepackage{geometry}
+\usepackage{setspace}
+\usepackage{graphicx}
+\usepackage{subcaption}
+%\usepackage{natbib}
+\usepackage [english]{babel}
+\usepackage{blindtext}
+\usepackage [autostyle, english = american]{csquotes}
+\MakeOuterQuote{"}
+
+\geometry{
+    top=3cm,
+    bottom=3cm,
+    left=3.5cm,
+    right=3.5cm,
+    headheight=14pt,
+}
+
+\title{Reservoir Computing with Complex Cellular Automata}
+\author{Neil Babson\\ \texttt{nbabson@pdx.edu}}
+\date{Portland State University -  \today}
+
+\begin{document}
+
+\maketitle
+
+\doublespacing
+
+\begin{abstract}
+Reservoir Computing is a computational framework in which a dynamical system, 
+          known as the \textit{reservoir}, casts a temporal input signal to a 
+          high-dimensional space, and a trainable \textit{readout layer} 
+          creates the output signal by extracting salient features from the 
+          reservoir.
+A suitable reservoir  must possess the property of 
+\textit{fading memory} in order to process inputs. The foundations of Reservoir Computing are the 
+independently proposed Echo State Networks and Liquid State Machines, both of 
+which use a randomly connected artificial recurrent neural network as the 
+reservoir. Since the inception of the field, researchers have looked for ways 
+to optimize the selection of reservoir construction parameters. Hierarchical 
+reservoirs reimpose a degree of topological structure on reservoir connectivity 
+by breaking the monolithic reservoir into loosely connected sub-reservoirs. The 
+realization that dynamical systems besides neural networks could act as 
+reservoirs has caused increasing interest in alternative reservoir substrates 
+using biological, chemical, and physical dynamical systems. Several researchers 
+have experimented with using the dynamical behavior of elementary cellular 
+automaton rules as reservoirs. This research described in this paper expands 
+this approach to cellular automaton with larger neighborhoods and/or more 
+states, which are termed complex, as opposed to the elementary rules. Results 
+show that some of these non-elementary cellular automaton rules vastly 
+outperform the best elementary rules at the standard benchmark 5-bit memory 
+task.
+\end{abstract}
+
+\section{Introduction}\label{introduction}
+The small field of Cellular Automaton based Reservoir Computing (ReCA) has 
+focused so far on the 256 elementary one-dimensional Cellular Automaton (CA) 
+    rules which have two states and a neighborhood of size three. This work 
+    expands ReCA to include CA rules with larger neighborhoods and more states.
+    These rules that are not part of the set of one-dimensional elementary 
+    rules will be referred to as \textit{complex} CA rules.  CA rule 
+    performance is tested on the 5-bit memory task that is standard in ReCA 
+    research. More expressive rules that outperform any of the elementary rules 
+    may require a smaller CA reservoir, reducing the amount of computation 
+    required to train the output layer and to operate the reservoir.\par
+    The remainder of the paper is organized as follows ...  
+    \section{Background}\label{background}
+\subsection{Reservoir Computing}
+Reservoir Computing (RC) is a relatively new approach to machine learning in 
+which  the inner dynamics of a recurrently connected system, the 
+\textit{reservoir}, are harnessed to cast temporal inputs into a 
+high-dimensional space, enhancing their separability.  A \textit{readout layer} 
+generates the output from a linear combination of the states of reservoir 
+nodes. Figure \ref{reservoir_layout} shows the components of a reservoir 
+computing system. The idea of reservoirs as a new type of architecture for 
+Recurrent Neural Networks (RNNs) was proposed independently in 2001, under the 
+name Echo State Networks (ESNS) \cite{jaeger2001echo}, and in 2002 as Liquid 
+State Machines (LSMs) \cite{maass2002real}. The recurrent connections of a RNN 
+cycle information back to the internal nodes, allowing them to possess 
+\textit{state}, or memory, which makes them suitable for sequential tasks such 
+as speech recognition. Unlike traditional neural networks, the internal weights 
+between the nodes of the reservoir used in RC are not trained.  Only the 
+weights to the output, or readout, layer are trained, providing a substantial 
+reduction in the amount of computation required for learning. \par  A reservoir 
+capable of representing the inputs in its internal dynamics can perform 
+multiple computation tasks, even simultaneous tasks, by training different 
+readout layers to extract the output. In both the original ESN and LSM 
+reservoir design
+nodes are connected at random, but as reservoirs found a growing number of 
+successful applications, researchers examined alternate construction techniques 
+\cite{lukovsevicius2007overview} and showed that many types of system besides 
+RNNs produce effective reservoirs \cite{tanaka2018recent}.\par
+    In order for a reservoir system to perform useful computation, it must 
+    possess the \textit{echo-state property}, characterized by the term 
+    \textit{fading memory}.  The system has the ability to remember (or echo) 
+    inputs, but also forgets them over time. The \textit{echo-state property} 
+    guarantees that the input driving the ESN will "wash out" the influence of 
+    the random initial condition of the reservoir, causing it to react 
+    predictably to inputs \cite{jaeger2001echo}. Dynamical systems operating at 
+    the "edge of chaos" between ordered and disordered behavior are believed  
+    to possess the highest computational power 
+    \cite{langton1990computation}\cite{legenstein2007edge}.
+
+\begin{figure}[ht]
+        \centering
+            \includegraphics[width=0.5\textwidth]{reservoir_layout.png}
+    \caption{TODO Replace with original image. Main components of a reservoir 
+        computing system.  \cite{bye2016investigation}}
+            \label{reservoir_layout}
+            \end{figure}
+
+\subsection{Cellular Automata}
+Cellular Automata (CA) are dynamical systems composed of discrete cells 
+arranged in a grid of arbitrary dimension, where each cell is in one of a 
+finite number of states.  At each timestep the cells are synchronously updated 
+to a new state according to the CA transition rule, which is a function of the 
+cell's previous state and that of its neighboring cells. \par
+The CA used in this paper are one-dimensional, which means that a cell's 
+neighborhood is a row of an odd number of contiguous cells, centered on itself 
+and including the immediate neighbors to the left and right.  Successive 
+time steps are iterated downward to form a two-dimensional representation of the 
+CA's evolution through time. The rule space of a CA depends on the size of the 
+neighborhood, N, and the number of states, S. The cell states are numbered from 
+0 to $S - 1$. The number of possible neighborhood states is $ S^N $ and each of 
+these may be mapped by the transition rule to one of the S states, giving a 
+total rule space of $ S^{S^N} $. A CA rule is used as a look-up table to apply 
+the transition from each possible neighborhood state. Figure \ref{ca_rule} 
+illustrates how a CA rule is applied.
+\begin{figure}[ht]
+  \centering
+    \includegraphics[width=0.5\textwidth]{ca_rule.png}
+    \caption{TODO Replace with original. Elementary rule 110.  
+        \cite{nichele2017deep}}
+        \label{ca_rule}
+        \end{figure}
+
+\par In his book \textit{A New Kind of Science} Wolfram systematically 
+investigated the 256 one-dimensional rules with S = 2 and N = 3, which he named 
+elementary cellular automata \cite{wolfram2002new}. An elementary rule's number 
+is found by reading the rule as a binary number and converting it to base-10.  
+Wolfram also proposed a classification system based on the complexity of the 
+emergent behavior of a CA rule. Class I CAs rapidly evolve to an homogeneous 
+state from most  intial configuration.  Class II CAs evolve to a stable or 
+simple periodic pattern.  Class III rules lead to chaotic behavior without 
+stable structures.  In Class IV rules "edge of chaos" behavior can develop, 
+       where localized structures can last for long periods, interacting with 
+       each other in interesting and difficult to predict ways. An instance of 
+       a Class IV rule, rule 110, has been proven to be Turing complete 
+       \cite{cook2004universality}. Figure \ref{ca_complexity} shows examples 
+       of the four classes.  \par
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{class1.png}
+    \caption{a. Class I}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{class2.png}
+    \caption{b. Class II}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{class3.png}
+    \caption{c. Class III}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.2\linewidth}
+    \includegraphics[width=\linewidth]{class4.png}
+    \caption{d. Class IV}
+  \end{subfigure}
+  \caption{Wolfram's four classes of Cellular Automata rule are represented by 
+      the elementary rules (a) 215, (b) 1, (c) 105, and (d) 193.}
+  \label{ca_complexity}
+  \end{figure}
+
+\section{Method}\label{method}
+The ReCA system described in this section was implemented by the author in a 
+C++ framework which can be found at https://github.com/nbabson/CAreservoir. The 
+architecture of the framework was largely modeled on the description given by 
+S. Nichele and A. Molund \cite{nichele2017deep}.
+
+\subsection{ReCA System Design}
+The CA reservoir is made up of R sub-reservoirs which receive identical 
+temporal input signals. This technique of duplicating the reservoir has been 
+used since the original ReCA paper, and is found to be necessary for accurate 
+results \cite{yilmaz2014reservoir}.
+The leftmost cell of the first sub-reservoir is set to be the 
+neighbor of the rightmost cell of the last sub-reservoir, creating a single 
+circular CA.  Within each sub-reservoir a random mapping is generated between 
+the elements of the input, of length $L_{n}$, and cells of the reservoir. The 
+sub-reservoir size is known as the diffusion length, $L_{d}$, where $L_{n} < 
+L_{d}$. The random mapping diffuses the inputs into the larger sub-reservoirs.  
+\par The reservoir is initialized with all the cells in the same state, either 
+0 for a two state CA, or the highest numbered state if $S > 2$. The initial 
+input overwrites select cell states, according to the mapping. For applications 
+with binary input, such the 5-bit memory benchmark, this is done by replacing 
+the initial state of the $R * L_{n}$ input cells with 0 or 1.  The reservoir 
+processes the input by the application of the CA rule I times, creating a CA 
+reservoir of $R * L_{d} * (I + 1)$ cells. The initial $R * L_{d} * I$ cells are 
+vectorized to provide the input to the readout layer, while the last $R * 
+L_{d}$ cells form the initial CA state for the next timestep, which is again 
+selectively overwritten according to the input mapping. The rule is applied 
+again, and the process repeats for each timestep of the input data.  \par  The 
+parameters S, N, R, $L_{d}$, and I can be set by command line arguments.  
+\subsection{Readout Layer}
+The 5-bit memory task requires the network to predict three output bits per 
+timestep.  Accordingly, the ReCA system that performs it has three output 
+nodes.  The weight from identical locations of the CA created at each timestep 
+are treated equally, and used to predict output by reflecting the system's 
+response to inputs. The output weights from the $R * L_{n} * I$ ReCA cells to 
+the readout nodes are set using a linear regression model. The outputs from all 
+time steps, as well as the target values, are sent to the linear regression 
+model all at once for fitting.  \par
+After the weights are set, the task is run again and the system predicts the 
+outputs. The real-valued output of the linear regression at the output nodes is 
+binarized, with output smaller than 0.5 converted to 0, and equal or greater to 
+0.5 converted to 1. \par The ReCA system uses two different linear regression 
+implementations, the linreg package from the C++ AlgLib library, and the 
+linear\_model.LinearRegression class from the Python scikit-learn library.  The 
+two implementations produced equivalent results but the sci-kit functions were 
+faster, so sci-kit is used for the experiments in this paper. The system also 
+allows the option  using support vector machines (SVM) from the C++ Torch 
+machine learning library as the classifier.  Stefano Nichele uses SVM in his 
+2017 ReCA paper using non-uniform reservoirs\cite{nichele2017deep}.
+
+
+\section{Five Bit Memory Task}\label{5_bit}
+The 5-bit memory task benchmark tests a network's long-short-term-memory 
+capability, and has been shown to be difficult for recurrent neural networks, 
+    including ESN \cite{hochreiter1997long}\cite{jaeger2012long}. All of the 
+    literature on ReCA uses the 5-bit task benchmark, so it is an appropriate 
+    first test of the capabilities of complex versus elementary CA reservoirs.  
+    The task has four temporal binary input signals, $i_1, i_2, i_3,$ and 
+    $i_4$, and three binary outputs, $o_1, o_2,$ and $o_3$.  During the
+first five time steps of one run of the input sequence, the $i_1$ input is one 
+of the 32 possible five digit binary numbers, while $i_2$ is always $(i_1 + 1) 
+    mod 2$ (1 when $i_1 = 0$ and vice versa). This is the \textit{message} that 
+    the system is supposed to remember. While the signal is input, $i_3 = i_4 = 
+    0$.  \par  This is followed by a \textit{distractor period} of $T_d$ 
+    timesteps.  Following convention, all tests were done with $T_d = 200$. On 
+    all time steps of the distractor period except the last, $i_1 = i_2 = 0, 
+    i_3 = 1, $ and $i_4 = 0$. On the last step of the distractor period, $i_4 = 
+    1$, giving the cue signal that it is time for the system to reproduce the 
+    pattern. Up until this point the expected output is $o_1 = o_2 = 0 $ and 
+    $0_3 = 1$. For the remaining five time steps of the run the output bits 
+    should be the same as the \textit{message}, i.e. the same as the first 
+    three input bits during the first five time steps. While the message is 
+    repeated, the inputs are the same as during the distractor period, $o_1 = 
+    o_2 = o_4 = 0$ and $o_3 = 1$. Figure \ref{5_bit} illustrates one run of the 
+    5-bit task. \par
+    This series of $T_d + 10$ time steps is a single run of the test and is 
+    repeated for each of the 32 possible message inputs. To pass the 5-bit task 
+    the trained system must correctly predict the output bits for all steps of 
+    the task. With $T_d = 200$, that is $210 * 32 * 3 = 20,160$ accurate 
+    predictions.
+
+% Please add the following required packages to your document preamble:
+% \usepackage{booktabs}
+% \usepackage{multirow}
+% \usepackage[table,xcdraw]{xcolor}
+% If you use beamer only pass "xcolor=table" option, i.e.  
+%\documentclass[xcolor=table]{beamer}
+\begin{table}[ht]
+\centering
+\begin{tabular}{@{}|c|l|l|l|l|l|l|l|l@{}}
+\toprule
+\multicolumn{1}{|l|}{Time step} & \multicolumn{4}{l|}{Input}                                    & \multicolumn{3}{l|}{Output}                               & \cellcolor[HTML]{003532}{\color[HTML]{333333} }          \\ \midrule
+1                               & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & 0 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+2                               & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+3                               & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+4                               & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+5                               & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & 0 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{\multirow{-5}{*}{Input message}}     \\ \midrule
+6                               & 0                         & 0                         & 1 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+...                             & 0                         & 0                         & 1 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+204                             & 0                         & 0                         & 1 & 0 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{\multirow{-3}{*}{Distractor period}} \\ \midrule
+205                             & 0                         & 0                         & 0 & 1 & 0 & 0                         & 1                         & \multicolumn{1}{l|}{Cue Signal}                          \\ \midrule
+206                             & 0                         & 0                         & 1 & 0 & 1 & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}0 & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-8}
+207                             & 0                         & 0                         & 1 & 0 & 0 & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-7}
+208                             & 0                         & 0                         & 1 & 0 & 0 & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-7}
+209                             & 0                         & 0                         & 1 & 0 & 0 & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & \multicolumn{1}{l|}{}                                    \\ \cmidrule(r){1-7}
+210                             & 0                         & 0                         & 1 & 0 & 1 & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}0 & \multicolumn{1}{l|}{\multirow{-5}{*}{Repeat Message}}    \\ \cmidrule(r){1-7} \cmidrule(l){9-9} 
+\end{tabular}
+\label{5_bit}
+\end{table}
+
+
+
+\section{Previous Work}
+\section{Experiments}\label{experiment}
+\subsection{Three State CA Reservoir}
+\subsection{Neighborhood Five CA Reservoir}
+\subsection{Population Density Rules}
+\subsection{Non-Uniform Reservoir}
+
+
+\section{Results}\label{results}
+
+\section{Discussion}\label{discussion}
+
+\section{Future Work}\label{future_work}
+
+\section{Conclusion}\label{conclusion}
+
+\bibliographystyle{ieeetr}
+\bibliography{CAReservoir}
+
+
+\end{document}
+
