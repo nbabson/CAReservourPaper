@@ -1,95 +1,97 @@
 \relax 
+\emailauthor{nbabson@pdx.edu}{Neil Babson}
 \citation{jaeger2001echo}
 \citation{maass2002real}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \newlabel{introduction}{{1}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{1}}
-\newlabel{background}{{2}{1}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Reservoir Computing}{1}}
 \citation{lukovsevicius2007overview}
 \citation{tanaka2018recent}
 \citation{jaeger2001echo}
 \citation{langton1990computation}
 \citation{legenstein2007edge}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{2}}
+\newlabel{background}{{2}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Reservoir Computing}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Components of a reservoir computing system. Input is connected to a subset of the reservoir nodes. Output is usually fully to the reservoir. Only the outout weights $w_{i}$ for $i \in \{1, ..., n\}$ are trained.\relax }}{2}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{reservoir_layout}{{1}{2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cellular Automata}{2}}
 \citation{wolfram2002new}
 \citation{cook2004universality}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cellular Automata}{2}}
 \citation{nichele2017deep}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elementary rule 90.\relax }}{3}}
+\newlabel{ca_rule}{{2}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Wolfram's four classes of Cellular Automata rule represented by the elementary rules. (a) Class I: Rule 215, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.\relax }}{3}}
+\newlabel{ca_complexity}{{3}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Previous Work}{3}}
 \@writefile{toc}{\contentsline {section}{\numberline {3}Method}{3}}
 \newlabel{method}{{3}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}ReCA System Design}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Readout Layer}{3}}
 \citation{nichele2017reservoir}
 \citation{hochreiter1997long}
 \citation{jaeger2012long}
-\citation{yilmaz2014reservoir}
-\citation{bye2016investigation}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, R = 2, I = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the R sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. \relax }}{4}}
+\newlabel{architecture}{{4}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Readout Layer}{4}}
 \@writefile{toc}{\contentsline {section}{\numberline {4}Benchmark Tests}{4}}
 \newlabel{Benchmarks}{{4}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Five Bit Memory Task}{4}}
 \newlabel{5_bit}{{4.1}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Components of a reservoir computing system. Input is connected to a subset of the reservoir nodes. Output is usually fully to the reservoir. Only the outout weights $w_{i}$ for $i \in \{1, ..., n\}$ are trained.}}{5}}
-\newlabel{reservoir_layout}{{1}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elementary rule 90.}}{5}}
-\newlabel{ca_rule}{{2}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run 17 of 32 of the five bit memory task.}}{5}}
-\newlabel{table:5_bit}{{1}{5}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces }}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces }}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces }}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces }}{6}}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Wolfram's four classes of Cellular Automata rule represented by the elementary rules. (a) Class I: Rule 215, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.}}{6}}
-\newlabel{ca_complexity}{{7}{6}}
+\citation{yilmaz2014reservoir}
+\citation{bye2016investigation}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
 \citation{nichele2017reservoir}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Temporal Density and Temporal Parity}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{7}}
-\newlabel{experiment}{{5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Three State CA Reservoir}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Neighborhood Five CA Reservoir}{7}}
-\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, R = 2, I = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the R sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. }}{8}}
-\newlabel{architecture}{{8}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Successful trials out of 100 for elementary CA rules on the 5-bit task.}}{8}}
-\newlabel{table:elementary}{{2}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.}}{8}}
-\newlabel{table:time}{{3}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Population Density Rules}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Evolving Complex CA Rules}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run 17 of 32 of the five bit memory task.\relax }}{5}}
+\newlabel{table:5_bit}{{1}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Temporal Density and Temporal Parity}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{5}}
+\newlabel{experiment}{{5}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Successful trials out of 100 for elementary CA rules on the 5-bit task.\relax }}{5}}
+\newlabel{table:elementary}{{2}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.\relax }}{5}}
+\newlabel{table:time}{{3}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Three State CA Reservoir}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Neighborhood Five CA Reservoir}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Population Density Rules}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Evolving Complex CA Rules}{6}}
 \citation{nichele2017reservoir}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Non-Uniform Reservoir}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{10}}
-\newlabel{results}{{6}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{10}}
-\newlabel{discussion}{{7}{10}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The six best rules from each of the categories of complex CA rule investigated.}}{11}}
-\newlabel{table:rules}{{4}{11}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.}}{12}}
-\newlabel{table:results}{{5}{12}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.\relax }}{7}}
+\newlabel{GA}{{5}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Non-Uniform Reservoir}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{7}}
+\newlabel{results}{{6}{7}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{7}}
+\newlabel{discussion}{{7}{7}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The six best rules from each of the categories of complex CA rule investigated.\relax }}{8}}
+\newlabel{table:rules}{{4}{8}}
 \citation{nichele2017reservoir}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{13}}
-\newlabel{future_work}{{8}{13}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }}{9}}
+\newlabel{table:results}{{5}{9}}
 \bibstyle{ieeetr}
 \bibdata{CAReservoir}
 \bibcite{jaeger2001echo}{{1}{}{{}}{{}}}
 \bibcite{maass2002real}{{2}{}{{}}{{}}}
 \bibcite{lukovsevicius2007overview}{{3}{}{{}}{{}}}
 \bibcite{tanaka2018recent}{{4}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{10}}
+\newlabel{future_work}{{8}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{10}}
+\newlabel{conclusion}{{9}{10}}
 \bibcite{langton1990computation}{{5}{}{{}}{{}}}
 \bibcite{legenstein2007edge}{{6}{}{{}}{{}}}
 \bibcite{wolfram2002new}{{7}{}{{}}{{}}}
 \bibcite{cook2004universality}{{8}{}{{}}{{}}}
 \bibcite{nichele2017deep}{{9}{}{{}}{{}}}
 \bibcite{bye2016investigation}{{10}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{14}}
-\newlabel{conclusion}{{9}{14}}
 \bibcite{yilmaz2014reservoir}{{11}{}{{}}{{}}}
 \bibcite{nichele2017reservoir}{{12}{}{{}}{{}}}
 \bibcite{hochreiter1997long}{{13}{}{{}}{{}}}
 \bibcite{jaeger2012long}{{14}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers
-\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.}}{16}}
-\newlabel{GA}{{9}{16}}
