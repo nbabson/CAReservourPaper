@@ -1,0 +1,647 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.21)  24 JUL 2019 17:20
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**CAreservoir
+(./CAreservoir
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
+! Text line contains an invalid character.
+l.1 ^^?
+       ELF^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+
+? q
+OK, entering \batchmode...
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1 ^^?E
+        LF^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no E in font nullfont!
+Missing character: There is no L in font nullfont!
+Missing character: There is no F in font nullfont!
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B
+             ^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A
+                ^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A
+                   ^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@
+                      ^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@
+                         ^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@
+                            ^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@
+                               ^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@^^@
+                                  ^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@^^@^^@
+                                     ^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@
+                                        ^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@
+                                           ^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@
+                                              ^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ^^?ELF^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C
+                                                 ^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...F^^B^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@
+                                                  >^^@^^A^^@^^@^^@Ю┼^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no > in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^^A^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@
+                                                  ^^A^^@^^@^^@Ю┼^^@^^@^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^A^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A
+                                                  ^^@^^@^^@Ю┼^^@^^@^^@^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@
+                                                  ^^@^^@Ю┼^^@^^@^^@^^@^^@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@
+                                                  ^^@Ю┼^^@^^@^^@^^@^^@^^@@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@
+                                                  Ю┼^^@^^@^^@^^@^^@^^@@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no Ю in font nullfont!
+Missing character: There is no ┼ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@
+                                                  ^^@^^@^^@^^@^^@@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@
+                                                  ^^@^^@^^@^^@@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@^^@
+                                                  ^^@^^@^^@@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@^^@^^@
+                                                  ^^@^^@@^^@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@^^@^^@^^@
+                                                  ^^@@^^@^^@^^@^^@^^@^^@^^@п...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^C^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@^^@^^@^^@^^@
+                                                  @^^@^^@^^@^^@^^@^^@^^@пу4^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no @ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^^@>^^@^^A^^@^^@^^@Ю┼^^@^^@^^@^^@^^@^^@@^^@
+                                                  ^^@^^@^^@^^@^^@^^@пу4^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...>^^@^^A^^@^^@^^@Ю┼^^@^^@^^@^^@^^@^^@@^^@^^@
+                                                  ^^@^^@^^@^^@^^@пу4^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^A^^@^^@^^@Ю┼^^@^^@^^@^^@^^@^^@@^^@^^@^^@
+                                                  ^^@^^@^^@^^@пу4^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...A^^@^^@^^@Ю┼^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@
+                                                  ^^@^^@^^@пу4^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@Ю┼^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@
+                                                  ^^@^^@пу4^^@^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@Ю┼^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@
+                                                  ^^@пу4^^@^^@^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@Ю┼^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@
+                                                  пу4^^@^^@^^@^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no п in font nullfont!
+Missing character: There is no у in font nullfont!
+Missing character: There is no 4 in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@пу4^^@
+                                                  ^^@^^@^^@^^@^^@^^@^^@^^@@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@пу4^^@^^@
+                                                  ^^@^^@^^@^^@^^@^^@^^@@^^@8...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@пу4^^@^^@^^@
+                                                  ^^@^^@^^@^^@^^@^^@@^^@8^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@@^^@^^@^^@^^@^^@^^@^^@пу4^^@^^@^^@^^@
+                                                  ^^@^^@^^@^^@^^@@^^@8^^@	^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@@^^@^^@^^@^^@^^@^^@^^@пу4^^@^^@^^@^^@^^@
+                                                  ^^@^^@^^@^^@@^^@8^^@	^^@@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^@^^@^^@^^@пу4^^@^^@^^@^^@^^@^^@
+                                                  ^^@^^@^^@@^^@8^^@	^^@@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^@^^@^^@пу4^^@^^@^^@^^@^^@^^@^^@
+                                                  ^^@^^@@^^@8^^@	^^@@^^@^^_^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^@^^@пу4^^@^^@^^@^^@^^@^^@^^@^^@
+                                                  ^^@@^^@8^^@	^^@@^^@^^_^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@^^@^^@^^@пу4^^@^^@^^@^^@^^@^^@^^@^^@^^@
+                                                  @^^@8^^@	^^@@^^@^^_^^@^^^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no @ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@пу4^^@^^@^^@^^@^^@^^@^^@^^@^^@@^^@
+                                                  8^^@	^^@@^^@^^_^^@^^^^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no 8 in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^@^^@пу4^^@^^@^^@^^@^^@^^@^^@^^@^^@@^^@8^^@
+                                                  	^^@@^^@^^_^^@^^^^^@^^F^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@пу4^^@^^@^^@^^@^^@^^@^^@^^@^^@@^^@8^^@	^^@
+                                                  @^^@^^_^^@^^^^^@^^F^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no @ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@^^@^^@@^^@8^^@	^^@@^^@
+                                                  ^^_^^@^^^^^@^^F^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@^^@@^^@8^^@	^^@@^^@^^_
+                                                  ^^@^^^^^@^^F^^@^^@^^@^^D^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@@^^@8^^@	^^@@^^@^^_^^@
+                                                  ^^^^^@^^F^^@^^@^^@^^D^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@@^^@8^^@	^^@@^^@^^_^^@^^^
+                                                  ^^@^^F^^@^^@^^@^^D^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@@^^@8^^@	^^@@^^@^^_^^@^^^^^@
+                                                  ^^F^^@^^@^^@^^D^^@^^@^^@@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@@^^@8^^@	^^@@^^@^^_^^@^^^^^@^^F
+                                                  ^^@^^@^^@^^D^^@^^@^^@@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@@^^@8^^@	^^@@^^@^^_^^@^^^^^@^^F^^@
+                                                  ^^@^^@^^D^^@^^@^^@@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@@^^@8^^@	^^@@^^@^^_^^@^^^^^@^^F^^@^^@
+                                                  ^^@^^D^^@^^@^^@@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@@^^@8^^@	^^@@^^@^^_^^@^^^^^@^^F^^@^^@^^@
+                                                  ^^D^^@^^@^^@@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@^^@8^^@	^^@@^^@^^_^^@^^^^^@^^F^^@^^@^^@^^D
+                                                  ^^@^^@^^@@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...@8^^@	^^@@^^@^^_^^@^^^^^@^^F^^@^^@^^@^^D^^@
+                                                  ^^@^^@@^^@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@	^^@@^^@^^_^^@^^^^^@^^F^^@^^@^^@^^D^^@^^@
+                                                  ^^@@^^@^^@^^@^^@^^@^^@^^@@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@@^^@^^_^^@^^^^^@^^F^^@^^@^^@^^D^^@^^@^^@
+                                                  @^^@^^@^^@^^@^^@^^@^^@@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no @ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^^@^^_^^@^^^^^@^^F^^@^^@^^@^^D^^@^^@^^@@^^@
+                                                  ^^@^^@^^@^^@^^@^^@@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^_^^@^^^^^@^^F^^@^^@^^@^^D^^@^^@^^@@^^@^^@
+                                                  ^^@^^@^^@^^@^^@@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^^^^@^^F^^@^^@^^@^^D^^@^^@^^@@^^@^^@^^@
+                                                  ^^@^^@^^@^^@@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^^^^@^^F^^@^^@^^@^^D^^@^^@^^@@^^@^^@^^@^^@
+                                                  ^^@^^@^^@@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^F^^@^^@^^@^^D^^@^^@^^@@^^@^^@^^@^^@^^@
+                                                  ^^@^^@@^^@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^F^^@^^@^^@^^D^^@^^@^^@@^^@^^@^^@^^@^^@^^@
+                                                  ^^@@^^@^^@^^@^^@^^@^^@^^@@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^D^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@
+                                                  @^^@^^@^^@^^@^^@^^@^^@@^^@...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no @ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^@^^@^^D^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@
+                                                  ^^@^^@^^@^^@^^@^^@@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^D^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@
+                                                  ^^@^^@^^@^^@^^@@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^D^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@
+                                                  ^^@^^@^^@^^@@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@
+                                                  ^^@^^@^^@@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@
+                                                  ^^@^^@@^^@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@
+                                                  ^^@@^^@^^@^^@^^@^^@^^@^^@Ь...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@
+                                                  @^^@^^@^^@^^@^^@^^@^^@Ь^^A...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no @ in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@
+                                                  ^^@^^@^^@^^@^^@^^@Ь^^A^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@
+                                                  ^^@^^@^^@^^@^^@Ь^^A^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@
+                                                  ^^@^^@^^@^^@Ь^^A^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@
+                                                  ^^@^^@^^@Ь^^A^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@
+                                                  ^^@^^@Ь^^A^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@@^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@
+                                                  ^^@Ь^^A^^@^^@^^@^^@^^@^^@Ь...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@
+                                                  Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no Ь in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@Ь^^A
+                                                  ^^@^^@^^@^^@^^@^^@Ь^^A^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@Ь^^A^^@
+                                                  ^^@^^@^^@^^@^^@Ь^^A^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@
+                                                  ^^@^^@^^@^^@Ь^^A^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@@^^@^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@
+                                                  ^^@^^@^^@Ь^^A^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@@^^@^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@
+                                                  ^^@^^@Ь^^A^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@@^^@^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@
+                                                  ^^@Ь^^A^^@^^@^^@^^@^^@^^@^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@
+                                                  Ь^^A^^@^^@^^@^^@^^@^^@^^H^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+Missing character: There is no Ь in font nullfont!
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A
+                                                  ^^@^^@^^@^^@^^@^^@^^H^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A^^@
+                                                  ^^@^^@^^@^^@^^@^^H^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@
+                                                  ^^@^^@^^@^^@^^H^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@
+                                                  ^^@^^@^^@^^H^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@^^@Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@
+                                                  ^^@^^@^^H^^@^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^@Ь^^A^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@
+                                                  ^^@^^H^^@^^@^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^A^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@
+                                                  ^^H^^@^^@^^@^^@^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@^^H
+                                                  ^^@^^@^^@^^@^^@^^@^^@^^C^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@^^H^^@
+                                                  ^^@^^@^^@^^@^^@^^@^^C^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@^^H^^@^^@
+                                                  ^^@^^@^^@^^@^^@^^C^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@^^H^^@^^@^^@
+                                                  ^^@^^@^^@^^@^^C^^@^^@^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@^^@Ь^^A^^@^^@^^@^^@^^@^^@^^H^^@^^@^^@^^@
+                                                  ^^@^^@^^@^^C^^@^^@^^@^^D^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...^^@Ь^^A^^@^^@^^@^^@^^@^^@^^H^^@^^@^^@^^@^^@
+                                                  ^^@^^@^^C^^@^^@^^@^^D^^@^^...
+A funny symbol that I can't read has just been input.
+Continue, and I'll forget that it ever happened.
+
+! Text line contains an invalid character.
+l.1 ...Ь^^A^^@^^@^^@^^@^^@^^@^^H^^@^^@^^@^^@^^@^^@
+                                                  ^^@^^C^^@^^@^^@^^D^^@^^@^^...
+(That makes 100 errors; please try again.) 
+Here is how much of TeX's memory you used:
+ 5 strings out of 494880
+ 142 string characters out of 6179601
+ 46110 words of memory out of 5000000
+ 3428 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 5i,0n,4p,1265b,14s stack positions out of 5000i,500n,10000p,200000b,80000s
+
+!  ==> Fatal error occurred, no output PDF file produced!
