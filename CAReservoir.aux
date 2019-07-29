@@ -1,10 +1,13 @@
 \relax 
 \emailauthor{nbabson@pdx.edu}{Neil Babson}
-\citation{jaeger2001echo}
-\citation{maass2002real}
-\babel@aux{english}{}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \newlabel{introduction}{{1}{1}}
+\citation{jaeger2001echo}
+\citation{maass2002real}
 \citation{lukovsevicius2007overview}
 \citation{tanaka2018recent}
 \citation{jaeger2001echo}
@@ -20,10 +23,14 @@
 \citation{wolfram2002new}
 \citation{wuensche1999classifying}
 \citation{cook2004universality}
+\citation{yilmaz2014reservoir}
+\citation{margem2017experimental}
+\citation{bye2016investigation}
+\citation{nichele2017reservoir}
+\citation{kleyko2017modality}
 \citation{nichele2017deep}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
-\citation{yilmaz2015connectionist}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elementary rule 90.\relax }}{3}}
 \newlabel{ca_rule}{{2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Wolfram's four classes of Cellular Automata rule represented by the elementary rules. (a) Class I: Rule 215, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.\relax }}{3}}
@@ -32,23 +39,24 @@
 \@writefile{toc}{\contentsline {section}{\numberline {3}Method}{3}}
 \newlabel{method}{{3}{3}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1}ReCA System Design}{3}}
+\citation{yilmaz2015connectionist}
 \citation{nichele2017reservoir}
-\citation{hochreiter1997long}
-\citation{jaeger2012long}
 \newlabel{eq:input}{{1}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, R = 2, I = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the R sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. \relax }}{4}}
 \newlabel{architecture}{{4}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Readout Layer}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Benchmark Tests}{4}}
-\newlabel{Benchmarks}{{4}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Five Bit Memory Task}{4}}
-\newlabel{5_bit}{{4.1}{4}}
+\citation{hochreiter1997long}
+\citation{jaeger2012long}
 \citation{yilmaz2014reservoir}
 \citation{bye2016investigation}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
 \citation{nichele2017reservoir}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run 17 of 32 of the five bit memory task.\relax }}{5}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Benchmark Tests}{5}}
+\newlabel{Benchmarks}{{4}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Five Bit Memory Task}{5}}
+\newlabel{5_bit}{{4.1}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run 17 of 32 of the 5-bit memory task.\relax }}{5}}
 \newlabel{table:5_bit}{{1}{5}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Temporal Density and Temporal Parity}{5}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{5}}
@@ -61,21 +69,25 @@
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Three State CA Reservoir}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Neighborhood Five CA Reservoir}{6}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Population Density Rules}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Evolving Complex CA Rules}{6}}
 \citation{nichele2017reservoir}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Evolving Complex CA Rules}{7}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.\relax }}{7}}
 \newlabel{GA}{{5}{7}}
 \@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}Non-Uniform Reservoir}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Temporal Density and Temporal Parity}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{7}}
-\newlabel{results}{{6}{7}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The six best rules from each of the categories of complex CA rule investigated.\relax }}{8}}
-\newlabel{table:rules}{{4}{8}}
+\citation{nichele2017reservoir}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Temporal Density and Temporal Parity}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{8}}
+\newlabel{results}{{6}{8}}
 \@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{8}}
 \newlabel{discussion}{{7}{8}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }}{9}}
-\newlabel{table:results}{{5}{9}}
-\citation{nichele2017reservoir}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The six best rules from each of the categories of complex CA rule investigated.\relax }}{9}}
+\newlabel{table:rules}{{4}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces A segment of the history of a reservoir using rule $S3_{1}$ on the 5-bit task with I=4, R=8, and $D_{L}$=30. Each four horizontal lines is one reservoir timestep. At the top of the image is the end of the distractor period after the input message 00001. The reservoir has fallen into a stable repeating pattern with a period of eight generations. After the cue signal is received the reservoir \csqQQ {34}remembers\csqQQ {34} the message that was encoded in the repeating pattern. After the next message 00010 is input the reservoir quickly falls into another stable pattern that encodes the new message.\relax }}{9}}
+\newlabel{repeat}{{6}{9}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }}{10}}
+\newlabel{table:results}{{5}{10}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{10}}
+\newlabel{conclusion}{{8}{10}}
 \bibstyle{ieeetr}
 \bibdata{CAReservoir}
 \bibcite{jaeger2001echo}{{1}{}{{}}{{}}}
@@ -84,16 +96,16 @@
 \bibcite{tanaka2018recent}{{4}{}{{}}{{}}}
 \bibcite{langton1990computation}{{5}{}{{}}{{}}}
 \bibcite{legenstein2007edge}{{6}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{10}}
-\newlabel{conclusion}{{8}{10}}
 \bibcite{wolfram2002new}{{7}{}{{}}{{}}}
 \bibcite{wuensche1999classifying}{{8}{}{{}}{{}}}
 \bibcite{cook2004universality}{{9}{}{{}}{{}}}
-\bibcite{nichele2017deep}{{10}{}{{}}{{}}}
-\bibcite{bye2016investigation}{{11}{}{{}}{{}}}
-\bibcite{yilmaz2014reservoir}{{12}{}{{}}{{}}}
-\bibcite{yilmaz2015connectionist}{{13}{}{{}}{{}}}
-\bibcite{nichele2017reservoir}{{14}{}{{}}{{}}}
-\bibcite{hochreiter1997long}{{15}{}{{}}{{}}}
-\bibcite{jaeger2012long}{{16}{}{{}}{{}}}
+\bibcite{yilmaz2014reservoir}{{10}{}{{}}{{}}}
+\bibcite{margem2017experimental}{{11}{}{{}}{{}}}
+\bibcite{bye2016investigation}{{12}{}{{}}{{}}}
+\bibcite{nichele2017reservoir}{{13}{}{{}}{{}}}
+\bibcite{kleyko2017modality}{{14}{}{{}}{{}}}
+\bibcite{nichele2017deep}{{15}{}{{}}{{}}}
+\bibcite{yilmaz2015connectionist}{{16}{}{{}}{{}}}
+\bibcite{hochreiter1997long}{{17}{}{{}}{{}}}
+\bibcite{jaeger2012long}{{18}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

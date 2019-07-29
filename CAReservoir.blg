@@ -1,38 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CAReservoir.aux
 The style file: ieeetr.bst
 Database file #1: CAReservoir.bib
-You've used 16 entries,
+I was expecting an "="---line 330 of file CAReservoir.bib
+ :      representations 
+ :                      based on cellular automata reservoir computing},
+I'm skipping whatever remains of this entry
+Warning--empty author in kleyko2017modality
+Warning--empty title in kleyko2017modality
+Warning--empty booktitle in kleyko2017modality
+Warning--empty year in kleyko2017modality
+You've used 18 entries,
             1876 wiz_defined-function locations,
-            573 strings with 6078 characters,
-and the built_in function-call counts, 3425 in all, are:
-= -- 347
-> -- 116
+            578 strings with 6248 characters,
+and the built_in function-call counts, 3685 in all, are:
+= -- 361
+> -- 125
 < -- 0
-+ -- 47
-- -- 31
-* -- 231
-:= -- 524
-add.period$ -- 17
-call.type$ -- 16
-change.case$ -- 17
++ -- 51
+- -- 33
+* -- 249
+:= -- 553
+add.period$ -- 18
+call.type$ -- 18
+change.case$ -- 18
 chr.to.int$ -- 0
-cite$ -- 16
-duplicate$ -- 182
-empty$ -- 336
-format.name$ -- 31
-if$ -- 823
+cite$ -- 22
+duplicate$ -- 198
+empty$ -- 376
+format.name$ -- 33
+if$ -- 885
 int.to.chr$ -- 0
-int.to.str$ -- 16
-missing$ -- 14
-newline$ -- 52
-num.names$ -- 16
-pop$ -- 38
+int.to.str$ -- 18
+missing$ -- 15
+newline$ -- 58
+num.names$ -- 17
+pop$ -- 57
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 100
+skip$ -- 107
 stack$ -- 0
 substring$ -- 183
 swap$ -- 61
@@ -40,7 +48,8 @@ text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 0
-while$ -- 35
-width$ -- 18
-write$ -- 157
+warning$ -- 4
+while$ -- 36
+width$ -- 20
+write$ -- 168
+(There was 1 error message)

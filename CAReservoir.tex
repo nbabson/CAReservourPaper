@@ -76,6 +76,12 @@ best elementary rules at the standard benchmark 5-bit memory task, requiring
 half the reservoir size to produce comparable results.
 \end{abstract}
 
+\begin{keyword}
+Reservoir computing \sep
+Cellular automata
+
+\end{keyword}
+
 \end{frontmatter}
 
 
@@ -217,6 +223,26 @@ stable structures.  In Class IV rules "edge of chaos" behavior can develop,
 
 \subsection{Previous Work}
 
+The use of elementary cellular automaton rules for reservoir computing was 
+   first proposed by Yilmaz in 2014, showing that the framework was capable of 
+   solving memory tasks using orders of magnitude less computation than an ESN 
+   \cite{yilmaz2014reservoir}. The name ReCA was introduced in 2016 by Margem 
+   and Yilmaz \cite{margem2017experimental}. Bye investigated the perofrmance 
+   of a ReCA system on the 30th order nonlinear autoregressive-moving-average 
+   (NARMA) benchmark, the temporal bit parity and temporal bit density tasks, 
+   as well as classification of vowel sound clips \cite{bye2016investigation}.  
+      Non-uniform elementary CA reservoirs were used to solve the 5-bit memory 
+      task by Nichele and Gunderson in 2017 \cite{nichele2017reservoir}. Also 
+      in 2017 Nichele and Molund proposed a deep ReCA system using a 
+      two-layered reservoir. Kleyko et al. demonstrated a ReCA system able 
+      classify medical images with accuracy on par with traditional methods 
+      \cite{kleyko2017modality}.
+ 
+
+
+
+
+
 \section{Method}\label{method}
 The ReCA system described in this section was implemented by the author in a 
 C++ framework which can be found at https://github.com/nbabson/CAreservoir. The 
@@ -238,30 +264,33 @@ L_{d}$. The random mapping diffuses the inputs into the larger sub-reservoirs.
 0 for a two state CA, or the highest numbered state if $S > 2$. The initial 
 input overwrites select cell states, according to the mapping. For applications 
 with binary input, such the 5-bit memory benchmark, this is done by replacing 
-the initial state of the $R \times L_{n}$ input cells with 0 or 1.  The 
+the initial state of the $R \cdot L_{n}$ input cells with 0 or 1.  The 
 reservoir processes the input by the application of the CA rule for I 
-iterations, creating a CA reservoir of $R \times L_{d} \times (I + 1)$ cells.  
-The initial $R \times L_{d} \times I$ cells are vectorized to provide the input 
-to the readout layer, while the last $R \times L_{d}$ cells form the initial CA 
+iterations, creating a CA reservoir of $R \cdot L_{d} \cdot (I + 1)$ cells.  
+The initial $R \cdot L_{d} \cdot I$ cells are vectorized to provide the input 
+to the readout layer, while the last $R \cdot L_{d}$ cells form the initial CA 
 state for the next timestep, which is again selectively overwritten according 
 to the input mapping. The rule is applied again, and the process repeats for 
-each timestep of the input data.  \par  Figure \ref{architecture} illustrates 
-how the input is encoded into the reservoir and expanded by the CA rule to 
-create the output vector.  The parameters S, N, R, $L_{d}$, and I can be set by 
-command line arguments. An alternative scheme for combining the inputs with the 
-reservoir, similar to that adopted by Yilmaz in \cite{yilmaz2015connectionist}, 
-    adds the input value to the current cell state according to equation 
-        \ref{eq:input}, where $s^{t+1}$ is the state of the input cell $s^t$ at 
-        the next timestep after combining with the input bit $i$.  Adding 1 to 
-        the resultant cell state ensures that every binary input affects the 
-        reservoir when $S > 2$.  This approach was found to produce inferior 
-        results and is not used in this paper.
+each timestep of the input data.  \par  
+
+
+Figure \ref{architecture} illustrates how the input is encoded into the 
+reservoir and expanded by the CA rule to create the output vector.  The 
+parameters S, N, R, $L_{d}$, and I can be set by command line arguments. An 
+alternative scheme for combining the inputs with the reservoir, similar to that 
+adopted by Yilmaz in \cite{yilmaz2015connectionist}, adds the input value to 
+the current cell state according to equation \ref{eq:input}, where $s^{t+1}$ is 
+the state of the input cell $s^t$ at the next timestep after combining with the 
+input bit $i$.  Adding 1 to the resultant cell state ensures that every binary 
+input affects the reservoir when $S > 2$.  This approach was found to produce 
+inferior results and is not used in this paper.
 
               \begin{equation} \label{eq:input}
               s^{t+1} = (s^t + i + 1) \bmod S
               \end{equation}    
 
-              \begin{figure}[H]
+
+	      \begin{figure}[H]
         \centering
             \includegraphics[width=0.4\textwidth]{Architecture.png}
     \caption{Mapping the input to the reservoir and generating the output.  
@@ -282,10 +311,10 @@ The 5-bit memory task requires the network to predict three output bits per
 timestep.  Accordingly, the ReCA system that performs it has three output 
 nodes.  The weight from identical locations of the CA created at each timestep 
 are treated equally, and used to predict output by reflecting the system's 
-response to inputs. The output weights from the $R * L_{n} * I$ ReCA cells to 
-the readout nodes are set using a linear regression model. The outputs from all 
-time steps, as well as the target values, are sent to the linear regression 
-model all at once for fitting.  \par
+response to inputs. The output weights from the $R \cdot L_{n} \cdot I$ ReCA 
+cells to the readout nodes are set using a linear regression model. The outputs 
+from all time steps, as well as the target values, are sent to the linear 
+regression model all at once for fitting.  \par
 After the weights are set, the task is run again and the system predicts the 
 outputs. The real-valued output of the linear regression at the output nodes is 
 binarized, with output smaller than 0.5 rounded to 0, and equal or greater to 
@@ -327,7 +356,7 @@ of the 32 possible five digit binary numbers, while $i_2$ is always $(i_1 + 1)
     This series of $T_d + 10$ time steps is a single run of the test and is 
     repeated for each of the 32 possible message inputs. To pass the 5-bit task 
     the trained system must correctly predict the output bits for all steps of 
-    the task. With $T_d = 200$, that is $210 * 32 * 3 = 20,160$ accurate 
+    the task. With $T_d = 200$, that is $210 \cdot 32 \cdot 3 = 20,160$ accurate 
     predictions.
 
 % Please add the following required packages to your document preamble:
@@ -355,7 +384,7 @@ of the 32 possible five digit binary numbers, while $i_2$ is always $(i_1 + 1)
 209 & 0 & 0 & 1 & 0 & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & \multicolumn{1}{l|}{} \\ \cline{1-8}
 210 & 0 & 0 & 1 & 0 & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & 0 & \multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Repeat\\ Message\end{tabular}}} \\ \hline
 \end{tabular}
-\caption{Run 17 of 32 of the five bit memory task.}
+\caption{Run 17 of 32 of the 5-bit memory task.}
 \label{table:5_bit}
 \end{table*}
 \fi
@@ -363,7 +392,7 @@ of the 32 possible five digit binary numbers, while $i_2$ is always $(i_1 + 1)
 \begin{table}[H]
 \centering
 \includegraphics[width=0.4\textwidth]{5bit.png}
-\caption{Run 17 of 32 of the five bit memory task.}
+\caption{Run 17 of 32 of the 5-bit memory task.}
 \label{table:5_bit}
 \end{table}
 
@@ -409,9 +438,9 @@ In order to establish a baseline for the performance of the complex CA rules on
 60 & 9 & 99 & 92 \\ \hline
 90 & 0 & 22 & 2  \\ \hline
 102 & 9 & 99 & 86 \\ \hline
-105 & 0 & 4 & 3 \\ \hline
 153 & 6 & 99 & 87 \\ \hline
 195 & 6 & 99 & 92 \\ \hline
+210 & 6 & 12 & 66 \\ \hline
 \end{tabular}
 \caption{Successful trials out of 100 for elementary CA rules on the 5-bit 
     task.}
@@ -436,7 +465,7 @@ In order to establish a baseline for the performance of the complex CA rules on
 \subsubsection{Three State CA Reservoir}
 One dimensional CAs with three states and a neighborhood of three have a 
 transition function specified by a lookup table 27 digits long. The rule space 
-is $3^27 \approx 7.6 * 10^12$. A stochastic search of the space randomly 
+is $3^27 \approx 7.6 \cdot 10^12$. A stochastic search of the space randomly 
 generated rules to test on the 5-bit memory task. As the most computationally 
 intensive part of the search is performing the linear regression on the 
 reservoirs, class I and class II rules, whose behavior is believed to be too 
@@ -452,7 +481,7 @@ passed the benchmark were found 2.0\% of the time, and 17.6\% of the randomly
 generated rules were discarded as class I or II.
     
 \subsubsection{Neighborhood Five CA Reservoir}
-Two state neighborhood five rules have a rule space of $2^32 \approx 4.3 * 
+Two state neighborhood five rules have a rule space of $2^32 \approx 4.3 \cdot 
     10^9$. As with three state neighborhood three rules, this space was 
     searched stochastically, with class I and class II rules ignored. Rules for 
     reservoirs that pass the 5-bit memory task are saved and tested on 100 
@@ -471,8 +500,8 @@ Population density transition rules are a function of a cell's state and the
 
   \subsubsection{Evolving Complex CA Rules}
 Complex CA with more than three states have a vast rule space. For (S,N) = 
-    (3,4) and (S,N) = (3,5) the number of possible CA rules are $\approx 3.4 * 
-    10^38$ and $\approx 2.4 * 10^87$ respectively. These spaces are not 
+    (3,4) and (S,N) = (3,5) the number of possible CA rules are $\approx 3.4 \cdot 
+    10^38$ and $\approx 2.4 \cdot 10^87$ respectively. These spaces are not 
     amenable to a stochastic search for rules able to perform the 5-bit memory 
     task.  Hundreds of randomly generated rules failed to produce any that were 
     successful. Almost all of these reservoirs mapped every input to the most 
@@ -663,9 +692,9 @@ reservoir parameters I, R, and $L_{d}$.  The results can be seen in Table
 60 & 9 & - & - & - & - & - \\ \hline
 90 & 0 & - & - & - & - & - \\ \hline
 102 & 9 & - & - & - & - & - \\ \hline
-105 & 0 & - & - & - & - & - \\ \hline
 153 & 6 & - & - & - & - & - \\ \hline
 195 & 6 & - & - & - & - & - \\ \hline
+210 & 6 & - & - & - & - & - \\ \hline
 \multicolumn{7}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
 $S3_{1}$ & 100 & 100 & 100 & 0 & 25 & 10 \\ \hline
 $S3_{2}$ & 99 & 63 & 44 & 0 & 16 & 0 \\ \hline
@@ -695,9 +724,9 @@ $S4_{4}$ & 95 & 35 & 21 & 0 & 0 & 0 \\ \hline
 $S4_{5}$ & 100 & 85 & 66 & 0 & 11 & 1 \\ \hline
 $S4_{6}$ & 87 & 20 & 2 & 0 & 0 & 0 \\ \hline
 \multicolumn{7}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
-$S5_{1}$ & 95 & 50 & 42 & 8 & 15 & 20 \\ \hline
+$S5_{1}$ & 95 & 50 & 42 & 8 & 15 & 0 \\ \hline
 $S5_{2}$ & 95 & 76 & 70 & 0 & 7 & 0 \\ \hline
-$S5_{3}$ & 99 & 74 & 51 & 0 & 24 & 0 \\ \hline
+$S5_{3}$ & 98 & 74 & 51 & 0 & 24 & 0 \\ \hline
 $S5_{4}$ & 80 & 1 & 9 & 0 & 2 & 0 \\ \hline
 $S5_{5}$ & 84 & 17 & 7 & 0 & 2 & 0 \\ \hline
 $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
@@ -709,14 +738,14 @@ $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 
 
 \section{Discussion}\label{discussion}
-While the best performing elementary rules required a reservoir of size $I * R 
-* L_{d} = 8 * 8 * 40 = 2560$ cells in order to achieve 99\% success on the 
+While the best performing elementary rules required a reservoir of size $I \cdot R 
+\cdot L_{d} = 8 \cdot 8 \cdot 40 = 2560$ cells in order to achieve 99\% success on the 
 5-bit memory task, each of the five categories of complex CA rule investigated 
 here produced a rule capable of achieving 99\% or 100\% success on a reservoir 
-of half that size, $I * R * L_{d} = 4 * 8 * 40 = 1280$ cells. The best 
+of half that size, $I \cdot R \cdot L_{d} = 4 \cdot 8 \cdot 40 = 1280$ cells. The best 
 performing rules discovered were three state neighborhood three. One of these 
-was able to produce 100\% correct results using a reservoir of size $I * R * 
-L_{d} = 4 * 6 * 40 = 960$ cells. Only the neighborhood five population density 
+was able to produce 100\% correct results using a reservoir of size $I \cdot R \cdot 
+L_{d} = 4 \cdot 6 \cdot 40 = 960$ cells. Only the neighborhood five population density 
 rules were investigated exhaustively.  For the other rule categories continued 
 searching would yield a virtually infinite number of similarly successful 
 rules. \par Rule performance correlates broadly with reservoir size, but the 
@@ -750,6 +779,22 @@ reduced iterations. When the reservoir size was halved from 1280 to 640  cells,
             that complex CA non-uniform pairings exist which do work well 
             together, it remains an open question how common or rare they are.
  
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.4\textwidth]{RepeatMessage.png}
+\caption{A segment of the history of a reservoir using rule $S3_{1}$ on the 
+   5-bit task with I=4, R=8, and $D_{L}$=30. Each four horizontal lines is one 
+      reservoir timestep. At the top of the image is the end of the distractor 
+      period after the input message 00001. The reservoir has fallen into a 
+      stable repeating pattern with a period of eight generations. After the 
+      cue signal is received the reservoir "remembers" the message that was 
+      encoded in the repeating pattern. After the next message 00010 is input 
+      the reservoir quickly falls into another stable pattern that encodes the 
+      new message.} 
+        
+\label{repeat}
+\end{figure}
 
 \iffalse
 

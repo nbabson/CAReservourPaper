@@ -44,26 +44,33 @@ A.~Wuensche, ``Classifying cellular automata automatically: Finding gliders,
 M.~Cook, ``Universality in elementary cellular automata,'' {\em Complex
   systems}, vol.~15, no.~1, pp.~1--40, 2004.
 
-\bibitem{nichele2017deep}
-S.~Nichele and A.~Molund, ``Deep reservoir computing using cellular automata,''
-  {\em arXiv preprint arXiv:1703.02806}, 2017.
+\bibitem{yilmaz2014reservoir}
+O.~Yilmaz, ``Reservoir computing using cellular automata,'' {\em arXiv preprint
+  arXiv:1410.0162}, 2014.
+
+\bibitem{margem2017experimental}
+M.~Margem and O.~Yilmaz, ``An experimental study on cellular automata reservoir
+  in pathological sequence learning tasks,'' 2017.
 
 \bibitem{bye2016investigation}
 E.~T. Bye, ``Investigation of elementary cellular automata for reservoir
   computing,'' Master's thesis, NTNU, 2016.
 
-\bibitem{yilmaz2014reservoir}
-O.~Yilmaz, ``Reservoir computing using cellular automata,'' {\em arXiv preprint
-  arXiv:1410.0162}, 2014.
+\bibitem{nichele2017reservoir}
+S.~Nichele and M.~S. Gundersen, ``Reservoir computing using non-uniform binary
+  cellular automata,'' {\em arXiv preprint arXiv:1702.03812}, 2017.
+
+\bibitem{kleyko2017modality}
+
+
+\bibitem{nichele2017deep}
+S.~Nichele and A.~Molund, ``Deep reservoir computing using cellular automata,''
+  {\em arXiv preprint arXiv:1703.02806}, 2017.
 
 \bibitem{yilmaz2015connectionist}
 O.~Yilmaz, ``Connectionist-symbolic machine intelligence using cellular
   automata based reservoir-hyperdimensional computing,'' {\em arXiv preprint
   arXiv:1503.00851}, 2015.
-
-\bibitem{nichele2017reservoir}
-S.~Nichele and M.~S. Gundersen, ``Reservoir computing using non-uniform binary
-  cellular automata,'' {\em arXiv preprint arXiv:1702.03812}, 2017.
 
 \bibitem{hochreiter1997long}
 S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' {\em Neural
