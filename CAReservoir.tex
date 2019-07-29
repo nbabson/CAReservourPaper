@@ -15,6 +15,8 @@
 \usepackage{blindtext}
 \usepackage [autostyle, english = american]{csquotes}
 \usepackage{etoolbox}
+\usepackage{amsmath}
+\usepackage{courier}
 
 \apptocmd{\thebibliography}{\raggedright}{}{}
 \MakeOuterQuote{"}
@@ -173,6 +175,11 @@ illustrates how a CA rule is applied.
 investigated the 256 one-dimensional rules with S = 2 and N = 3, which he named 
 elementary cellular automata \cite{wolfram2002new}. An elementary rule's number 
 is found by reading the rule as a binary number and converting it to base-10.  
+Similarly, when $S = 3$ the rule number is determined by converting the lookup 
+table from base-3 to base-10.
+By convention, hexadecimal numbering is used for complex rules 
+\cite{wuensche1999classifying}.
+
 Wolfram also proposed a classification system based on the complexity of the 
 emergent behavior of a CA rule. Class I CAs rapidly evolve to an homogeneous 
 state from most  intial configurations.  Class II CAs evolve to a stable or 
@@ -231,20 +238,30 @@ L_{d}$. The random mapping diffuses the inputs into the larger sub-reservoirs.
 0 for a two state CA, or the highest numbered state if $S > 2$. The initial 
 input overwrites select cell states, according to the mapping. For applications 
 with binary input, such the 5-bit memory benchmark, this is done by replacing 
-the initial state of the $R * L_{n}$ input cells with 0 or 1.  The reservoir 
-processes the input by the application of the CA rule for I iterations, 
-          creating a CA reservoir of $R * L_{d} * (I + 1)$ cells. The initial 
-          $R * L_{d} * I$ cells are vectorized to provide the input to the 
-          readout layer, while the last $R * L_{d}$ cells form the initial CA 
-          state for the next timestep, which is again selectively overwritten 
-          according to the input mapping. The rule is applied again, and the 
-          process repeats for each timestep of the input data.  \par  Figure 
-          \ref{architecture} illustrates how the input is encoded into the 
-          reservoir and expanded by the CA rule to create the output vector.  
-          The parameters S, N, R, $L_{d}$, and I can be set by command line 
-          arguments.
+the initial state of the $R \times L_{n}$ input cells with 0 or 1.  The 
+reservoir processes the input by the application of the CA rule for I 
+iterations, creating a CA reservoir of $R \times L_{d} \times (I + 1)$ cells.  
+The initial $R \times L_{d} \times I$ cells are vectorized to provide the input 
+to the readout layer, while the last $R \times L_{d}$ cells form the initial CA 
+state for the next timestep, which is again selectively overwritten according 
+to the input mapping. The rule is applied again, and the process repeats for 
+each timestep of the input data.  \par  Figure \ref{architecture} illustrates 
+how the input is encoded into the reservoir and expanded by the CA rule to 
+create the output vector.  The parameters S, N, R, $L_{d}$, and I can be set by 
+command line arguments. An alternative scheme for combining the inputs with the 
+reservoir, similar to that adopted by Yilmaz in \cite{yilmaz2015connectionist}, 
+    adds the input value to the current cell state according to equation 
+        \ref{eq:input}, where $s^{t+1}$ is the state of the input cell $s^t$ at 
+        the next timestep after combining with the input bit $i$.  Adding 1 to 
+        the resultant cell state ensures that every binary input affects the 
+        reservoir when $S > 2$.  This approach was found to produce inferior 
+        results and is not used in this paper.
 
-\begin{figure}[H]
+              \begin{equation} \label{eq:input}
+              s^{t+1} = (s^t + i + 1) \bmod S
+              \end{equation}    
+
+              \begin{figure}[H]
         \centering
             \includegraphics[width=0.4\textwidth]{Architecture.png}
     \caption{Mapping the input to the reservoir and generating the output.  
@@ -352,38 +369,43 @@ of the 32 possible five digit binary numbers, while $i_2$ is always $(i_1 + 1)
 
 
 \subsection{Temporal Density and Temporal Parity}
-
-\section{Experiments}\label{experiment}
+For both the temporal density and the temporal parity classification tasks the 
+    reservoir receives a single input stream of bits. The reservoirs were 
+    tested on both tasks simultaneously using the same input stream.  
+    \section{Experiments}\label{experiment}
+\subsection{5-Bit Memory Task}
 In order to establish a baseline for the performance of the complex CA rules on 
-the 5-bit memory task, the ReCA framework was tested on a selection of 
-elementary CA rules which were found to be the most successful at the task in 
-previous work\cite{yilmaz2014reservoir}\cite{bye2016investigation}. With I = 4 
-and R = 8, only four elementary rules were able to achieve zero error on the 
-5-bit task. These four rules are equivalent, being either mirror images of each 
-other and/or having their states reversed.\par Increasing the reservoir size by 
-adding sub-reservoirs or applying the rule more times improved accuracy, but 
-came at a cost of increased processing time required to perform the linear 
-regression.  Table \ref{table:elementary} shows the results for the most 
-promising elementary rules at different combinations of I and R.  Table 
-\ref{table:time} gives average times to train and test elementary CA reservoirs 
-of different sizes. The results obtained here were somewhat worse for the 
-smaller reservoir of (I,R) = (4,8) than in previous work using a similar system 
-design  
-\cite{bye2016investigation}\cite{yilmaz2014reservoir}\cite{nichele2017reservoir}.  
-\par Finding more effective rules among complex CA enables the task to be 
-reliably completed with a smaller reservoir than is required by an elementary 
-CA, thereby reducing the amount of computation required. All of the experiments 
-described in this section were performed with (I,R) = (4,8) and $L_{d} = 40$.  
-Only rules that passed the 5-bit task on their first run were saved for further 
-testing. Since none of the elementary CA rules were able to pass the benchmark 
-as much as 10\% of the time, this means that many rules which are capable of 
-outperforming any of the elementary rules were rejected. 
+    the 5-bit memory task, the ReCA framework was tested on a selection of 
+    elementary CA rules which were found to be the most successful at the task 
+    in previous work\cite{yilmaz2014reservoir}\cite{bye2016investigation}. With 
+    I = 4 and R = 8, only four elementary rules were able to achieve zero error 
+    on the 5-bit task. These four rules are equivalent, being either mirror 
+    images of each other and/or having their states reversed.\par Increasing 
+    the reservoir size by adding sub-reservoirs or applying the rule more times 
+    improved accuracy, but came at a cost of increased processing time required 
+    to perform the linear regression.  Table \ref{table:elementary} shows the 
+    results for the most promising elementary rules at different combinations 
+    of I and R.  Table \ref{table:time} gives average times to train and test 
+    elementary CA reservoirs of different sizes. The results obtained here were 
+    somewhat worse for the smaller reservoir of (I,R) = (4,8) than in previous 
+    work using a similar system design  
+    \cite{bye2016investigation}\cite{yilmaz2014reservoir}\cite{nichele2017reservoir}.  
+    \par Finding more effective rules among complex CA enables the task to be 
+    reliably completed with a smaller reservoir than is required by an 
+    elementary CA, thereby reducing the amount of computation required. All of 
+    the experiments described in this section were performed with (I,R) = (4,8) 
+    and $L_{d} = 40$.  Only rules that passed the 5-bit task on their first run 
+    were saved for further testing. Since none of the elementary CA rules were 
+    able to pass the benchmark as much as 10\% of the time, this means that 
+    many rules which are capable of outperforming any of the elementary rules 
+    were rejected. 
 
 
-\begin{table}[H]
+\begin{table}[H] \centering
 \begin{tabular}{|l|l|l|l|}
 \hline
-Rule & (I,R)=(4,8) & (8,8) & (4,12) \\ \hline
+\textbf{Rule} & \textbf{(I,R)=(4,8)} & \textbf{(8,8)} & \textbf{(4,12)} \\ 
+\hline
 60 & 9 & 99 & 92 \\ \hline
 90 & 0 & 22 & 2  \\ \hline
 102 & 9 & 99 & 86 \\ \hline
@@ -396,10 +418,10 @@ Rule & (I,R)=(4,8) & (8,8) & (4,12) \\ \hline
 \label{table:elementary}
 \end{table}
 
-\begin{table}[H]
+\begin{table}[H] \centering
 \begin{tabular}{|l|l|}
 \hline
-(I,R) & Time \\ \hline
+\textbf{(I,R)} & \textbf{Time} \\ \hline
 (4,8) & 19 s \\ \hline
 (4,12) & 33 s \\ \hline
 (8,8) & 57 s \\ \hline
@@ -411,7 +433,7 @@ Rule & (I,R)=(4,8) & (8,8) & (4,12) \\ \hline
 \end{table}
 
   
-\subsection{Three State CA Reservoir}
+\subsubsection{Three State CA Reservoir}
 One dimensional CAs with three states and a neighborhood of three have a 
 transition function specified by a lookup table 27 digits long. The rule space 
 is $3^27 \approx 7.6 * 10^12$. A stochastic search of the space randomly 
@@ -429,34 +451,35 @@ then scored on 100 runs of the 5-bit task.  Out of a thousand runs, rules that
 passed the benchmark were found 2.0\% of the time, and 17.6\% of the randomly 
 generated rules were discarded as class I or II.
     
-\subsection{Neighborhood Five CA Reservoir}
+\subsubsection{Neighborhood Five CA Reservoir}
 Two state neighborhood five rules have a rule space of $2^32 \approx 4.3 * 
-10^9$. As with three state neighborhood three rules, this space was searched 
-stochastically, with class I and class II rules ignored. Rules for reservoirs 
-that pass the 5-bit memory task are saved and tested on 100 further runs of the 
-benchmark. Of 1000 runs, 2.2\% of randomly generated rules passed the 
-benchmark, and 16.2\% of the rules were rejected before testing for being class 
-I or class II.
-\subsection{Population Density Rules}
+    10^9$. As with three state neighborhood three rules, this space was 
+    searched stochastically, with class I and class II rules ignored. Rules for 
+    reservoirs that pass the 5-bit memory task are saved and tested on 100 
+    further runs of the benchmark. Of 1000 runs, 2.2\% of randomly generated 
+    rules passed the benchmark, and 16.2\% of the rules were rejected before 
+    testing for being class I or class II.
+\subsubsection{Population Density Rules}
 Population density transition rules are a function of a cell's state and the 
-count of how many cells are in each state $s \in S$ among its neighbors. For 
-(S,N) = (2,5), these are a left-right symmetrical subset of the two state 
-neighborhood five rules. The transition function lookup table is 10 digits 
-long, and each of the 1024 rules were investigated. Those exhibiting class I or 
-class II behavior were rejected while the rest were tested on the 5-bit memory 
-task. Nine rules passed the benchmark. Those that passed were saved and tested 
-on the benchmark 100 times.
+    count of how many cells are in each state $s \in S$ among its neighbors. 
+    For (S,N) = (2,5), these are a left-right symmetrical subset of the two 
+    state neighborhood five rules. The transition function lookup table is 10 
+    digits long, and each of the 1024 rules were investigated. Those exhibiting 
+    class I or class II behavior were rejected while the rest were tested on 
+    the 5-bit memory task. Nine rules passed the benchmark. Those that passed 
+    were saved and tested on the benchmark 100 times.
 
-  \subsection{Evolving Complex CA Rules}
+  \subsubsection{Evolving Complex CA Rules}
 Complex CA with more than three states have a vast rule space. For (S,N) = 
-(3,4) and (S,N) = (3,5) the number of possible CA rules are $\approx 3.4 * 
-10^38$ and $\approx 2.4 * 10^87$ respectively. These spaces are not amenable to 
-a stochastic search for rules able to perform the 5-bit memory task.  Hundreds 
-of randomly generated rules failed to produce any that were successful. Almost 
-all of these reservoirs mapped every input to the most frequently occurring 
-expected output for each output layer node. This is because the vast majority 
-of these rules are class III, too chaotic to allow stable structures too 
-persist and therefore unable to support computation.\par
+    (3,4) and (S,N) = (3,5) the number of possible CA rules are $\approx 3.4 * 
+    10^38$ and $\approx 2.4 * 10^87$ respectively. These spaces are not 
+    amenable to a stochastic search for rules able to perform the 5-bit memory 
+    task.  Hundreds of randomly generated rules failed to produce any that were 
+    successful. Almost all of these reservoirs mapped every input to the most 
+    frequently occurring expected output for each output layer node. This is 
+    because the vast majority of these rules are class III, too chaotic to 
+    allow stable structures too persist and therefore unable to support 
+    computation.\par
 In order to reduce the chaoticity, a genetic algorithm (GA) was used to evolve 
 rules more likely to have class III behavior. The very chaotic rules found by 
 randomly generating a CA with $S > 3$ tend to have small contiguous regions in 
@@ -503,19 +526,22 @@ have class IV behavior by maximizing the size of these contiguous regions,
   \label{GA}
   \end{figure}
 
-\subsection{Non-Uniform Reservoir}
+\subsubsection{Non-Uniform Reservoir}
 A non-uniform CA is one in which the cells don't all implement the same rule.  
-The ReCA framework used here implements a parallel non-uniform CA in which the 
-reservoir is split in half into two sub-reservoirs  using different rules.  The 
-cells at the boundaries between  the two sub-reservoirs consider their 
-neighbors in the other sub-reservoir the same as those in their own 
-sub-reservoir in the application of the rule. This allows information to to 
-flow between the two regions. Previous work has shown that certain combinations 
-of elementary rules in a parallel ReCA perform better than either of the rules 
-individually at the 5-bit memory task while other combinations impeded 
-performance\cite{nichele2017reservoir}.  \par In this work combinations of 
-complex rules were tested together to show that complementary rule combinations 
-exist for the different types of complex CA rules investigated.  
+    The ReCA framework used here implements a parallel non-uniform CA in which 
+    the reservoir is split in half into two sub-reservoirs  using different 
+    rules.  The cells at the boundaries between  the two sub-reservoirs 
+    consider their neighbors in the other sub-reservoir the same as those in 
+    their own sub-reservoir in the application of the rule. This allows 
+    information to to flow between the two regions. Previous work has shown 
+    that certain combinations of elementary rules in a parallel ReCA perform 
+    better than either of the rules individually at the 5-bit memory task while 
+    other combinations impeded performance\cite{nichele2017reservoir}.  \par In 
+    this work combinations of complex rules were tested together to show that 
+    complementary rule combinations exist for the different types of complex CA 
+    rules investigated.  
+    
+\subsection{Temporal Density and Temporal Parity}
 
 \section{Results}\label{results}
 %\subsection{Elementary CA Results}
@@ -530,59 +556,91 @@ were given labels. The best performing rules and their labels are seen in Table
 \small
 \begin{tabular}{|p{2cm}|l|}
 \hline
-\multicolumn{2}{|l|}{Three State Rules (S,N) = (3,3)} \\ \hline
-$S3_{1}$ &  022001212222022121202001201 \\ \hline
-$S3_{2}$ &  212001112001100202012121112 \\ \hline
-$S3_{3}$ &  110211111111012011002221221 \\ \hline
-$S3_{4}$ &  112220001122200202101120022 \\ \hline
-$S3_{5}$ &  120000111211201212122222020 \\ \hline
-$S3_{6}$ &  210121202010220010012001002 \\ \hline
-\multicolumn{2}{|l|}{Neighborhood Five Rules (S,N) = (2,5)} \\ \hline
-$N5_{1}$ &  10011011100011011100011101100000 \\ \hline
-$N5_{2}$ &  00000000110011011101111101000000 \\ \hline
-$N5_{3}$ &  01110010010111111011001001000000 \\ \hline
-$N5_{4}$ &  11111101001110100110110100010010 \\ \hline
-$N5_{5}$ &  01001111011100010110000101010100 \\ \hline
-$N5_{6}$ &  01110001111011100011101010101111 \\ \hline
-\multicolumn{2}{|l|}{Density Rules (S,N) = (2,5)} \\ \hline
-$D_{1}$ &  0100111011\\ \hline
-$D_{2}$ &  1001010100\\ \hline
-$D_{3}$ &  1011010000\\ \hline
-$D_{4}$ &  1111001010\\ \hline
-$D_{5}$ &  1001110101\\ \hline
-$D_{6}$ &  1010001101\\ \hline
-\multicolumn{2}{|l|}{Four State Rules (S,N) = (3,3)} \\ \hline
-$S4_{1}$ &  2321222211000231312322232311322030112313011100201322000131220020\\ 
+\multicolumn{2}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
+%$S3_{1}$ &  022001212222022121202001201 \\ \hline
+$S3_{1}$ &  212aa02ad02\\ \hline
+%$S3_{2}$ &  212001112001100202012121112 \\ \hline
+$S3_{2}$ &  5ec2484e083\\ \hline
+%$S3_{3}$ &  110211111111012011002221221 \\ \hline
+$S3_{3}$ &  34be5823dc1\\ \hline
+%$S3_{4}$ &  112220001122200202101120022 \\ \hline
+$S3_{4}$ &   3d337739e3f\\ \hline
+%$S3_{5}$ &  120000111211201212122222020 \\ \hline
+$S3_{5}$ &   3db9f53398b\\ \hline
+%$S3_{6}$ &  210121202010220010012001002 \\ \hline
+$S3_{6}$ &   58db54c1a35\\ \hline
+\multicolumn{2}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
+%$N5_{1}$ &  10011011100011011100011101100000 \\ \hline
+$N5_{1}$ &   9b8dc760\\ \hline
+%$N5_{2}$ &  00000000110011011101111101000000 \\ \hline
+$N5_{2}$ &    cddf40\\ \hline
+%$N5_{3}$ &  01110010010111111011001001000000 \\ \hline
+$N5_{3}$ &   725fb240\\ \hline
+%$N5_{4}$ &  11111101001110100110110100010010 \\ \hline
+$N5_{4}$ &   fd3a6d12\\ \hline
+%$N5_{5}$ &  01001111011100010110000101010100 \\ \hline
+$N5_{5}$ &   4f716154\\ \hline
+%$N5_{6}$ &  01110001111011100011101010101111 \\ \hline
+$N5_{6}$ &   71ee3aaf\\ \hline
+\multicolumn{2}{|l|}{\textbf{Density Rules (S,N) = (2,5)}} \\ \hline
+%$D_{1}$ &  0100111011\\ \hline
+$D_{1}$ &   13b \\ \hline
+%$D_{2}$ &  1001010100\\ \hline
+$D_{2}$ &   254 \\ \hline
+%$D_{3}$ &  1011010000\\ \hline
+$D_{3}$ &   2d0 \\ \hline
+%$D_{4}$ &  1111001010\\ \hline
+$D_{4}$ &   3ca \\ \hline
+%$D_{5}$ &  1001110101\\ \hline
+$D_{5}$ &   275 \\ \hline
+%$D_{6}$ &  1010001101\\ \hline
+$D_{6}$ &   28d \\ \hline
+\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (3,3)}} \\ \hline
+%$S4_{1}$ &  2321222211000231312322232311322030112313011100201322000131220020\\ 
+$S4_{1}$ &   b9aa502ddbabb5e8c5b715087a01da08\\ \hline
+%$S4_{2}$ &  3202120010220311333022122021303233302103221213012310122021121000\\ 
+$S4_{2}$ &   e2604a35fca689cefc93a671b4689640 \\ \hline
+%$S4_{3}$ &  0133030132200000320101302012232200212322332332000000130331110303\\ 
+$S4_{3}$ &   1f31e800e11c86ba09bafbe00073d533\\ \hline
+%$S4_{4}$ &  2330232310230333132321011123101333310111101120123322023101112201\\ 
+$S4_{4}$ &   bcbb4b3f7b915b47fd154586fa2d15a1\\ \hline
+%$S4_{5}$ &  1103233321313023211332211232000210133021222120002201022101311332\\ 
+$S4_{5}$ &   53bf9dcb97e96e0247c9a980a1291d7e \\ \hline
+%$S4_{6}$ &  1303200320121103303030201311010210331123101211201101121212023003\\
+$S4_{6}$ &   73838653ccc875124f5b4658516662c3\\
 \hline
-$S4_{2}$ &  3202120010220311333022122021303233302103221213012310122021121000\\ 
+\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
+ $S5_{1}$ & %  {\begin{tabular}[c]{@{}l@{}}
+%1301443104221322240300230403103441002312212144030011314304232243323124040221\\ 
+    %    4204330141121024304340424234410332033014231100030\ \end{tabular}} \\ 
+    1871abdbbb1f751c5649ce2208abe0525e5e98543e527293d8fe32c1cbec8f9493da900dc 
+    \\
+    \hline
+    $S5_{2}$ & %{\begin{tabular}[c]{@{}l@{}}
+%1203233110034020231023234244243332104432100104440412333033104430212221401123
+%    4302014024200311301004200203233323023204121113342\ \end{tabular}} \\ ff 
+159b7bf409f219a835b7bbe69791bfa94432d737117268fff0b99044ac2ccbb513ca91456 \\
 \hline
-$S4_{3}$ &  0133030132200000320101302012232200212322332332000000130331110303\\ 
-\hline
-$S4_{4}$ &  2330232310230333132321011123101333310111101120123322023101112201\\ 
-\hline
-$S4_{5}$ &  1103233321313023211332211232000210133021222120002201022101311332\\ 
-\hline
-$S4_{6}$ &  1303200320121103303030201311010210331123101211201101121212023003\\
-\hline
-\multicolumn{2}{|l|}{Five State Rules (S,N) = (3,3)} \\ \hline
- $S5_{1}$ & {\begin{tabular}[c]{@{}l@{}}
-1301443104221322240300230403103441002312212144030011314304232243323124040221\\ 
-    4204330141121024304340424234410332033014231100030\ \end{tabular}} \\ \hline
-    $S5_{2}$ & {\begin{tabular}[c]{@{}l@{}}
-1203233110034020231023234244243332104432100104440412333033104430212221401123\\
-    4302014024200311301004200203233323023204121113342\ \end{tabular}} \\ \hline
-$S5_{3}$ & {\begin{tabular}[c]{@{}l@{}}
-1400243030402041101342340202043101140340113112143144030220022044324410141400\\
-    1144040240413332111020130224434041240241032000030\ \end{tabular}} \\ \hline
-$S5_{4}$  & {\begin{tabular}[c]{@{}l@{}}
-1421333424244211231320221124334213323140314040030314242321304343413222403434\\
-    1443102441033314110213410404041140002414124400043\ \end{tabular}} \\ \hline
-$S5_{5}$ & {\begin{tabular}[c]{@{}l@{}}
-3420313303232322101243344342044403031133414314300043124201312322441210243102\\
-    0012332434010222311113213123044310440203144333200\ \end{tabular}} \\ \hline
-$S5_{6}$ & {\begin{tabular}[c]{@{}l@{}}
-0133104314321000400141320442032240002333312104040024401313033202213203300242\\
-    3234304312240443431412304141033301200200241442030\ \end{tabular}} \\ \hline
+$S5_{3}$ & %{\begin{tabular}[c]{@{}l@{}}
+%1400243030402041101342340202043101140340113112143144030220022044324410141400
+%    1144040240413332111020130224434041240241032000030\ \end{tabular}}
+1b4cca207dfd49a79d60a0f0a36fda79a911db434135e22cd79e6e04c69f086c7aab1712a
+\\ \hline
+$S5_{4}$  & %{\begin{tabular}[c]{@{}l@{}}
+%1421333424244211231320221124334213323140314040030314242321304343413222403434
+%    1443102441033314110213410404041140002414124400043\ \end{tabular}}
+1ca6bafcb8cc14e379373cb798461269c4d81258cc28720c74f12dd39b8e48d5863e176a9
+\\ \hline
+$S5_{5}$ & %{\begin{tabular}[c]{@{}l@{}}
+%3420313303232322101243344342044403031133414314300043124201312322441210243102
+%    0012332434010222311113213123044310440203144333200\ \end{tabular}} 
+3ac662317b4445a8e63b425645228e27bfc4a0a388497b03a0adede89e87685b12977008f
+\\ \hline
+$S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
+%0133104314321000400141320442032240002333312104040024401313033202213203300242
+%    3234304312240443431412304141033301200200241442030\ \end{tabular}} 
+53b86edcbce84369a1eeb58079725743b506f228e9459e488139f0763489461f3847c82a
+\\ \hline
 \end{tabular}
 \caption{The six best rules from each of the categories of complex CA rule 
     investigated.}
@@ -598,44 +656,45 @@ reservoir parameters I, R, and $L_{d}$.  The results can be seen in Table
 \small
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-Rule & (I,R,$L_{d}$)=(4,8,40) & (4,8,30) & (4,6,40) & (4,4,40) & (3,8,40) & 
-(4,8,20) \\ \hline
-\multicolumn{7}{|l|}{Elementary Rules (S,N) = (2,3)} \\ \hline
+\textbf{Rule} & \textbf{(I,R,$L_{d}$)=(4,8,40)} & \textbf{(4,8,30)} & 
+\textbf{(4,6,40)} & \textbf{(4,4,40)} & \textbf{(3,8,40)} & \textbf{(4,8,20)} 
+\\ \hline
+\multicolumn{7}{|l|}{\textbf{Elementary Rules (S,N) = (2,3)}} \\ \hline
 60 & 9 & - & - & - & - & - \\ \hline
 90 & 0 & - & - & - & - & - \\ \hline
 102 & 9 & - & - & - & - & - \\ \hline
 105 & 0 & - & - & - & - & - \\ \hline
 153 & 6 & - & - & - & - & - \\ \hline
 195 & 6 & - & - & - & - & - \\ \hline
-\multicolumn{7}{|l|}{Three State Rules (S,N) = (3,3)} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
 $S3_{1}$ & 100 & 100 & 100 & 0 & 25 & 10 \\ \hline
 $S3_{2}$ & 99 & 63 & 44 & 0 & 16 & 0 \\ \hline
 $S3_{3}$ & 100 & 92 & 89 & 2 & 0 & 6 \\ \hline
 $S3_{4}$ & 100 & 53 & 42 & 0 & 0 & 0 \\ \hline
 $S3_{5}$ & 100 & 85 & 93 & 2 & 2 & 0 \\ \hline
 $S3_{6}$ & 99 & 97 & 79 & 6 & 5 & 0 \\ \hline
-\multicolumn{7}{|l|}{Neighborhood Five Rules (S,N) = (2,5)} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
 $N5_{1}$ & 97 & 83 & 61 & 0 & 0 & 0 \\ \hline
 $N5_{2}$ & 99 & 92 & 60 & 0 & 0 & 2 \\ \hline
 $N5_{3}$ & 99 & 98 & 69 & 0 & 88 & 2  \\ \hline
 $N5_{4}$ & 95 & 75 & 59 & 0 & 0 & 0 \\ \hline
 $N5_{5}$ & 95 & 87 & 26 & 0 & 0 & 0 \\ \hline
 $N5_{6}$ & 93 & 49 & 46 & 35 & 38 & 0  \\ \hline
-\multicolumn{7}{|l|}{Density Rules (S,N) = (2,5)} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Density Rules (S,N) = (2,5)}} \\ \hline
 $D_{1}$ & 68 & 47 & 23 & 0 & 1 & 0  \\ \hline
 $D_{2}$ & 70 & 0 & 6 & 0 & 0 & 0 \\ \hline
 $D_{3}$ & 94 & 62 & 63 & 0 & 0 & 20 \\ \hline
 $D_{4}$ & 96 & 87 & 57 & 0 & 0 & 0 \\ \hline
 $D_{5}$ & 99 & 17 & 35 & 0 & 25 & 0 \\ \hline
 $D_{6}$ & 64 & 58 & 27 & 0 & 1 & 0 \\ \hline
-\multicolumn{7}{|l|}{Four State Rules (S,N) = (3,3)} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Four State Rules (S,N) = (3,3)}} \\ \hline
 $S4_{1}$ & 90 & 75 & 58 & 0 & 12  & 1 \\ \hline
 $S4_{2}$ & 90 & 84 & 56 & 0 & 9 & 0  \\ \hline
 $S4_{3}$ & 93 & 12 & 9 & 0 & 42 & 0 \\ \hline
 $S4_{4}$ & 95 & 35 & 21 & 0 & 0 & 0 \\ \hline
 $S4_{5}$ & 100 & 85 & 66 & 0 & 11 & 1 \\ \hline
 $S4_{6}$ & 87 & 20 & 2 & 0 & 0 & 0 \\ \hline
-\multicolumn{7}{|l|}{Five State Rules (S,N) = (3,3)} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
 $S5_{1}$ & 95 & 50 & 42 & 8 & 15 & 20 \\ \hline
 $S5_{2}$ & 95 & 76 & 70 & 0 & 7 & 0 \\ \hline
 $S5_{3}$ & 99 & 74 & 51 & 0 & 24 & 0 \\ \hline
@@ -662,8 +721,8 @@ rules were investigated exhaustively.  For the other rule categories continued
 searching would yield a virtually infinite number of similarly successful 
 rules. \par Rule performance correlates broadly with reservoir size, but the 
 ability of the ReCA system to  pass the benchmark falls at different rates 
-depending which of the reservoir parameters I, R, or $L_{d}$ is lowered. The 30 
-complex rules average 91.7\% correct test runs on the 1280 cell reservoir.  
+depending on which of the reservoir parameters I, R, or $L_{d}$ is lowered. The 
+30 complex rules average 91.7\% correct test runs on the 1280 cell reservoir.  
 Reducing the reservoir size by 1/4 by lowering the diffusion length to 30 
 caused the least performance degradation, with the average success rate at 
 56.6\%. Reducing the reservoir size by cutting the number of sub-reservoirs 
@@ -674,24 +733,25 @@ three, the average success rate was only 11.0\%, with 11 rules achieving zero
 correct runs, while a  couple of rules were  relatively resilient to the 
 reduced iterations. When the reservoir size was halved from 1280 to 640  cells, 
         the majority of the complex rules were unable to to complete any 
-        successful runs of the task, and the average success rate was only 
-        1.9\%. \par An attempt was made to find pairs of rules that would 
-        complement each other in a non-uniform reservoir, performing better 
-        than either rule would alone, as has been shown to sometimes occur with 
-        pairs of elementary rules \cite{nichele2017reservoir}. The six rules of 
-        each complex rule type can form 75 combinations of same-type rules each 
-        of which can be used as a non-uniform reservoir for  any setting of the 
-        reservoir size parameters. Of these possibilities, 20 combinations were 
-        tested with 100 runs of the benchmark. Pairs of rules were selected 
-        that performed well individually with the same reservoir parameters.  
-        None of these pairs performed better than the more successful of the 
-        two in a uniform reservoir, 11 of the pairings performing significantly 
-        worse than either rule tested alone. While it seems very likely that 
-        complex CA non-uniform pairings exist which do work well together, it 
-        remains an open question how common or rare they are.
+            successful runs of the task, and the average success rate was only 
+            1.9\%. \par An attempt was made to find pairs of rules that would 
+            complement each other in a non-uniform reservoir, performing better 
+            than either rule would alone, as has been shown to sometimes occur 
+            with pairs of elementary rules \cite{nichele2017reservoir}. The six 
+            rules of each complex rule type can form 75 combinations of 
+            same-type rules each of which can be used as a non-uniform 
+            reservoir for  any setting of the reservoir size parameters. Of 
+            these possibilities, 20 combinations were tested with 100 runs of 
+            the benchmark. Pairs of rules were selected that performed well 
+            individually with the same reservoir parameters.  None of these 
+            pairs performed better than the more successful of the two in a 
+            uniform reservoir, 11 of the pairings performing significantly 
+            worse than either rule tested alone. While it seems very likely 
+            that complex CA non-uniform pairings exist which do work well 
+            together, it remains an open question how common or rare they are.
  
 
-
+\iffalse
 
 \section{Future Work}\label{future_work}
 The next step in investigating complex CA rules for ReCA would be to measure 
@@ -713,7 +773,7 @@ some light on why certain combinations are complementary. It is also possible
 that given one successful rule, techniques for constructing a complementary 
 rule could be discovered.
 
-
+\fi
 \section{Conclusion}\label{conclusion}
 A reservoir computing with cellular automata (ReCA) framework has been 
 implemented which expands the field of ReCA research from the 256 elementary 

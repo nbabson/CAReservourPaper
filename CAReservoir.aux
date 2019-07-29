@@ -2,10 +2,7 @@
 \emailauthor{nbabson@pdx.edu}{Neil Babson}
 \citation{jaeger2001echo}
 \citation{maass2002real}
-\select@language{english}
-\@writefile{toc}{\select@language{english}}
-\@writefile{lof}{\select@language{english}}
-\@writefile{lot}{\select@language{english}}
+\babel@aux{english}{}
 \@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
 \newlabel{introduction}{{1}{1}}
 \citation{lukovsevicius2007overview}
@@ -21,10 +18,12 @@
 \newlabel{reservoir_layout}{{1}{2}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cellular Automata}{2}}
 \citation{wolfram2002new}
+\citation{wuensche1999classifying}
 \citation{cook2004universality}
 \citation{nichele2017deep}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
+\citation{yilmaz2015connectionist}
 \@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elementary rule 90.\relax }}{3}}
 \newlabel{ca_rule}{{2}{3}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Wolfram's four classes of Cellular Automata rule represented by the elementary rules. (a) Class I: Rule 215, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.\relax }}{3}}
@@ -36,6 +35,7 @@
 \citation{nichele2017reservoir}
 \citation{hochreiter1997long}
 \citation{jaeger2012long}
+\newlabel{eq:input}{{1}{4}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, R = 2, I = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the R sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. \relax }}{4}}
 \newlabel{architecture}{{4}{4}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Readout Layer}{4}}
@@ -53,45 +53,47 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Temporal Density and Temporal Parity}{5}}
 \@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{5}}
 \newlabel{experiment}{{5}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Successful trials out of 100 for elementary CA rules on the 5-bit task.\relax }}{5}}
-\newlabel{table:elementary}{{2}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.\relax }}{5}}
-\newlabel{table:time}{{3}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Three State CA Reservoir}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Neighborhood Five CA Reservoir}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Population Density Rules}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Evolving Complex CA Rules}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}5-Bit Memory Task}{5}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Successful trials out of 100 for elementary CA rules on the 5-bit task.\relax }}{6}}
+\newlabel{table:elementary}{{2}{6}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.\relax }}{6}}
+\newlabel{table:time}{{3}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Three State CA Reservoir}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Neighborhood Five CA Reservoir}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Population Density Rules}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Evolving Complex CA Rules}{6}}
 \citation{nichele2017reservoir}
 \@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.\relax }}{7}}
 \newlabel{GA}{{5}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Non-Uniform Reservoir}{7}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.5}Non-Uniform Reservoir}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Temporal Density and Temporal Parity}{7}}
 \@writefile{toc}{\contentsline {section}{\numberline {6}Results}{7}}
 \newlabel{results}{{6}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{7}}
-\newlabel{discussion}{{7}{7}}
 \@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces The six best rules from each of the categories of complex CA rule investigated.\relax }}{8}}
 \newlabel{table:rules}{{4}{8}}
-\citation{nichele2017reservoir}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{8}}
+\newlabel{discussion}{{7}{8}}
 \@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }}{9}}
 \newlabel{table:results}{{5}{9}}
+\citation{nichele2017reservoir}
 \bibstyle{ieeetr}
 \bibdata{CAReservoir}
 \bibcite{jaeger2001echo}{{1}{}{{}}{{}}}
 \bibcite{maass2002real}{{2}{}{{}}{{}}}
 \bibcite{lukovsevicius2007overview}{{3}{}{{}}{{}}}
 \bibcite{tanaka2018recent}{{4}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Future Work}{10}}
-\newlabel{future_work}{{8}{10}}
-\@writefile{toc}{\contentsline {section}{\numberline {9}Conclusion}{10}}
-\newlabel{conclusion}{{9}{10}}
 \bibcite{langton1990computation}{{5}{}{{}}{{}}}
 \bibcite{legenstein2007edge}{{6}{}{{}}{{}}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{10}}
+\newlabel{conclusion}{{8}{10}}
 \bibcite{wolfram2002new}{{7}{}{{}}{{}}}
-\bibcite{cook2004universality}{{8}{}{{}}{{}}}
-\bibcite{nichele2017deep}{{9}{}{{}}{{}}}
-\bibcite{bye2016investigation}{{10}{}{{}}{{}}}
-\bibcite{yilmaz2014reservoir}{{11}{}{{}}{{}}}
-\bibcite{nichele2017reservoir}{{12}{}{{}}{{}}}
-\bibcite{hochreiter1997long}{{13}{}{{}}{{}}}
-\bibcite{jaeger2012long}{{14}{}{{}}{{}}}
+\bibcite{wuensche1999classifying}{{8}{}{{}}{{}}}
+\bibcite{cook2004universality}{{9}{}{{}}{{}}}
+\bibcite{nichele2017deep}{{10}{}{{}}{{}}}
+\bibcite{bye2016investigation}{{11}{}{{}}{{}}}
+\bibcite{yilmaz2014reservoir}{{12}{}{{}}{{}}}
+\bibcite{yilmaz2015connectionist}{{13}{}{{}}{{}}}
+\bibcite{nichele2017reservoir}{{14}{}{{}}{{}}}
+\bibcite{hochreiter1997long}{{15}{}{{}}{{}}}
+\bibcite{jaeger2012long}{{16}{}{{}}{{}}}
 \providecommand\NAT@force@numbers{}\NAT@force@numbers

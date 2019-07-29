@@ -35,6 +35,11 @@ R.~Legenstein and W.~Maass, ``Edge of chaos and prediction of computational
 S.~Wolfram, {\em A new kind of science}, vol.~5.
 \newblock Wolfram media Champaign, IL, 2002.
 
+\bibitem{wuensche1999classifying}
+A.~Wuensche, ``Classifying cellular automata automatically: Finding gliders,
+  filtering, and relating space-time patterns, attractor basins, and the z
+  parameter,'' {\em Complexity}, vol.~4, no.~3, pp.~47--66, 1999.
+
 \bibitem{cook2004universality}
 M.~Cook, ``Universality in elementary cellular automata,'' {\em Complex
   systems}, vol.~15, no.~1, pp.~1--40, 2004.
@@ -50,6 +55,11 @@ E.~T. Bye, ``Investigation of elementary cellular automata for reservoir
 \bibitem{yilmaz2014reservoir}
 O.~Yilmaz, ``Reservoir computing using cellular automata,'' {\em arXiv preprint
   arXiv:1410.0162}, 2014.
+
+\bibitem{yilmaz2015connectionist}
+O.~Yilmaz, ``Connectionist-symbolic machine intelligence using cellular
+  automata based reservoir-hyperdimensional computing,'' {\em arXiv preprint
+  arXiv:1503.00851}, 2015.
 
 \bibitem{nichele2017reservoir}
 S.~Nichele and M.~S. Gundersen, ``Reservoir computing using non-uniform binary
