@@ -227,7 +227,7 @@ The use of elementary cellular automaton rules for reservoir computing was
    first proposed by Yilmaz in 2014, showing that the framework was capable of 
    solving memory tasks using orders of magnitude less computation than an ESN 
    \cite{yilmaz2014reservoir}. The name ReCA was introduced in 2016 by Margem 
-   and Yilmaz \cite{margem2017experimental}. Bye investigated the perofrmance 
+   and Yilmaz \cite{margem2017experimental}. Bye investigated the performance 
    of a ReCA system on the 30th order nonlinear autoregressive-moving-average 
    (NARMA) benchmark, the temporal bit parity and temporal bit density tasks, 
    as well as classification of vowel sound clips \cite{bye2016investigation}.  
@@ -400,7 +400,42 @@ of the 32 possible five digit binary numbers, while $i_2$ is always $(i_1 + 1)
 \subsection{Temporal Density and Temporal Parity}
 For both the temporal density and the temporal parity classification tasks the 
     reservoir receives a single input stream of bits. The reservoirs were 
-    tested on both tasks simultaneously using the same input stream.  
+    tested on both tasks simultaneously using the same input stream. These two 
+    tasks were used by Snyder et al. to test the performance of a Random 
+    Boolean Network (RBN) reservoir \cite{snyder2013computational}, and of a 
+    non-uniform ReCA system by Bye \cite{bye2016investigation}. \par The 
+    reservoir continuously evaluates the incoming bits over a window of the 
+    last $n$ timesteps, where $n$ is an odd number. The temporal density output 
+    node is trained to return 1 if the input window contains more 1s than 0s 
+    and return 0 otherwise. The temporal parity output node is trained to 
+    return whether the number of 1s in the input window is odd or even. For the 
+    temporal density task a delay of $\tau$ timesteps was included between the 
+    input and the expected response. \par The single input was mapped to 
+    $L_{in}$ cells in each subreservoir. In agreement with previous work, 
+   optimal performance was found when the ratio $L_{in}/L_{d} = 1/2$ 
+      \cite{bye2016investigation}, which is used for the experiments in this 
+      paper. The system was trained and tested on randomly generated sets of 
+      length $L_{t}$ timesteps.  In order to pass either task the reservoir 
+      must make $L_{t} - n - \tau$ accurate predictions, as the reservoir 
+      output is ignored for the first $n + \tau$ timesteps of the test set.  
+      Table \ref{table:temp_settings} shows the system parameters used for all 
+      the temporal density and temporal parity results in this paper. 
+
+
+\begin{table}[H] \centering
+\begin{tabular}{|l|l|l|l|l|l|l|}
+\hline
+\textbf{I} & \textbf{R} & \textbf{$L_{d}$} & \textbf{$L_{in}$} & 
+\textbf{$L_{t}$} & \textbf{$\tau$} & \textbf{n}   \\ \hline
+4 & 12 & 40 & 20 & 400 & 2 & 3 \\ \hline
+\end{tabular}
+\caption{System parameters used for the temporal density and temporal parity 
+   benchmark tasks.}
+\label{table:temp_settings}
+\end{table}
+
+
+
     \section{Experiments}\label{experiment}
 \subsection{5-Bit Memory Task}
 In order to establish a baseline for the performance of the complex CA rules on 
@@ -566,7 +601,7 @@ A non-uniform CA is one in which the cells don't all implement the same rule.
     that certain combinations of elementary rules in a parallel ReCA perform 
     better than either of the rules individually at the 5-bit memory task while 
     other combinations impeded performance\cite{nichele2017reservoir}.  \par In 
-    this work combinations of complex rules were tested together to show that 
+    this work combinations of complex rules were tested together to see whether 
     complementary rule combinations exist for the different types of complex CA 
     rules investigated.  
     
@@ -577,8 +612,8 @@ A non-uniform CA is one in which the cells don't all implement the same rule.
 From each of the types of rules that were investigated, the six most successful 
 rules at performing the benchmark task using reservoirs with parameters (I, R, 
         $L_{d}$) = (4, 8, 40) were selected for testing with smaller  
-reservoirs. In the absence of a naming convention for the complex rules, these 
-were given labels. The best performing rules and their labels are seen in Table
+reservoirs. Due to the length of the complex rules, these were given labels.  
+The best performing rules and their labels are seen in Table
 \ref{table:rules}. \par
 
 \begin{table*}[!htb] \centering
@@ -671,8 +706,8 @@ $S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
 53b86edcbce84369a1eeb58079725743b506f228e9459e488139f0763489461f3847c82a
 \\ \hline
 \end{tabular}
-\caption{The six best rules from each of the categories of complex CA rule 
-    investigated.}
+\caption{The six best performing rules on the 5-bit memory task from each of 
+   the categories of complex CA rule investigated.}
 \label{table:rules}
 \end{table*}
 
@@ -736,6 +771,83 @@ $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 \label{table:results}
 \end{table*}
 
+
+
+\begin{table*}[!htb] \centering
+\small
+\begin{tabular}{|p{2cm}|l|}
+\hline
+\multicolumn{2}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
+$S3_{1}$ &  212aa02ad02\\ \hline
+$S3_{2}$ &  5ec2484e083\\ \hline
+$S3_{3}$ &  34be5823dc1\\ \hline
+$S3_{4}$ &   3d337739e3f\\ \hline
+$S3_{5}$ &   3db9f53398b\\ \hline
+$S3_{6}$ &   58db54c1a35\\ \hline
+\multicolumn{2}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
+%$N5_{1}$ &  10011011100011011100011101100000 \\ \hline
+$N5_{1}$ &   9b8dc760\\ \hline
+%$N5_{2}$ &  00000000110011011101111101000000 \\ \hline
+$N5_{2}$ &    cddf40\\ \hline
+%$N5_{3}$ &  01110010010111111011001001000000 \\ \hline
+$N5_{3}$ &   725fb240\\ \hline
+%$N5_{4}$ &  11111101001110100110110100010010 \\ \hline
+$N5_{4}$ &   fd3a6d12\\ \hline
+%$N5_{5}$ &  01001111011100010110000101010100 \\ \hline
+$N5_{5}$ &   4f716154\\ \hline
+%$N5_{6}$ &  01110001111011100011101010101111 \\ \hline
+$N5_{6}$ &   71ee3aaf\\ \hline
+\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (3,3)}} \\ \hline
+%$S4_{1}$ &  2321222211000231312322232311322030112313011100201322000131220020\\ 
+$S4_{1}$ &   b9aa502ddbabb5e8c5b715087a01da08\\ \hline
+%$S4_{2}$ &  3202120010220311333022122021303233302103221213012310122021121000\\ 
+$S4_{2}$ &   e2604a35fca689cefc93a671b4689640 \\ \hline
+%$S4_{3}$ &  0133030132200000320101302012232200212322332332000000130331110303\\ 
+$S4_{3}$ &   1f31e800e11c86ba09bafbe00073d533\\ \hline
+%$S4_{4}$ &  2330232310230333132321011123101333310111101120123322023101112201\\ 
+$S4_{4}$ &   bcbb4b3f7b915b47fd154586fa2d15a1\\ \hline
+%$S4_{5}$ &  1103233321313023211332211232000210133021222120002201022101311332\\ 
+$S4_{5}$ &   53bf9dcb97e96e0247c9a980a1291d7e \\ \hline
+%$S4_{6}$ &  1303200320121103303030201311010210331123101211201101121212023003\\
+$S4_{6}$ &   73838653ccc875124f5b4658516662c3\\
+\hline
+\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
+ $S5_{1}$ & %  {\begin{tabular}[c]{@{}l@{}}
+%1301443104221322240300230403103441002312212144030011314304232243323124040221\\ 
+    %    4204330141121024304340424234410332033014231100030\ \end{tabular}} \\ 
+    1871abdbbb1f751c5649ce2208abe0525e5e98543e527293d8fe32c1cbec8f9493da900dc 
+    \\
+    \hline
+    $S5_{2}$ & %{\begin{tabular}[c]{@{}l@{}}
+%1203233110034020231023234244243332104432100104440412333033104430212221401123
+%    4302014024200311301004200203233323023204121113342\ \end{tabular}} \\ ff 
+159b7bf409f219a835b7bbe69791bfa94432d737117268fff0b99044ac2ccbb513ca91456 \\
+\hline
+$S5_{3}$ & %{\begin{tabular}[c]{@{}l@{}}
+%1400243030402041101342340202043101140340113112143144030220022044324410141400
+%    1144040240413332111020130224434041240241032000030\ \end{tabular}}
+1b4cca207dfd49a79d60a0f0a36fda79a911db434135e22cd79e6e04c69f086c7aab1712a
+\\ \hline
+$S5_{4}$  & %{\begin{tabular}[c]{@{}l@{}}
+%1421333424244211231320221124334213323140314040030314242321304343413222403434
+%    1443102441033314110213410404041140002414124400043\ \end{tabular}}
+1ca6bafcb8cc14e379373cb798461269c4d81258cc28720c74f12dd39b8e48d5863e176a9
+\\ \hline
+$S5_{5}$ & %{\begin{tabular}[c]{@{}l@{}}
+%3420313303232322101243344342044403031133414314300043124201312322441210243102
+%    0012332434010222311113213123044310440203144333200\ \end{tabular}} 
+3ac662317b4445a8e63b425645228e27bfc4a0a388497b03a0adede89e87685b12977008f
+\\ \hline
+$S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
+%0133104314321000400141320442032240002333312104040024401313033202213203300242
+%    3234304312240443431412304141033301200200241442030\ \end{tabular}} 
+53b86edcbce84369a1eeb58079725743b506f228e9459e488139f0763489461f3847c82a
+\\ \hline
+\end{tabular}
+\caption{The six best performing rules on the 5-bit memory task from each of 
+   the categories of complex CA rule investigated.}
+\label{table:rules_temp_dens}
+\end{table*}
 
 \section{Discussion}\label{discussion}
 While the best performing elementary rules required a reservoir of size $I \cdot R 

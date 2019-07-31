@@ -80,4 +80,9 @@ S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' {\em Neural
 H.~Jaeger, ``Long short-term memory in echo state networks: Details of a
   simulation study,'' tech. rep., Jacobs University Bremen, 2012.
 
+\bibitem{snyder2013computational}
+D.~Snyder, A.~Goudarzi, and C.~Teuscher, ``Computational capabilities of random
+  automata networks for reservoir computing,'' {\em Physical Review E},
+  vol.~87, no.~4, p.~042808, 2013.
+
 \end{thebibliography}

@@ -11,45 +11,45 @@ Warning--empty author in kleyko2017modality
 Warning--empty title in kleyko2017modality
 Warning--empty booktitle in kleyko2017modality
 Warning--empty year in kleyko2017modality
-You've used 18 entries,
+You've used 19 entries,
             1876 wiz_defined-function locations,
-            578 strings with 6248 characters,
-and the built_in function-call counts, 3685 in all, are:
-= -- 361
-> -- 125
+            586 strings with 6439 characters,
+and the built_in function-call counts, 3991 in all, are:
+= -- 394
+> -- 136
 < -- 0
-+ -- 51
-- -- 33
-* -- 249
-:= -- 553
-add.period$ -- 18
-call.type$ -- 18
-change.case$ -- 18
++ -- 55
+- -- 36
+* -- 267
+:= -- 592
+add.period$ -- 19
+call.type$ -- 19
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 22
-duplicate$ -- 198
-empty$ -- 376
-format.name$ -- 33
-if$ -- 885
+cite$ -- 23
+duplicate$ -- 219
+empty$ -- 400
+format.name$ -- 36
+if$ -- 965
 int.to.chr$ -- 0
-int.to.str$ -- 18
-missing$ -- 15
-newline$ -- 58
-num.names$ -- 17
-pop$ -- 57
+int.to.str$ -- 19
+missing$ -- 16
+newline$ -- 61
+num.names$ -- 18
+pop$ -- 59
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 107
+skip$ -- 126
 stack$ -- 0
-substring$ -- 183
-swap$ -- 61
+substring$ -- 195
+swap$ -- 74
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 4
-while$ -- 36
-width$ -- 20
-write$ -- 168
+while$ -- 38
+width$ -- 21
+write$ -- 179
 (There was 1 error message)
