@@ -199,19 +199,20 @@ stable structures.  In Class IV rules "edge of chaos" behavior can develop,
 
 \begin{figure}[H]
   \centering
-  \begin{subfigure}[]{0.2\linewidth}
+  \begin{subfigure}[]{0.45\linewidth}
     \includegraphics[width=\linewidth]{class1.png}
     \caption{}
   \end{subfigure}
-  \begin{subfigure}[]{0.2\linewidth}
+  \begin{subfigure}[]{0.45\linewidth}
     \includegraphics[width=\linewidth]{class2.png}
     \caption{}
   \end{subfigure}
-  \begin{subfigure}[]{0.2\linewidth}
+  \vskip\baselineskip
+  \begin{subfigure}[]{0.45\linewidth}
     \includegraphics[width=\linewidth]{class3.png}
     \caption{}
   \end{subfigure}
-  \begin{subfigure}[]{0.2\linewidth}
+  \begin{subfigure}[]{0.45\linewidth}
     \includegraphics[width=\linewidth]{class4.png}
     \caption{}
   \end{subfigure}
@@ -263,15 +264,16 @@ L_{d}$. The random mapping diffuses the inputs into the larger sub-reservoirs.
 \par The reservoir is initialized with all the cells in the same state, either 
 0 for a two state CA, or the highest numbered state if $S > 2$. The initial 
 input overwrites select cell states, according to the mapping. For applications 
-with binary input, such the 5-bit memory benchmark, this is done by replacing 
-the initial state of the $R \cdot L_{n}$ input cells with 0 or 1.  The 
-reservoir processes the input by the application of the CA rule for I 
-iterations, creating a CA reservoir of $R \cdot L_{d} \cdot (I + 1)$ cells.  
-The initial $R \cdot L_{d} \cdot I$ cells are vectorized to provide the input 
-to the readout layer, while the last $R \cdot L_{d}$ cells form the initial CA 
-state for the next timestep, which is again selectively overwritten according 
-to the input mapping. The rule is applied again, and the process repeats for 
-each timestep of the input data.  \par  
+with binary input, such the 5-bit memory benchmark and the temporal density and 
+temporal parity benchmarks, this is done by replacing the initial state of the 
+$R \cdot L_{n}$ input cells with 0 or 1.  The reservoir processes the input by 
+the application of the CA rule for I iterations, creating a CA reservoir of $R 
+\cdot L_{d} \cdot (I + 1)$ cells.  The initial $R \cdot L_{d} \cdot I$ cells 
+are vectorized to provide the input to the readout layer, while the last $R 
+\cdot L_{d}$ cells form the initial CA state for the next timestep, which is 
+again selectively overwritten according to the input mapping. The rule is 
+applied again, and the process repeats for each timestep of the input data.  
+\par  
 
 
 Figure \ref{architecture} illustrates how the input is encoded into the 
@@ -590,33 +592,79 @@ have class IV behavior by maximizing the size of these contiguous regions,
   \label{GA}
   \end{figure}
 
-\subsubsection{Non-Uniform Reservoir}
+\subsection{Temporal Density and Temporal Parity}
+  The elementary rules found to be most successful at the parity task by Bye 
+     were tested 100 times on the joint benchmark task to serve as a baseline 
+     of comparison for the complex rule's performance. As with the 5-bit task, 
+        three state and neighborhood five CA rules were found by a stochastic 
+           search of the rule space. Rules that achieved 100\% correct 
+           prediction on either the temporal density or the temporal parity 
+           task were saved for further testing. This occurred on 2.3\% of the 
+           runs for three state rules and 1.8\% for neighborhood five rules.  
+           \par  Unlike with the previous benchmark, class I and class II rules 
+           were not removed from consideration before testing.  This is because 
+           it was empirically observed that rules that perform well on the 
+           temporal density/parity tasks tend to exhibit a very low degree of 
+           chaoticity. Because of the high percentage of CA cells that were 
+           mapped as input for this benchmark, a rule that is class I or II 
+           when evolved without interference can exhibit complex dynamics when 
+           used as a reservoir.  Figure \ref{rule48} demonstrates this using 
+           elementary rule 48, the most successful at the combined benchmark.  
+           \par Among the two state neighborhood five population density rules 
+           only one was found that got zero error on either of the tasks, so 
+           this class of rules was not investigated further for this benchmark.  
+           \par To find four and five state CA rules a GA was again used to 
+           reduce the chaoticity of contestant rules. Evolution continued until 
+           the "smallest-largest" fitness score reached 400. This is twice the 
+           fitness target for the 5-bit task, again due to the lower chaoticity 
+           of rules that perform well on the temporal tasks.
+
+
+\subsection{Non-Uniform Reservoir}
 A non-uniform CA is one in which the cells don't all implement the same rule.  
     The ReCA framework used here implements a parallel non-uniform CA in which 
     the reservoir is split in half into two sub-reservoirs  using different 
     rules.  The cells at the boundaries between  the two sub-reservoirs 
-    consider their neighbors in the other sub-reservoir the same as those in 
-    their own sub-reservoir in the application of the rule. This allows 
+    consider their neighbors in the other sub-reservoir to be the same as those 
+    in their own sub-reservoir in the application of the rule. This allows 
     information to to flow between the two regions. Previous work has shown 
     that certain combinations of elementary rules in a parallel ReCA perform 
     better than either of the rules individually at the 5-bit memory task while 
-    other combinations impeded performance\cite{nichele2017reservoir}.  \par In 
-    this work combinations of complex rules were tested together to see whether 
-    complementary rule combinations exist for the different types of complex CA 
-    rules investigated.  
-    
-\subsection{Temporal Density and Temporal Parity}
+    other combinations impeded performance\cite{nichele2017reservoir}. For the 
+    combined temporal density/parity task Bye found that only non-uniform 
+    automata could correctly predict 100\% of the outputs 
+    \cite{bye2016investigation}.
+  \par In this work combinations of complex rules were tested together to see 
+  whether complementary rule combinations could be found for the different 
+  types of complex CA rules investigated.     \begin{figure}[H]
+\centering
+\begin{subfigure}[]{0.2\linewidth}
+  \includegraphics[width=\linewidth]{rule48.jpg}
+  \caption{}
+  \end{subfigure}
+\begin{subfigure}[]{0.2\linewidth}
+  \includegraphics[width=\linewidth]{rule48_reservoir.jpg}
+  \caption{}
+  \end{subfigure}
+  \caption{Elementary rule 48. (a) Evolved with only initial input the rule 
+     produces a system lacking interacting structures. (b) Used as a reservoir 
+        for the temporal density and temporal parity benchmarks the rule 
+           produces interacting structures and predicts the output without 
+              error.}
+     \label{rule48}
+     \end{figure}
 
 \section{Results}\label{results}
 %\subsection{Elementary CA Results}
 From each of the types of rules that were investigated, the six most successful 
-rules at performing the benchmark task using reservoirs with parameters (I, R, 
-        $L_{d}$) = (4, 8, 40) were selected for testing with smaller  
-reservoirs. Due to the length of the complex rules, these were given labels.  
-The best performing rules and their labels are seen in Table
-\ref{table:rules}. \par
+   rules at performing the 5-bit benchmark task using reservoirs with 
+   parameters (I, R, $L_{d}$) = (4, 8, 40) were selected for testing with 
+   smaller  reservoirs. Due to the length of the complex rules, these were 
+   given labels.  The best performing rules and their labels are seen in Table
+\ref{table:rules}. \par 
 
-\begin{table*}[!htb] \centering
+
+\begin{table*}[!htbp] \centering
 \small
 \begin{tabular}{|p{2cm}|l|}
 \hline
@@ -659,7 +707,7 @@ $D_{4}$ &   3ca \\ \hline
 $D_{5}$ &   275 \\ \hline
 %$D_{6}$ &  1010001101\\ \hline
 $D_{6}$ &   28d \\ \hline
-\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (3,3)}} \\ \hline
+\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
 %$S4_{1}$ &  2321222211000231312322232311322030112313011100201322000131220020\\ 
 $S4_{1}$ &   b9aa502ddbabb5e8c5b715087a01da08\\ \hline
 %$S4_{2}$ &  3202120010220311333022122021303233302103221213012310122021121000\\ 
@@ -673,7 +721,7 @@ $S4_{5}$ &   53bf9dcb97e96e0247c9a980a1291d7e \\ \hline
 %$S4_{6}$ &  1303200320121103303030201311010210331123101211201101121212023003\\
 $S4_{6}$ &   73838653ccc875124f5b4658516662c3\\
 \hline
-\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
+\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
  $S5_{1}$ & %  {\begin{tabular}[c]{@{}l@{}}
 %1301443104221322240300230403103441002312212144030011314304232243323124040221\\ 
     %    4204330141121024304340424234410332033014231100030\ \end{tabular}} \\ 
@@ -713,10 +761,15 @@ $S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
 
 
 The selected rules were then tested 100 times each with a range of the 
-reservoir parameters I, R, and $L_{d}$.  The results can be seen in Table 
-\ref{table:results}. 
+   reservoir parameters I, R, and $L_{d}$.  The results can be seen in Table 
+   \ref{table:results}. \par The labels for the most successful rules at the 
+   temporal density and temporal parity tasks are in Table 
+   \ref{table:rules_temp_dens}, and the results are found in Table 
+   \ref{table:results_temp_dens}.
 
-\begin{table*}[!htb] \centering
+
+
+\begin{table*}[!htbp] \centering
 \small
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
@@ -751,14 +804,14 @@ $D_{3}$ & 94 & 62 & 63 & 0 & 0 & 20 \\ \hline
 $D_{4}$ & 96 & 87 & 57 & 0 & 0 & 0 \\ \hline
 $D_{5}$ & 99 & 17 & 35 & 0 & 25 & 0 \\ \hline
 $D_{6}$ & 64 & 58 & 27 & 0 & 1 & 0 \\ \hline
-\multicolumn{7}{|l|}{\textbf{Four State Rules (S,N) = (3,3)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
 $S4_{1}$ & 90 & 75 & 58 & 0 & 12  & 1 \\ \hline
 $S4_{2}$ & 90 & 84 & 56 & 0 & 9 & 0  \\ \hline
 $S4_{3}$ & 93 & 12 & 9 & 0 & 42 & 0 \\ \hline
 $S4_{4}$ & 95 & 35 & 21 & 0 & 0 & 0 \\ \hline
 $S4_{5}$ & 100 & 85 & 66 & 0 & 11 & 1 \\ \hline
 $S4_{6}$ & 87 & 20 & 2 & 0 & 0 & 0 \\ \hline
-\multicolumn{7}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
 $S5_{1}$ & 95 & 50 & 42 & 8 & 15 & 0 \\ \hline
 $S5_{2}$ & 95 & 76 & 70 & 0 & 7 & 0 \\ \hline
 $S5_{3}$ & 98 & 74 & 51 & 0 & 24 & 0 \\ \hline
@@ -773,7 +826,7 @@ $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 
 
 
-\begin{table*}[!htb] \centering
+\begin{table*}[!htbp] \centering
 \small
 \begin{tabular}{|p{2cm}|l|}
 \hline
@@ -791,7 +844,7 @@ $N5_{3}$ &   1d5d1f7d\\ \hline
 $N5_{4}$ &   73ebbf\\ \hline
 $N5_{5}$ &   fdfc1734\\ \hline
 $N5_{6}$ &   5d17350f\\ \hline
-\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (3,3)}} \\ \hline
+\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
 $S4_{1}$ &   be2614f5ae52e0bceb0564a44a818504\\ \hline
 $S4_{2}$ &   dd8a5ec44a19cf885d83514504883000\\ \hline
 $S4_{3}$ &   5c9e5700e4a3423d37456595f56282c0\\ \hline
@@ -799,31 +852,42 @@ $S4_{4}$ &   ccb14db2d37a6039165a6d45151f4010\\ \hline
 $S4_{5}$ &   17a2163c27560aaece871545a3208890\\ \hline
 $S4_{6}$ &   754f9cb2174a865262d53515310f1120\\
 \hline
-\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (3,3)}} \\ \hline
- $S5_{1}$ & %  {\begin{tabular}[c]{@{}l@{}}
+\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
+ $S5_{1}$ &
 94edc5925c6beb872f42363fd4499effd7a06330439d82cd00064a42299880a06a6300f7   \\
     \hline
-    $S5_{2}$ & %{\begin{tabular}[c]{@{}l@{}}
+    $S5_{2}$ &
 2e9ffae0f04c5a7902a36adca32e1aad8a22e5486eb074b92abcb17ef0e97f22ef3812276\\\hline
-$S5_{3}$ & %{\begin{tabular}[c]{@{}l@{}}
+$S5_{3}$ & 
 4a09ab57fa452402cda01dd88d4aa08f24b83f51a5c6a638ba703cbfc0e6d485e7cb98b3f \\ 
-    \hline
-$S5_{4}$  & %{\begin{tabular}[c]{@{}l@{}}
+\hline
+$S5_{4}$  &
 4572ec6156d9dab4f6db2cda2bb51a94877dd8d554d71deb9e25698ec08cc0a95ca9ef65 \\ 
     \hline
-$S5_{5}$ & %{\begin{tabular}[c]{@{}l@{}}
+$S5_{5}$ &
 2c2b5702c45a01eccf1b8f8e29f2c4199f2ea0fa00c9c4e67e2579d1c7f20a770182cca6c \\ 
     \hline
-$S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
+$S5_{6}$ &
 3e5309a22ea94f23fd18365607c9c64e7201fa39ea33e4b7543332f59c6d43ed51317bbd5 \\ 
     \hline
 \end{tabular}
-\caption{The six best performing rules on the temporal density/parity task from 
-    each CA rule category investigated.}
+\caption{The six best performing rules on the cpmbined temporal density/parity 
+   task from each CA rule category investigated.}
 \label{table:rules_temp_dens}
 \end{table*}
 
+
 \section{Discussion}\label{discussion}
+The qualities that cause a CA rule to produce a good reservoir were not the 
+   same for the two benchmarks investigated, and none of the rules that worked 
+   well for one benchmark showed any success at the other. The increased 
+   information that can be held by a complex rule proved helpful for the 5-bit 
+   memory task. As can be seen in Figure \ref{repeat}, a good reservoir for 
+   this task falls into one of number of possible  periodic attractors after 
+   each message is input. The particular basin of attraction encodes the 
+   message, which is output when the cue signal is given. 
+   
+   \subsection{5-bit memory task}
 While the best performing elementary rules required a reservoir of size $I \cdot R 
 \cdot L_{d} = 8 \cdot 8 \cdot 40 = 2560$ cells in order to achieve 99\% success on the 
 5-bit memory task, each of the five categories of complex CA rule investigated 
@@ -882,6 +946,8 @@ reduced iterations. When the reservoir size was halved from 1280 to 640  cells,
 \label{repeat}
 \end{figure}
 
+\subsection{Temporal Density and Temporal Parity}
+
 \iffalse
 
 \section{Future Work}\label{future_work}
@@ -906,6 +972,8 @@ rule could be discovered.
 
 \fi
 \section{Conclusion}\label{conclusion}
+
+
 A reservoir computing with cellular automata (ReCA) framework has been 
 implemented which expands the field of ReCA research from the 256 elementary 
 cellular automata rules to investigate rules with larger neighborhoods and more 
@@ -915,8 +983,56 @@ find \textit{edge of chaos} rules capable of computing the 5-bit memory task
 benchmark. \par The six best rules from each of five categories of complex rule 
 were tested and shown to require half of the reservoir size as the most 
 successful elementary rules to produce comparable results. This reduction in 
-reservoir size equals a saving in power and time when operating the reservoirs.
+reservoir size equals a saving in power and time when operating the reservoirs.  
 
+
+
+\begin{table}[H] \centering
+\begin{tabular}{|l|l|l|l|}
+\hline
+\textbf{Rule} & \textbf{Combined} & \textbf{TD} & \textbf{TP} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Elementary Rules (S,N) = (2,3)}} \\ \hline
+27 & 50 & 98 & 51 \\ \hline
+38 & 57 & 72 & 72 \\ \hline
+39 & 45 & 94 & 48 \\ \hline
+48 & 67 & 83 & 76 \\ \hline
+83 & 51 & 94 & 56 \\ \hline
+174 & 57 & 98 & 58 \\ \hline
+   \multicolumn{4}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
+$S3_{1}$ & 50 & 58 & 82 \\ \hline
+$S3_{2}$ & 48 & 78 & 61 \\ \hline
+$S3_{3}$ & 46 & 61 & 73 \\ \hline
+$S3_{4}$ & 45 & 66 & 67 \\ \hline
+$S3_{5}$ & 43 & 81 & 53 \\ \hline
+$S3_{6}$ & 42 & 77 & 55 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
+$N5_{1}$ & 50 & 96 & 52 \\ \hline
+$N5_{2}$ & 52 & 77 & 69 \\ \hline
+$N5_{3}$ & 43 & 88 & 52 \\ \hline
+$N5_{4}$ & 42 & 72 & 57 \\ \hline
+$N5_{5}$ & 34 & 44 & 66 \\  \hline
+$N5_{6}$ & 30 & 40 & 75 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
+$S4_{1}$ & 34 & 65 & 55 \\ \hline
+$S4_{2}$ & 33 & 63 & 54 \\ \hline
+$S4_{3}$ & 29 & 56 & 56 \\ \hline
+$S4_{4}$ & 24 & 40 & 57 \\ \hline
+$S4_{5}$ & 24 & 39 & 60 \\ \hline
+$S4_{6}$ & 23 & 57 & 46 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
+$S5_{1}$ & 29 & 56 & 45 \\ \hline
+$S5_{2}$ & 19 & 34 & 55 \\ \hline
+$S5_{3}$ & 16 & 36 & 52 \\ \hline
+$S5_{4}$ & 16 & 38 & 38 \\ \hline
+$S5_{5}$ & 11 & 16 & 70 \\ \hline
+$S5_{6}$ & 9 & 15 & 48 \\ \hline
+\multicolumn{4}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
+\end{tabular}
+\caption{Successful runs out of 100 on the temporal density and temporal parity 
+   benchmarks as well as performing both tasks in tandem.
+}
+\label{table:results_temp_dens}
+\end{table}
 \bibliographystyle{ieeetr}
 \bibliography{CAReservoir}
 
