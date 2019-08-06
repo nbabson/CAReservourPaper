@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.20)  5 AUG 2019 12:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.1.21)  5 AUG 2019 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **CAReservoir
 (./CAReservoir.tex
-LaTeX2e <2016/02/01>
-Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
+LaTeX2e <2017-04-15>
+Babel <3.18> and hyphenation patterns for 5 language(s) loaded.
 (./elsarticle.cls
 Document Class: elsarticle 2019/02/25, 3.2: Elsevier Ltd
 \@bls=\dimen102
@@ -27,44 +27,36 @@ File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \bibindent=\dimen103
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks14
 )
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2016/01/03 v1.0q Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/graphics.cfg
-File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
 )
-Package graphics Info: Driver file: pdftex.def on input line 95.
+Package graphics Info: Driver file: pdftex.def on input line 99.
 
-(/usr/share/texlive/texmf-dist/tex/latex/pdftex-def/pdftex.def
-File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
-Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
-Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
-)
-\Gread@gobject=\count87
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 ))
 \Gin@req@height=\dimen104
 \Gin@req@width=\dimen105
 )
-\c@tnote=\count88
-\c@fnote=\count89
-\c@cnote=\count90
-\c@ead=\count91
-\c@author=\count92
+\c@tnote=\count87
+\c@fnote=\count88
+\c@cnote=\count89
+\c@ead=\count90
+\c@author=\count91
 \@eadauthor=\toks15
-\c@affn=\count93
+\c@affn=\count92
 \absbox=\box26
 \elsarticlehighlightsbox=\box27
 \elsarticlegrabsbox=\box28
@@ -83,14 +75,14 @@ Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip45
 \bibsep=\skip46
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count94
+\c@NAT@ctr=\count93
 )
 \splwrite=\write3
 \openout3 = `CAReservoir.spl'.
 
 \appnamewidth=\dimen109
 ) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
-Package: booktabs 2005/04/14 v1.61803 publication quality tables
+Package: booktabs 2016/04/27 v1.618033 publication quality tables
 \heavyrulewidth=\dimen110
 \lightrulewidth=\dimen111
 \cmidrulewidth=\dimen112
@@ -101,22 +93,26 @@ Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \cmidrulesep=\dimen117
 \cmidrulekern=\dimen118
 \defaultaddspace=\dimen119
-\@cmidla=\count95
-\@cmidlb=\count96
+\@cmidla=\count94
+\@cmidlb=\count95
 \@aboverulesep=\dimen120
 \@belowrulesep=\dimen121
-\@thisruleclass=\count97
-\@lastruleclass=\count98
+\@thisruleclass=\count96
+\@lastruleclass=\count97
 \@thisrulewidth=\dimen122
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip47
+\multirow@cntb=\count98
+\multirow@dima=\skip48
 \bigstrutjot=\dimen123
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 
-(/usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
-File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package xcolor Info: Driver file: pdftex.def on input line 225.
 
@@ -124,29 +120,29 @@ Package xcolor Info: Driver file: pdftex.def on input line 225.
 Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
 
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
-Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
 \col@sep=\dimen124
 \extrarowheight=\dimen125
 \NC@list=\toks17
-\extratabsurround=\skip47
-\backup@length=\skip48
+\extratabsurround=\skip49
+\backup@length=\skip50
 )
 \everycr=\toks18
-\minrowclearance=\skip49
+\minrowclearance=\skip51
 )
 \rownum=\count99
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
-Package xcolor Info: Model `RGB' extended on input line 1353.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
 \c@tracingmulticols=\count100
 \mult@box=\box32
 \multicol@leftmargin=\dimen126
@@ -159,8 +155,8 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \page@free=\dimen128
 \premulticols=\dimen129
 \postmulticols=\dimen130
-\multicolsep=\skip50
-\multicolbaselineskip=\skip51
+\multicolsep=\skip52
+\multicolbaselineskip=\skip53
 \partial@page=\box33
 \last@line=\box34
 \maxbalancingoverflow=\dimen131
@@ -198,11 +194,10 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
-Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
-Package ifpdf Info: pdfTeX in PDF mode is detected.
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
 )
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifvtex.sty
-Package: ifvtex 2010/03/01 v1.5 Detect VTeX and its facilities (HO)
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
 Package ifvtex Info: VTeX not detected.
 )
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
@@ -225,13 +220,13 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 Package: setspace 2011/12/19 v6.7a set line spacing
 )
 (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
-Package: subcaption 2016/02/20 v1.1-142 Sub-captions (AR)
+Package: subcaption 2016/05/22 v1.1-161 Sub-captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2016/02/04 v1.7-139 caption3 kernel (AR)
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
 \captionmargin=\dimen143
 \captionmargin@=\dimen144
@@ -255,15 +250,21 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@floatcapt=\box59
 )
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.sty
-Package: babel 2016/02/24 3.9q The Babel package
+Package: babel 2018/02/14 3.18 The Babel package
 
+(/usr/share/texlive/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2018/02/14 3.18 Babel switching mechanism
+)
 (/usr/share/texlive/texmf-dist/tex/generic/babel-english/english.ldf
-Language: english 2012/08/20 v3.3p English support from the babel system
+Language: english 2017/06/06 v3.3r English support from the babel system
 
 (/usr/share/texlive/texmf-dist/tex/generic/babel/babel.def
-File: babel.def 2016/02/24 3.9q Babel common definitions
+File: babel.def 2018/02/14 3.18 Babel common definitions
 \babel@savecnt=\count116
 \U@D=\dimen150
+
+(/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@dirlevel=\count117
 )
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
@@ -275,42 +276,42 @@ Package: blindtext 2012/01/06 V2.0 blindtext-Package
 (/usr/share/texlive/texmf-dist/tex/latex/tools/xspace.sty
 Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
 )
-\c@blindtext=\count117
-\c@Blindtext=\count118
-\c@blind@countparstart=\count119
-\blind@countxx=\count120
-\blindtext@numBlindtext=\count121
-\blind@countyy=\count122
-\c@blindlist=\count123
-\c@blindlistlevel=\count124
-\c@blindlist@level=\count125
-\blind@listitem=\count126
-\c@blind@listcount=\count127
-\c@blind@levelcount=\count128
-\blind@mathformula=\count129
-\blind@Mathformula=\count130
-\c@blind@randomcount=\count131
-\c@blind@randommax=\count132
-\c@blind@pangramcount=\count133
-\c@blind@pangrammax=\count134
+\c@blindtext=\count118
+\c@Blindtext=\count119
+\c@blind@countparstart=\count120
+\blind@countxx=\count121
+\blindtext@numBlindtext=\count122
+\blind@countyy=\count123
+\c@blindlist=\count124
+\c@blindlistlevel=\count125
+\c@blindlist@level=\count126
+\blind@listitem=\count127
+\c@blind@listcount=\count128
+\c@blind@levelcount=\count129
+\blind@mathformula=\count130
+\blind@Mathformula=\count131
+\c@blind@randomcount=\count132
+\c@blind@randommax=\count133
+\c@blind@pangramcount=\count134
+\c@blind@pangrammax=\count135
 )
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
-Package: csquotes 2016/01/31 v5.1g context-sensitive quotations (JAW)
+Package: csquotes 2018/02/11 v5.2c context-sensitive quotations (JAW)
 
 (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-Package: etoolbox 2015/08/02 v2.2a e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count135
+Package: etoolbox 2018/02/11 v2.5e e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count136
 )
-\csq@reset=\count136
-\csq@gtype=\count137
-\csq@glevel=\count138
-\csq@qlevel=\count139
-\csq@maxlvl=\count140
-\csq@tshold=\count141
+\csq@reset=\count137
+\csq@gtype=\count138
+\csq@glevel=\count139
+\csq@qlevel=\count140
+\csq@maxlvl=\count141
+\csq@tshold=\count142
 \csq@ltx@everypar=\toks22
 
 (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
-File: csquotes.def 2016/01/31 v5.1g csquotes generic definitions (JAW)
+File: csquotes.def 2018/02/11 v5.2c csquotes generic definitions (JAW)
 )
 Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
 Package csquotes Info: ... configuration file loaded successfully.
@@ -322,8 +323,8 @@ Package csquotes Info: Enabling multilingual quotes.
 Package csquotes Info: Redefining alias 'english' -> 'english/american'.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
-Package: amsmath 2016/03/03 v2.15a AMS math features
-\@mathmargin=\skip52
+Package: amsmath 2017/09/02 v2.17a AMS math features
+\@mathmargin=\skip54
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -339,32 +340,32 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen152
 )
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
-Package: amsopn 1999/12/14 v2.01 operator names
+Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count142
-LaTeX Info: Redefining \frac on input line 199.
-\uproot@=\count143
-\leftroot@=\count144
-LaTeX Info: Redefining \overline on input line 297.
-\classnum@=\count145
-\DOTSCASE@=\count146
-LaTeX Info: Redefining \ldots on input line 394.
-LaTeX Info: Redefining \dots on input line 397.
-LaTeX Info: Redefining \cdots on input line 518.
+\inf@bad=\count143
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count144
+\leftroot@=\count145
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count146
+\DOTSCASE@=\count147
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
 \Mathstrutbox@=\box60
 \strutbox@=\box61
 \big@size=\dimen153
-LaTeX Font Info:    Redeclaring font encoding OML on input line 630.
-LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
-\macc@depth=\count147
-\c@MaxMatrixCols=\count148
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count148
+\c@MaxMatrixCols=\count149
 \dotsspace@=\muskip10
-\c@parentequation=\count149
-\dspbrk@lvl=\count150
+\c@parentequation=\count150
+\dspbrk@lvl=\count151
 \tag@help=\toks24
-\row@=\count151
-\column@=\count152
-\maxfields@=\count153
+\row@=\count152
+\column@=\count153
+\maxfields@=\count154
 \andhelp@=\toks25
 \eqnshift@=\dimen154
 \alignsep@=\dimen155
@@ -373,11 +374,11 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 631.
 \totwidth@=\dimen158
 \lineht@=\dimen159
 \@envbody=\toks26
-\multlinegap=\skip53
-\multlinetaggap=\skip54
+\multlinegap=\skip55
+\multlinetaggap=\skip56
 \mathdisplay@stack=\toks27
-LaTeX Info: Redefining \[ on input line 2735.
-LaTeX Info: Redefining \] on input line 2736.
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/courier.sty
 Package: courier 2005/04/12 PSNFSS-v9.2a (WaS) 
@@ -400,58 +401,66 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
 LaTeX Font Info:    ... okay on input line 33.
- (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
+\scratchcounter=\count155
 \scratchdimen=\dimen160
 \scratchbox=\box62
-\nofMPsegments=\count155
-\nofMParguments=\count156
+\nofMPsegments=\count156
+\nofMParguments=\count157
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count157
+\MPscratchCnt=\count158
 \MPscratchDim=\dimen161
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
 \everyMPtoPDFconversion=\toks29
-) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
-Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
 )
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)))
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
 
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2018/01/21 v0.26 Utility functions of pdfTeX for LuaTeX (HO
 )
 Package pdftexcmds Info: LuaTeX not detected.
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
 Package pdftexcmds Info: \pdfdraftmode found.
 )
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
-Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
-
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
-Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
-Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
-))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
 Package grfext Info: Graphics extension search list:
-(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
-(grfext)             \AppendGraphicsExtensions on input line 452.
+(grfext)             \AppendGraphicsExtensions on input line 456.
 
 (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
@@ -515,37 +524,34 @@ Overfull \hbox (2.22221pt too wide) has occurred while \output is active
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 <Reservoir.png, id=13, 423.5825pt x 261.97874pt>
 File: Reservoir.png Graphic file (type png)
- <use Reservoir.png>
-Package pdftex.def Info: Reservoir.png used on input line 146.
+<use Reservoir.png>
+Package pdftex.def Info: Reservoir.png  used on input line 146.
 (pdftex.def)             Requested size: 171.99922pt x 106.37663pt.
-
 <Rule90.png, id=15, 1138.2525pt x 274.02374pt>
 File: Rule90.png Graphic file (type png)
- <use Rule90.png>
-Package pdftex.def Info: Rule90.png used on input line 175.
+<use Rule90.png>
+Package pdftex.def Info: Rule90.png  used on input line 175.
 (pdftex.def)             Requested size: 171.99922pt x 41.40701pt.
- [2 <./Reservoir.png>] <class1.png, id=25, 963.6pt x 963.6pt>
+ [2 <./Reservoir.png>]
+<class1.png, id=25, 963.6pt x 963.6pt>
 File: class1.png Graphic file (type png)
- <use class1.png>
-Package pdftex.def Info: class1.png used on input line 203.
+<use class1.png>
+Package pdftex.def Info: class1.png  used on input line 203.
 (pdftex.def)             Requested size: 94.50038pt x 94.49832pt.
-
 <class2.png, id=26, 963.6pt x 963.6pt>
 File: class2.png Graphic file (type png)
- <use class2.png>
-Package pdftex.def Info: class2.png used on input line 207.
+<use class2.png>
+Package pdftex.def Info: class2.png  used on input line 207.
 (pdftex.def)             Requested size: 94.50038pt x 94.49832pt.
-
 <class3.png, id=27, 963.6pt x 963.6pt>
 File: class3.png Graphic file (type png)
- <use class3.png>
-Package pdftex.def Info: class3.png used on input line 212.
+<use class3.png>
+Package pdftex.def Info: class3.png  used on input line 212.
 (pdftex.def)             Requested size: 94.50038pt x 94.49832pt.
-
 <class4.png, id=28, 963.6pt x 963.6pt>
 File: class4.png Graphic file (type png)
- <use class4.png>
-Package pdftex.def Info: class4.png used on input line 216.
+<use class4.png>
+Package pdftex.def Info: class4.png  used on input line 216.
 (pdftex.def)             Requested size: 94.50038pt x 94.49832pt.
 
 Underfull \hbox (badness 5119) in paragraph at lines 248--252
@@ -555,41 +561,38 @@ Underfull \hbox (badness 5119) in paragraph at lines 248--252
 [3 <./Rule90.png> <./class1.png> <./class2.png> <./class3.png> <./class4.png>]
 <Architecture.png, id=40, 764.8575pt x 522.95375pt>
 File: Architecture.png Graphic file (type png)
- <use Architecture.png>
-Package pdftex.def Info: Architecture.png used on input line 297.
+<use Architecture.png>
+Package pdftex.def Info: Architecture.png  used on input line 297.
 (pdftex.def)             Requested size: 171.99922pt x 117.59567pt.
 
-[4 <./Architecture.png>] <5bit.png, id=46, 803.0pt x 721.69624pt>
+[4 <./Architecture.png>]
+<5bit.png, id=46, 803.0pt x 721.69624pt>
 File: 5bit.png Graphic file (type png)
-
 <use 5bit.png>
-Package pdftex.def Info: 5bit.png used on input line 396.
+Package pdftex.def Info: 5bit.png  used on input line 396.
 (pdftex.def)             Requested size: 171.99922pt x 154.57802pt.
  [5 <./5bit.png>] [6] [7]
 <GA.png, id=58, 720.6925pt x 342.27875pt>
 File: GA.png Graphic file (type png)
- <use GA.png>
-Package pdftex.def Info: GA.png used on input line 588.
+<use GA.png>
+Package pdftex.def Info: GA.png  used on input line 588.
 (pdftex.def)             Requested size: 210.0023pt x 99.73355pt.
  [8 <./GA.png>]
 <rule48.jpg, id=63, 1445.4pt x 1445.4pt>
 File: rule48.jpg Graphic file (type jpg)
- <use rule48.jpg>
-Package pdftex.def Info: rule48.jpg used on input line 642.
+<use rule48.jpg>
+Package pdftex.def Info: rule48.jpg  used on input line 642.
 (pdftex.def)             Requested size: 41.99982pt x 41.9927pt.
-
 <rule48_reservoir.jpg, id=64, 1445.4pt x 1445.4pt>
 File: rule48_reservoir.jpg Graphic file (type jpg)
- <use rule48_reservoir.jpg>
-Package pdftex.def Info: rule48_reservoir.jpg used on input line 646.
+<use rule48_reservoir.jpg>
+Package pdftex.def Info: rule48_reservoir.jpg  used on input line 646.
 (pdftex.def)             Requested size: 41.99982pt x 41.9927pt.
-
-[9 <./rule48.jpg> <./rule48_reservoir.jpg>] [10] [11] [12]
+ [9 <./rule48.jpg> <./rule48_reservoir.jpg>] [10] [11] [12]
 <RepeatMessage.png, id=80, 1950.28625pt x 1378.14874pt>
 File: RepeatMessage.png Graphic file (type png)
-
 <use RepeatMessage.png>
-Package pdftex.def Info: RepeatMessage.png used on input line 935.
+Package pdftex.def Info: RepeatMessage.png  used on input line 935.
 (pdftex.def)             Requested size: 171.99922pt x 121.5256pt.
 
 Overfull \hbox (2.93692pt too wide) in paragraph at lines 991--1033
@@ -605,13 +608,13 @@ Missing character: There is no Ä in font cmr10!
 Missing character: There is no ù in font cmr10!
  [14]) [15] (./CAReservoir.aux) ) 
 Here is how much of TeX's memory you used:
- 6717 strings out of 493029
- 95947 string characters out of 6136233
- 239441 words of memory out of 5000000
- 10124 multiletter control sequences out of 15000+600000
+ 6842 strings out of 494880
+ 98127 string characters out of 6179601
+ 237567 words of memory out of 5000000
+ 10029 multiletter control sequences out of 15000+600000
  9631 words of font info for 35 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 42i,13n,40p,817b,575s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36 hyphenation exceptions out of 8191
+ 42i,13n,40p,817b,573s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips
 /base/8r.enc}</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
 10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb>
@@ -631,7 +634,7 @@ xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/urw/courier/ucrr8a.pfb>
-Output written on CAReservoir.pdf (15 pages, 2606429 bytes).
+Output written on CAReservoir.pdf (15 pages, 2594484 bytes).
 PDF statistics:
  153 PDF objects out of 1000 (max. 8388607)
  94 compressed objects within 1 object stream
