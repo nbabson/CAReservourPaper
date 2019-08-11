@@ -1,0 +1,72 @@
+%% Creator: Inkscape inkscape 0.91, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'Reservoir.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{600.00053346bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.55088352)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{Reservoir.pdf}}%
+    \put(0.26654656,0.49297549){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.27695733\unitlength}\raggedright \end{minipage}}}%
+    \put(0.62307171,0.51745795){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.41926139\unitlength}\raggedright \end{minipage}}}%
+    \put(0.08568845,0.34940936){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{  }}}%
+    \put(-0.01806151,0.52969916){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.85994475\unitlength}\raggedright \end{minipage}}}%
+    \put(-0.01041075,0.5220484){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1774975\unitlength}\raggedright \end{minipage}}}%
+    \put(-0.01653136,0.49909614){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22493217\unitlength}\raggedright \end{minipage}}}%
+    \put(-0.0119409,0.48226448){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.22187187\unitlength}\raggedright \end{minipage}}}%
+    \put(0.08286845,0.3316794){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Input}}}%
+    \put(0.40272999,0.32924939){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Reservoir}}}%
+    \put(0.78997802,0.33155936){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Output}}}%
+    \put(0.08292846,0.29558609){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{layer}}}%
+    \put(0.78679785,0.30017658){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{layer}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{Reservoir.pdf}}%
+    \put(0.71794105,0.29788133){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{w1}}}%
+    \put(0.74318859,0.25580219){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{w2}}}%
+    \put(0.74089334,0.07600938){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{w3}}}%
+    \put(0.7294172,0.03622556){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{w4}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{Reservoir.pdf}}%
+  \end{picture}%
+\endgroup%

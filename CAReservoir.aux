@@ -1,105 +1,128 @@
 \relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyperFirstAtBeginDocument{\AtBeginDocument}
+\HyperFirstAtBeginDocument{\ifx\hyper@anchor\@undefined
+\global\let\oldcontentsline\contentsline
+\gdef\contentsline#1#2#3#4{\oldcontentsline{#1}{#2}{#3}}
+\global\let\oldnewlabel\newlabel
+\gdef\newlabel#1#2{\newlabelxx{#1}#2}
+\gdef\newlabelxx#1#2#3#4#5#6{\oldnewlabel{#1}{{#2}{#3}}}
+\AtEndDocument{\ifx\hyper@anchor\@undefined
+\let\contentsline\oldcontentsline
+\let\newlabel\oldnewlabel
+\fi}
+\fi}
+\global\let\hyper@last\relax 
+\gdef\HyperFirstAtBeginDocument#1{#1}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
 \emailauthor{nbabson@pdx.edu}{Neil Babson}
-\babel@aux{english}{}
-\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}}
-\newlabel{introduction}{{1}{1}}
 \citation{jaeger2001echo}
 \citation{maass2002real}
+\select@language{english}
+\@writefile{toc}{\select@language{english}}
+\@writefile{lof}{\select@language{english}}
+\@writefile{lot}{\select@language{english}}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}}
+\newlabel{introduction}{{1}{1}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{1}{section.2}}
+\newlabel{background}{{2}{1}{Background}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Reservoir Computing}{1}{subsection.2.1}}
 \citation{lukovsevicius2007overview}
 \citation{tanaka2018recent}
 \citation{jaeger2001echo}
 \citation{langton1990computation}
 \citation{legenstein2007edge}
-\@writefile{toc}{\contentsline {section}{\numberline {2}Background}{2}}
-\newlabel{background}{{2}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Reservoir Computing}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Components of a reservoir computing system. Input is connected to a subset of the reservoir nodes. Output is usually fully to the reservoir. Only the outout weights $w_{i}$ for $i \in \{1, ..., n\}$ are trained.\relax }}{2}}
-\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{reservoir_layout}{{1}{2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cellular Automata}{2}}
 \citation{wolfram2002new}
 \citation{wuensche1999classifying}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Components of a reservoir computing system. The input layer is connected to a subset of the reservoir nodes. The output layer is usually fully connected to the reservoir. Only the output weights $w_{i}$ for $i \in \{1, ..., n\}$ are trained.\relax }}{2}{figure.caption.1}}
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{reservoir_layout}{{1}{2}{Components of a reservoir computing system. The input layer is connected to a subset of the reservoir nodes. The output layer is usually fully connected to the reservoir. Only the output weights $w_{i}$ for $i \in \{1, ..., n\}$ are trained.\relax }{figure.caption.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Cellular Automata}{2}{subsection.2.2}}
 \citation{cook2004universality}
 \citation{yilmaz2014reservoir}
 \citation{margem2017experimental}
 \citation{bye2016investigation}
 \citation{nichele2017reservoir}
+\citation{nichele2017deep}
 \citation{kleyko2017modality}
 \citation{nichele2017deep}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elementary rule 90.\relax }}{3}}
-\newlabel{ca_rule}{{2}{3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Wolfram's four classes of Cellular Automata rule represented by the elementary rules. (a) Class I: Rule 215, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.\relax }}{3}}
-\newlabel{ca_complexity}{{3}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Previous Work}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Elementary rule 90.\relax }}{3}{figure.caption.2}}
+\newlabel{ca_rule}{{2}{3}{Elementary rule 90.\relax }{figure.caption.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Wolfram's four classes of CA represented by the elementary rules. (a) Class I: Rule 251, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.\relax }}{3}{figure.caption.3}}
+\newlabel{ca_complexity}{{3}{3}{Wolfram's four classes of CA represented by the elementary rules. (a) Class I: Rule 251, (b) Class II: Rule 1, (c) Class III: Rule 105, and (d) Class IV: Rule 193.\relax }{figure.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Previous Work}{3}{subsection.2.3}}
 \citation{yilmaz2015connectionist}
-\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{4}}
-\newlabel{method}{{3}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}ReCA System Design}{4}}
-\newlabel{eq:input}{{1}{4}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, R = 2, I = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the R sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. \relax }}{4}}
-\newlabel{architecture}{{4}{4}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Readout Layer}{4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Method}{4}{section.3}}
+\newlabel{method}{{3}{4}{Method}{section.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}ReCA System Design}{4}{subsection.3.1}}
+\newlabel{eq:input}{{1}{4}{ReCA System Design}{equation.3.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, $R$ = 2, $I$ = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the $R$ sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. \relax }}{4}{figure.caption.4}}
+\newlabel{architecture}{{4}{4}{Mapping the input to the reservoir and generating the output. $L_{n}$ = 4, $L_{d}$ = 8, $R$ = 2, $I$ = 4, Rule 90. Initially all the cells of the reservoir are in the same state. At each timestep the input is randomly mapped onto each of the $R$ sub-reservoirs, overwriting the cell state. The CA rule is then applied I times. The last generation of the CA forms the initial state for the next timestep, which is again overwritten according to the input mapping. The rest of the CA is vectorized and sent to the output nodes. \relax }{figure.caption.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Readout Layer}{4}{subsection.3.2}}
 \citation{nichele2017reservoir}
 \citation{hochreiter1997long}
 \citation{jaeger2012long}
 \citation{snyder2013computational}
 \citation{bye2016investigation}
-\@writefile{toc}{\contentsline {section}{\numberline {4}Benchmark Tests}{5}}
-\newlabel{Benchmarks}{{4}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Five Bit Memory Task}{5}}
-\newlabel{5_bit}{{4.1}{5}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run 17 of 32 of the 5-bit memory task.\relax }}{5}}
-\newlabel{table:5_bit}{{1}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Temporal Density and Temporal Parity}{5}}
+\citation{bye2016investigation}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Benchmark Tests}{5}{section.4}}
+\newlabel{Benchmarks}{{4}{5}{Benchmark Tests}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Five Bit Memory Task}{5}{subsection.4.1}}
+\newlabel{5_bit}{{4.1}{5}{Five Bit Memory Task}{subsection.4.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Temporal Density and Temporal Parity}{5}{subsection.4.2}}
+\citation{yilmaz2014reservoir}
 \citation{bye2016investigation}
 \citation{yilmaz2014reservoir}
 \citation{bye2016investigation}
+\citation{nichele2017reservoir}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Run 17 of 32 of the 5-bit memory task.\relax }}{6}{table.caption.5}}
+\newlabel{table:5_bit}{{1}{6}{Run 17 of 32 of the 5-bit memory task.\relax }{table.caption.5}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces System parameters used for the temporal density and temporal parity benchmark tasks.\relax }}{6}{table.caption.6}}
+\newlabel{table:temp_settings}{{2}{6}{System parameters used for the temporal density and temporal parity benchmark tasks.\relax }{table.caption.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{6}{section.5}}
+\newlabel{experiment}{{5}{6}{Experiments}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}5-Bit Memory Task}{6}{subsection.5.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Successful trials out of 100 runs of the 5-bit task for elementary CA rules.\relax }}{7}{table.caption.7}}
+\newlabel{table:elementary}{{3}{7}{Successful trials out of 100 runs of the 5-bit task for elementary CA rules.\relax }{table.caption.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.\relax }}{7}{table.caption.8}}
+\newlabel{table:time}{{4}{7}{Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.\relax }{table.caption.8}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Three State CA Reservoir}{7}{subsubsection.5.1.1}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Neighborhood Five CA Reservoir}{7}{subsubsection.5.1.2}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Population Density Rules}{7}{subsubsection.5.1.3}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Evolving Complex CA Rules}{7}{subsubsection.5.1.4}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.\relax }}{8}{figure.caption.9}}
+\newlabel{GA}{{5}{8}{Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.\relax }{figure.caption.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Temporal Density and Temporal Parity}{8}{subsection.5.2}}
+\citation{nichele2017reservoir}
 \citation{bye2016investigation}
-\citation{yilmaz2014reservoir}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Non-Uniform Reservoir}{9}{subsection.5.3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Elementary rule 48. (a) Evolved with only initial input the rule produces a system lacking interacting structures. (b) Used as a reservoir for the temporal density and temporal parity benchmarks the rule produces interacting structures and predicts the output without error.\relax }}{9}{figure.caption.10}}
+\newlabel{rule48}{{6}{9}{Elementary rule 48. (a) Evolved with only initial input the rule produces a system lacking interacting structures. (b) Used as a reservoir for the temporal density and temporal parity benchmarks the rule produces interacting structures and predicts the output without error.\relax }{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{9}{section.6}}
+\newlabel{results}{{6}{9}{Results}{section.6}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{9}{section.7}}
+\newlabel{discussion}{{7}{9}{Discussion}{section.7}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces The six best performing rules on the 5-bit memory task from each of the categories of complex CA rule investigated.\relax }}{10}{table.caption.11}}
+\newlabel{table:rules}{{5}{10}{The six best performing rules on the 5-bit memory task from each of the categories of complex CA rule investigated.\relax }{table.caption.11}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }}{11}{table.caption.12}}
+\newlabel{table:results}{{6}{11}{Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }{table.caption.12}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces The six best performing rules on the cpmbined temporal density/parity task from each CA rule category investigated.\relax }}{12}{table.caption.13}}
+\newlabel{table:rules_temp_dens}{{7}{12}{The six best performing rules on the cpmbined temporal density/parity task from each CA rule category investigated.\relax }{table.caption.13}{}}
 \citation{nichele2017reservoir}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces System parameters used for the temporal density and temporal parity benchmark tasks.\relax }}{6}}
-\newlabel{table:temp_settings}{{2}{6}}
-\@writefile{toc}{\contentsline {section}{\numberline {5}Experiments}{6}}
-\newlabel{experiment}{{5}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}5-Bit Memory Task}{6}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Successful trials out of 100 for elementary CA rules on the 5-bit task.\relax }}{6}}
-\newlabel{table:elementary}{{3}{6}}
-\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Time in seconds to train and test a reservoir using elementary rule 60 on the 5-bit task for different values of I and R. Times are averages of five test runs.\relax }}{6}}
-\newlabel{table:time}{{4}{6}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.1}Three State CA Reservoir}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.2}Neighborhood Five CA Reservoir}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.3}Population Density Rules}{7}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {5.1.4}Evolving Complex CA Rules}{7}}
-\citation{nichele2017reservoir}
-\citation{bye2016investigation}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Two rules produce a pair of children by splitting at a randomly chosen point and recombining. Each child receives a single random mutation.\relax }}{8}}
-\newlabel{GA}{{5}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Temporal Density and Temporal Parity}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Non-Uniform Reservoir}{8}}
-\citation{nichele2017reservoir}
-\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Elementary rule 48. (a) Evolved with only initial input the rule produces a system lacking interacting structures. (b) Used as a reservoir for the temporal density and temporal parity benchmarks the rule produces interacting structures and predicts the output without error.\relax }}{9}}
-\newlabel{rule48}{{6}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {6}Results}{9}}
-\newlabel{results}{{6}{9}}
-\@writefile{toc}{\contentsline {section}{\numberline {7}Discussion}{9}}
-\newlabel{discussion}{{7}{9}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}5-bit memory task}{9}}
-\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces The six best performing rules on the 5-bit memory task from each of the categories of complex CA rule investigated.\relax }}{10}}
-\newlabel{table:rules}{{5}{10}}
-\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Successful runs out of 100 on 5-bit task for elementary CA and five types of complex CA rule.\relax }}{11}}
-\newlabel{table:results}{{6}{11}}
-\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces The six best performing rules on the cpmbined temporal density/parity task from each CA rule category investigated.\relax }}{12}}
-\newlabel{table:rules_temp_dens}{{7}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}5-bit Memory Task}{13}{subsection.7.1}}
 \bibstyle{ieeetr}
 \bibdata{CAReservoir}
-\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A segment of the history of a reservoir using rule $S3_{1}$ on the 5-bit task with I=4, R=8, and $D_{L}$=30. Each four horizontal lines is one reservoir timestep. At the top of the image is the end of the distractor period after the input message 00001. The reservoir has fallen into a stable repeating pattern with a period of eight generations. After the cue signal is received the reservoir \csqQQ {34}remembers\csqQQ {34} the message that was encoded in the repeating pattern. After the next message 00010 is input the reservoir quickly falls into another stable pattern that encodes the new message.\relax }}{13}}
-\newlabel{repeat}{{7}{13}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Temporal Density and Temporal Parity}{13}}
-\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{13}}
-\newlabel{conclusion}{{8}{13}}
 \bibcite{jaeger2001echo}{{1}{}{{}}{{}}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces A segment of the history of a reservoir using rule $S3_{1}$ on the 5-bit task with I=4, R=8, and $D_{L}$=30. Each four horizontal lines is one reservoir timestep. At the top of the image is the end of the distractor period after the input message 00001. The reservoir has fallen into a stable repeating pattern with a period of eight generations. After the cue signal is received the reservoir \csqQQ {34}remembers\csqQQ {34} the message that was encoded in the repeating pattern. After the next message 00010 is input the reservoir quickly falls into another stable pattern that encodes the new message.\relax }}{14}{figure.caption.14}}
+\newlabel{repeat}{{7}{14}{A segment of the history of a reservoir using rule $S3_{1}$ on the 5-bit task with I=4, R=8, and $D_{L}$=30. Each four horizontal lines is one reservoir timestep. At the top of the image is the end of the distractor period after the input message 00001. The reservoir has fallen into a stable repeating pattern with a period of eight generations. After the cue signal is received the reservoir "remembers" the message that was encoded in the repeating pattern. After the next message 00010 is input the reservoir quickly falls into another stable pattern that encodes the new message.\relax }{figure.caption.14}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Temporal Density and Temporal Parity}{14}{subsection.7.2}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Conclusion}{14}{section.8}}
+\newlabel{conclusion}{{8}{14}{Conclusion}{section.8}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Successful runs out of 100 on the temporal density and temporal parity benchmarks as well as performing both tasks in tandem. \relax }}{14}{table.caption.15}}
+\newlabel{table:results_temp_dens}{{8}{14}{Successful runs out of 100 on the temporal density and temporal parity benchmarks as well as performing both tasks in tandem. \relax }{table.caption.15}{}}
 \bibcite{maass2002real}{{2}{}{{}}{{}}}
 \bibcite{lukovsevicius2007overview}{{3}{}{{}}{{}}}
 \bibcite{tanaka2018recent}{{4}{}{{}}{{}}}
@@ -110,12 +133,10 @@
 \bibcite{cook2004universality}{{9}{}{{}}{{}}}
 \bibcite{yilmaz2014reservoir}{{10}{}{{}}{{}}}
 \bibcite{margem2017experimental}{{11}{}{{}}{{}}}
-\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Successful runs out of 100 on the temporal density and temporal parity benchmarks as well as performing both tasks in tandem. \relax }}{14}}
-\newlabel{table:results_temp_dens}{{8}{14}}
 \bibcite{bye2016investigation}{{12}{}{{}}{{}}}
 \bibcite{nichele2017reservoir}{{13}{}{{}}{{}}}
-\bibcite{kleyko2017modality}{{14}{}{{}}{{}}}
-\bibcite{nichele2017deep}{{15}{}{{}}{{}}}
+\bibcite{nichele2017deep}{{14}{}{{}}{{}}}
+\bibcite{kleyko2017modality}{{15}{}{{}}{{}}}
 \bibcite{yilmaz2015connectionist}{{16}{}{{}}{{}}}
 \bibcite{hochreiter1997long}{{17}{}{{}}{{}}}
 \bibcite{jaeger2012long}{{18}{}{{}}{{}}}

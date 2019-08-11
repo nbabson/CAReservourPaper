@@ -60,12 +60,15 @@ E.~T. Bye, ``Investigation of elementary cellular automata for reservoir
 S.~Nichele and M.~S. Gundersen, ``Reservoir computing using non-uniform binary
   cellular automata,'' {\em arXiv preprint arXiv:1702.03812}, 2017.
 
-\bibitem{kleyko2017modality}
-
-
 \bibitem{nichele2017deep}
 S.~Nichele and A.~Molund, ``Deep reservoir computing using cellular automata,''
   {\em arXiv preprint arXiv:1703.02806}, 2017.
+
+\bibitem{kleyko2017modality}
+D.~Kleyko, S.~Khan, E.~Osipov, and S.-P. Yong, ``Modality classification of
+  medical images with distributed representations based on cellular automata
+  reservoir computing,'' in {\em 2017 IEEE 14th International Symposium on
+  Biomedical Imaging (ISBI 2017)}, pp.~1053--1056, IEEE, 2017.
 
 \bibitem{yilmaz2015connectionist}
 O.~Yilmaz, ``Connectionist-symbolic machine intelligence using cellular
