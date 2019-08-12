@@ -243,7 +243,7 @@ The use of elementary CA rules for RC was
    as well as classification of vowel sound clips.  
       Non-uniform elementary CA reservoirs were used to solve the 5-bit memory 
       task by Nichele and Gunderson in 2017 \cite{nichele2017reservoir}. Also 
-      in 2017 Nichele and Molund \cite{nichele2017deep}
+      in 2017, Nichele and Molund \cite{nichele2017deep}
 proposed a deep ReCA system using a 
       two-layered reservoir. Kleyko et al. \cite{kleyko2017modality} demonstrated a ReCA system able 
       classify medical images with accuracy on par with traditional methods 
@@ -811,45 +811,50 @@ The selected rules were then tested 100 times each with a range of the
 \small
 \begin{tabular}{|l|l|l|l|l|l|l|}
 \hline
-\textbf{Rule} & \textbf{(I,R,$L_{d}$)=(4,8,40)} & \textbf{(4,8,30)} & 
+\textbf{Rule} & \textbf{\boldmath$(I,R,L_{d})=(4,8,40)$} & \textbf{(4,8,30)} & 
 \textbf{(4,6,40)} & \textbf{(4,4,40)} & \textbf{(3,8,40)} & \textbf{(4,8,20)} 
 \\ \hline
-\multicolumn{7}{|l|}{\textbf{Elementary Rules (S,N) = (2,3)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Elementary Rules \boldmath$(S,N) = (2,3)$}} \\ 
+\hline
 60 & 9 & - & - & - & - & - \\ \hline
 90 & 0 & - & - & - & - & - \\ \hline
 102 & 9 & - & - & - & - & - \\ \hline
 153 & 6 & - & - & - & - & - \\ \hline
 195 & 6 & - & - & - & - & - \\ \hline
 210 & 6 & - & - & - & - & - \\ \hline
-\multicolumn{7}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Three State Rules \boldmath$(S,N) = (3,3)$}} \\ 
+\hline
 $S3_{1}$ & 100 & 100 & 100 & 0 & 25 & 10 \\ \hline
 $S3_{2}$ & 99 & 63 & 44 & 0 & 16 & 0 \\ \hline
 $S3_{3}$ & 100 & 92 & 89 & 2 & 0 & 6 \\ \hline
 $S3_{4}$ & 100 & 53 & 42 & 0 & 0 & 0 \\ \hline
 $S3_{5}$ & 100 & 85 & 93 & 2 & 2 & 0 \\ \hline
 $S3_{6}$ & 99 & 97 & 79 & 6 & 5 & 0 \\ \hline
-\multicolumn{7}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Neighborhood Five Rules \boldmath$(S,N) = (2,5)$}} 
+\\ \hline
 $N5_{1}$ & 97 & 83 & 61 & 0 & 0 & 0 \\ \hline
 $N5_{2}$ & 99 & 92 & 60 & 0 & 0 & 2 \\ \hline
 $N5_{3}$ & 99 & 98 & 69 & 0 & 88 & 2  \\ \hline
 $N5_{4}$ & 95 & 75 & 59 & 0 & 0 & 0 \\ \hline
 $N5_{5}$ & 95 & 87 & 26 & 0 & 0 & 0 \\ \hline
 $N5_{6}$ & 93 & 49 & 46 & 35 & 38 & 0  \\ \hline
-\multicolumn{7}{|l|}{\textbf{Density Rules (S,N) = (2,5)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Density Rules \boldmath$(S,N) = (2,5)$}} \\ \hline
 $D_{1}$ & 68 & 47 & 23 & 0 & 1 & 0  \\ \hline
 $D_{2}$ & 70 & 0 & 6 & 0 & 0 & 0 \\ \hline
 $D_{3}$ & 94 & 62 & 63 & 0 & 0 & 20 \\ \hline
 $D_{4}$ & 96 & 87 & 57 & 0 & 0 & 0 \\ \hline
 $D_{5}$ & 99 & 17 & 35 & 0 & 25 & 0 \\ \hline
 $D_{6}$ & 64 & 58 & 27 & 0 & 1 & 0 \\ \hline
-\multicolumn{7}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Four State Rules \boldmath$(S,N) = (4,3)$}} \\ 
+\hline
 $S4_{1}$ & 90 & 75 & 58 & 0 & 12  & 1 \\ \hline
 $S4_{2}$ & 90 & 84 & 56 & 0 & 9 & 0  \\ \hline
 $S4_{3}$ & 93 & 12 & 9 & 0 & 42 & 0 \\ \hline
 $S4_{4}$ & 95 & 35 & 21 & 0 & 0 & 0 \\ \hline
 $S4_{5}$ & 100 & 85 & 66 & 0 & 11 & 1 \\ \hline
 $S4_{6}$ & 87 & 20 & 2 & 0 & 0 & 0 \\ \hline
-\multicolumn{7}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
+\multicolumn{7}{|l|}{\textbf{Five State Rules \boldmath$(S,N) = (5,3)$}} \\ 
+\hline
 $S5_{1}$ & 95 & 50 & 42 & 8 & 15 & 0 \\ \hline
 $S5_{2}$ & 95 & 76 & 70 & 0 & 7 & 0 \\ \hline
 $S5_{3}$ & 98 & 74 & 51 & 0 & 24 & 0 \\ \hline
@@ -857,7 +862,7 @@ $S5_{4}$ & 80 & 1 & 9 & 0 & 2 & 0 \\ \hline
 $S5_{5}$ & 84 & 17 & 7 & 0 & 2 & 0 \\ \hline
 $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 \end{tabular}
-\caption{Successful runs out of 100 on 5-bit task for elementary CA and five 
+\caption{Successful runs out of 101 on 5-bit task for elementary CA and five 
     types of complex CA rule.}
 \label{table:results}
 \end{table*}
@@ -868,46 +873,52 @@ $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 \small
 \begin{tabular}{|p{2cm}|l|}
 \hline
-\multicolumn{2}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
-$S3_{1}$ &  43eaeb0ea68\\\hline
-$S3_{2}$ &  688e5c88a95\\ \hline
-$S3_{3}$ &  41d9be81e58\\ \hline
-$S3_{4}$ &   41f81666893\\ \hline
-$S3_{5}$ &   32d7be7347b\\ \hline
-$S3_{6}$ &   58db54c1a35\\ \hline
-\multicolumn{2}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
-$N5_{1}$ &   c040f\\ \hline
-$N5_{2}$ &   ff19e808\\ \hline
-$N5_{3}$ &   1d5d1f7d\\ \hline
-$N5_{4}$ &   73ebbf\\ \hline
-$N5_{5}$ &   fdfc1734\\ \hline
-$N5_{6}$ &   5d17350f\\ \hline
-\multicolumn{2}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
-$S4_{1}$ &   be2614f5ae52e0bceb0564a44a818504\\ \hline
-$S4_{2}$ &   dd8a5ec44a19cf885d83514504883000\\ \hline
-$S4_{3}$ &   5c9e5700e4a3423d37456595f56282c0\\ \hline
-$S4_{4}$ &   ccb14db2d37a6039165a6d45151f4010\\ \hline
-$S4_{5}$ &   17a2163c27560aaece871545a3208890\\ \hline
-$S4_{6}$ &   754f9cb2174a865262d53515310f1120\\
+\multicolumn{2}{|l|}{\textbf{Three State Rules \boldmath$(S,N) = (3,3)$}} \\ 
 \hline
-\multicolumn{2}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
+$S3_{1}$ &  \verb|43eaeb0ea68| \\\hline
+$S3_{2}$ &  \verb|688e5c88a95| \\ \hline
+$S3_{3}$ &  \verb|41d9be81e58| \\ \hline
+$S3_{4}$ &  \verb|41f81666893| \\ \hline
+$S3_{5}$ &  \verb|32d7be7347b| \\ \hline
+$S3_{6}$ &  \verb|58db54c1a35| \\ \hline
+\multicolumn{2}{|l|}{\textbf{Neighborhood Five Rules \boldmath$(S,N) = (2,5)$}} 
+\\ \hline
+$N5_{1}$ &   \verb|000c040f| \\ \hline
+$N5_{2}$ &   \verb|ff19e808| \\ \hline
+$N5_{3}$ &   \verb|1d5d1f7d| \\ \hline
+$N5_{4}$ &   \verb|0073ebbf| \\ \hline
+$N5_{5}$ &   \verb|fdfc1734| \\ \hline
+$N5_{6}$ &   \verb|5d17350f| \\ \hline
+\multicolumn{2}{|l|}{\textbf{Four State Rules \boldmath$(S,N) = (4,3)$}} \\ 
+\hline
+$S4_{1}$ &   \verb|be2614f5ae52e0bceb0564a44a818504| \\ \hline
+$S4_{2}$ &   \verb|dd8a5ec44a19cf885d83514504883000| \\ \hline
+$S4_{3}$ &   \verb|5c9e5700e4a3423d37456595f56282c0| \\ \hline
+$S4_{4}$ &   \verb|ccb14db2d37a6039165a6d45151f4010| \\ \hline
+$S4_{5}$ &   \verb|17a2163c27560aaece871545a3208890| \\ \hline
+$S4_{6}$ &   \verb|754f9cb2174a865262d53515310f1120| \\
+\hline
+\multicolumn{2}{|l|}{\textbf{Five State Rules \boldmath$(S,N) = (5,3)$}} \\ 
+\hline
  $S5_{1}$ &
-94edc5925c6beb872f42363fd4499effd7a06330439d82cd00064a42299880a06a6300f7   \\
+\verb|094edc5925c6beb872f42363fd4499effd7a06330439d82cd00064a42299880a06a6300f7|  
+\\
     \hline
     $S5_{2}$ &
-2e9ffae0f04c5a7902a36adca32e1aad8a22e5486eb074b92abcb17ef0e97f22ef3812276\\\hline
+\verb|2e9ffae0f04c5a7902a36adca32e1aad8a22e5486eb074b92abcb17ef0e97f22ef3812276| 
+\\\hline
 $S5_{3}$ & 
-4a09ab57fa452402cda01dd88d4aa08f24b83f51a5c6a638ba703cbfc0e6d485e7cb98b3f \\ 
-\hline
+\verb|4a09ab57fa452402cda01dd88d4aa08f24b83f51a5c6a638ba703cbfc0e6d485e7cb98b3f| 
+\\ \hline
 $S5_{4}$  &
-4572ec6156d9dab4f6db2cda2bb51a94877dd8d554d71deb9e25698ec08cc0a95ca9ef65 \\ 
-    \hline
+\verb|04572ec6156d9dab4f6db2cda2bb51a94877dd8d554d71deb9e25698ec08cc0a95ca9ef65| 
+\\ \hline
 $S5_{5}$ &
-2c2b5702c45a01eccf1b8f8e29f2c4199f2ea0fa00c9c4e67e2579d1c7f20a770182cca6c \\ 
-    \hline
+\verb|2c2b5702c45a01eccf1b8f8e29f2c4199f2ea0fa00c9c4e67e2579d1c7f20a770182cca6c| 
+\\ \hline
 $S5_{6}$ &
-3e5309a22ea94f23fd18365607c9c64e7201fa39ea33e4b7543332f59c6d43ed51317bbd5 \\ 
-    \hline
+\verb|3e5309a22ea94f23fd18365607c9c64e7201fa39ea33e4b7543332f59c6d43ed51317bbd5| 
+\\ \hline
 \end{tabular}
 \caption{The six best performing rules on the cpmbined temporal density/parity 
    task from each CA rule category investigated.}
@@ -1014,35 +1025,40 @@ rule could be discovered.
 \begin{tabular}{|l|l|l|l|}
 \hline
 \textbf{Rule} & \textbf{Combined} & \textbf{TD} & \textbf{TP} \\ \hline
-\multicolumn{4}{|l|}{\textbf{Elementary Rules (S,N) = (2,3)}} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Elementary Rules \boldmath$(S,N) = (2,3)$}} \\ 
+\hline
 27 & 50 & 98 & 51 \\ \hline
 38 & 57 & 72 & 72 \\ \hline
 39 & 45 & 94 & 48 \\ \hline
 48 & 67 & 83 & 76 \\ \hline
 83 & 51 & 94 & 56 \\ \hline
 174 & 57 & 98 & 58 \\ \hline
-   \multicolumn{4}{|l|}{\textbf{Three State Rules (S,N) = (3,3)}} \\ \hline
+   \multicolumn{4}{|l|}{\textbf{Three State Rules \boldmath$(S,N) = (3,3)$}} \\ 
+   \hline
 $S3_{1}$ & 50 & 58 & 82 \\ \hline
 $S3_{2}$ & 48 & 78 & 61 \\ \hline
 $S3_{3}$ & 46 & 61 & 73 \\ \hline
 $S3_{4}$ & 45 & 66 & 67 \\ \hline
 $S3_{5}$ & 43 & 81 & 53 \\ \hline
 $S3_{6}$ & 42 & 77 & 55 \\ \hline
-\multicolumn{4}{|l|}{\textbf{Neighborhood Five Rules (S,N) = (2,5)}} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Neighborhood Five Rules \boldmath$(S,N) = (2,5)$}} 
+\\ \hline
 $N5_{1}$ & 50 & 96 & 52 \\ \hline
 $N5_{2}$ & 52 & 77 & 69 \\ \hline
 $N5_{3}$ & 43 & 88 & 52 \\ \hline
 $N5_{4}$ & 42 & 72 & 57 \\ \hline
 $N5_{5}$ & 34 & 44 & 66 \\  \hline
 $N5_{6}$ & 30 & 40 & 75 \\ \hline
-\multicolumn{4}{|l|}{\textbf{Four State Rules (S,N) = (4,3)}} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Four State Rules \boldmath$(S,N) = (4,3)$}} \\ 
+\hline
 $S4_{1}$ & 34 & 65 & 55 \\ \hline
 $S4_{2}$ & 33 & 63 & 54 \\ \hline
 $S4_{3}$ & 29 & 56 & 56 \\ \hline
 $S4_{4}$ & 24 & 40 & 57 \\ \hline
 $S4_{5}$ & 24 & 39 & 60 \\ \hline
 $S4_{6}$ & 23 & 57 & 46 \\ \hline
-\multicolumn{4}{|l|}{\textbf{Five State Rules (S,N) = (5,3)}} \\ \hline
+\multicolumn{4}{|l|}{\textbf{Five State Rules \boldmath$(S,N) = (5,3)$}} \\ 
+\hline
 $S5_{1}$ & 29 & 56 & 45 \\ \hline
 $S5_{2}$ & 19 & 34 & 55 \\ \hline
 $S5_{3}$ & 16 & 36 & 52 \\ \hline
