@@ -482,14 +482,14 @@ In order to establish a baseline for the performance of the complex CA rules on
     time required to perform the linear regression.  Table 
     \ref{table:elementary} shows the results for the most promising elementary 
     rules at different combinations of $I$ and $R$.  Table \ref{table:time} 
-gives average times to train and test elementary CA reservoirs of different 
-   sizes. The results obtained here were somewhat worse for the smaller 
-   reservoir of $(I,R) = (4,8)$ than in previous work using a similar system 
-   design  
+gives average CPU times to train and test elementary CA reservoirs of different 
+   sizes, measured using the C standard library clock() function. The results 
+   obtained here were somewhat worse for the smaller reservoir of $(I,R) = 
+   (4,8)$ than in previous work using a similar system design  
    \cite{yilmaz2014reservoir}\cite{bye2016investigation}\cite{nichele2017reservoir}.  
    \par Finding more effective rules among complex CA enables the task to be 
    reliably completed with a smaller reservoir than is required by an 
-   elementary CA, thereby reducing the amount of computation required. All of 
+   elementary CA, thereby reducing the amount of computation required.  All of 
    the experiments described in this section were performed with $(I,R) = 
    (4,8)$ and $L_{d} = 40$.  Only rules that passed the 5-bit task on their 
    first run were saved for further testing.  Since none of the elementary CA 
@@ -519,13 +519,13 @@ gives average times to train and test elementary CA reservoirs of different
 \begin{tabular}{|l|l|}
 \hline
 \boldmath$(I,R)$ & \textbf{Time} \\ \hline
-(4,8) & 19 s \\ \hline
-(4,12) & 33 s \\ \hline
-(8,8) & 57 s \\ \hline
+(4,8) & 7.72 s \\ \hline
+(4,12) & 11.53 s \\ \hline
+(8,8) & 15.35 s \\ \hline
 \end{tabular}
-\caption{Time in seconds to train and test a reservoir using elementary rule 60 
-    on the 5-bit task for different values of I and R. Times are averages of 
-        five test runs.}
+\caption{CPU time in seconds to train and test a reservoir using elementary 
+   rule 60 on the 5-bit task for different values of I and R. Times are 
+      averages of five test runs.}
 \label{table:time}
 \end{table}
 
@@ -919,8 +919,10 @@ $S5_{5}$ &
 $S5_{6}$ &
 \verb|3e5309a22ea94f23fd18365607c9c64e7201fa39ea33e4b7543332f59c6d43ed51317bbd5| 
 \\ \hline
+\multicolumn{2}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
+\multicolumn{2}{|l|}{$S3_{1} + N5_{1}$} \\ \hline 
 \end{tabular}
-\caption{The six best performing rules on the cpmbined temporal density/parity 
+\caption{The six best performing rules on the combined temporal density/parity 
    task from each CA rule category investigated.}
 \label{table:rules_temp_dens}
 \end{table*}
@@ -981,12 +983,12 @@ remains an open question how common or rare they are.
 \centering
 \includegraphics[width=0.475\textwidth]{RepeatMessage.pdf}
 \caption{A segment of the history of a reservoir using rule $S3_{1}$ on the 
-   5-bit task with I=4, R=8, and $D_{L}$=30. Each four horizontal lines is one 
+   5-bit task with $I=4, R=6, and D_{L}=30$. Each four horizontal lines is one 
       reservoir timestep. At the top of the image is the end of the distractor 
-      period after the input message 00001. The reservoir has fallen into a 
+      period after the input message 00000. The reservoir has fallen into a 
       stable repeating pattern with a period of eight generations. After the 
       cue signal is received the reservoir "remembers" the message that was 
-      encoded in the repeating pattern. After the next message 00010 is input 
+      encoded in the repeating pattern. After the next message 00001 is input 
       the reservoir quickly falls into another stable pattern that encodes the 
       new message.} 
         
@@ -1018,7 +1020,6 @@ that given one successful rule, techniques for constructing a complementary
 rule could be discovered.
 
 \fi
-\section{Conclusion}\label{conclusion}
 
 
 \begin{table}[H] \centering
@@ -1066,6 +1067,7 @@ $S5_{4}$ & 16 & 38 & 38 \\ \hline
 $S5_{5}$ & 11 & 16 & 70 \\ \hline
 $S5_{6}$ & 9 & 15 & 48 \\ \hline
 \multicolumn{4}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
+$NU$ & 54 & 78 & 69 \\ \hline
 \end{tabular}
 \caption{Successful runs out of 100 on the temporal density and temporal parity 
    benchmarks as well as performing both tasks in tandem.
@@ -1073,6 +1075,7 @@ $S5_{6}$ & 9 & 15 & 48 \\ \hline
 \label{table:results_temp_dens}
 \end{table}
 
+\section{Conclusion}\label{conclusion}
 A reservoir computing with cellular automata (ReCA) framework has been 
 implemented which expands the field of ReCA research from the 256 elementary 
 cellular automata rules to investigate rules with larger neighborhoods and more 
@@ -1084,6 +1087,10 @@ were tested and shown to require half of the reservoir size as the most
 successful elementary rules to produce comparable results. This reduction in 
 reservoir size equals a saving in power and time when operating the reservoirs.  
 
+
+\section{Acknowledgment}
+This work was supported in part by C-BRIC, one of six centers in JUMP, a 
+Semiconductor Research Corporation (SRC) program sponsored by DARPA.
 
 \bibliographystyle{ieeetr}
 \bibliography{CAReservoir}

@@ -1,41 +1,41 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CAReservoir.aux
 The style file: ieeetr.bst
 Database file #1: CAReservoir.bib
 You've used 19 entries,
             1876 wiz_defined-function locations,
-            591 strings with 6715 characters,
-and the built_in function-call counts, 4284 in all, are:
-= -- 433
+            589 strings with 6773 characters,
+and the built_in function-call counts, 4308 in all, are:
+= -- 430
 > -- 149
 < -- 0
 + -- 59
 - -- 40
-* -- 283
-:= -- 634
+* -- 284
+:= -- 631
 add.period$ -- 20
 call.type$ -- 19
-change.case$ -- 20
+change.case$ -- 18
 chr.to.int$ -- 0
 cite$ -- 19
-duplicate$ -- 230
-empty$ -- 418
+duplicate$ -- 236
+empty$ -- 428
 format.name$ -- 40
-if$ -- 1041
+if$ -- 1050
 int.to.chr$ -- 0
 int.to.str$ -- 19
-missing$ -- 16
+missing$ -- 18
 newline$ -- 61
 num.names$ -- 19
-pop$ -- 53
+pop$ -- 58
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
 skip$ -- 142
 stack$ -- 0
 substring$ -- 235
-swap$ -- 85
+swap$ -- 87
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -43,4 +43,4 @@ type$ -- 0
 warning$ -- 0
 while$ -- 42
 width$ -- 21
-write$ -- 185
+write$ -- 182

@@ -13,8 +13,9 @@ W.~Maass, T.~Natschl{\"a}ger, and H.~Markram, ``Real-time computing without
   2002.
 
 \bibitem{lukovsevicius2007overview}
-M.~Luko{\v{s}}evicius and H.~Jaeger, ``Overview of reservoir recipes,'' tech.
-  rep., School Eng. Sci., Jacobs Univ, Bremen, Germany, 2007.
+M.~Luko{\v{s}}evicius and H.~Jaeger, ``Overview of reservoir recipes,'' {\em
+  Bremen, Germany: School of Engineering Science, Jacobs University Technical
+  Report}, 2007.
 
 \bibitem{tanaka2018recent}
 G.~Tanaka, T.~Yamane, J.~B. H{\'e}roux, R.~Nakane, N.~Kanazawa, S.~Takeda,
@@ -37,7 +38,7 @@ S.~Wolfram, {\em A new kind of science}, vol.~5.
 
 \bibitem{wuensche1999classifying}
 A.~Wuensche, ``Classifying cellular automata automatically: Finding gliders,
-  filtering, and relating space-time patterns, attractor basins, and the z
+  filtering, and relating space-time patterns, attractor basins, and the {Z}
   parameter,'' {\em Complexity}, vol.~4, no.~3, pp.~47--66, 1999.
 
 \bibitem{cook2004universality}
@@ -54,7 +55,8 @@ M.~Margem and O.~Yilmaz, ``An experimental study on cellular automata reservoir
 
 \bibitem{bye2016investigation}
 E.~T. Bye, ``Investigation of elementary cellular automata for reservoir
-  computing,'' Master's thesis, NTNU, 2016.
+  computing,'' Master's thesis, Norwegian University of Science and Technology,
+  2016.
 
 \bibitem{nichele2017reservoir}
 S.~Nichele and M.~S. Gundersen, ``Reservoir computing using non-uniform binary
@@ -81,7 +83,8 @@ S.~Hochreiter and J.~Schmidhuber, ``Long short-term memory,'' {\em Neural
 
 \bibitem{jaeger2012long}
 H.~Jaeger, ``Long short-term memory in echo state networks: Details of a
-  simulation study,'' tech. rep., Jacobs University Bremen, 2012.
+  simulation study,'' {\em Bremen, Germany: School of Engineering Science,
+  Jacobs University Technical Report}, 2012.
 
 \bibitem{snyder2013computational}
 D.~Snyder, A.~Goudarzi, and C.~Teuscher, ``Computational capabilities of random
