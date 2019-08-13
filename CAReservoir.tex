@@ -245,9 +245,12 @@ The use of elementary CA rules for RC was
       task by Nichele and Gunderson in 2017 \cite{nichele2017reservoir}. Also 
       in 2017, Nichele and Molund \cite{nichele2017deep}
 proposed a deep ReCA system using a 
-      two-layered reservoir. Kleyko et al. \cite{kleyko2017modality} demonstrated a ReCA system able 
-      classify medical images with accuracy on par with traditional methods 
-      .
+      two-layered reservoir. Kleyko et al. \cite{kleyko2017modality} 
+demonstrated a ReCA system able classify medical images with accuracy on par 
+    with traditional methods McDonald \cite{mcdonald2017reservoir} used pairs 
+    of elementary rules to implement a ReCA framework in which the reservoir 
+    requirements of hyperdimensional projection and short term memory are 
+    explicitly separated into alternating modes of reservoir evolution.
  
 
 
@@ -327,7 +330,7 @@ inferior results and is not used in this paper.
 The number of readout nodes the ReCA system requires is determined by the task 
 being  performed. Both of the benchmark tasks used in this paper require the 
 network to predict binary outputs at each timestep. One readout node is needed 
-for each output bit/ \par The weight from identical locations of the CA created 
+for each output bit. \par The weight from identical locations of the CA created 
    at each timestep are treated equally, and used to predict output by 
       reflecting the system's response to inputs. The output weights from the 
       $R \cdot L_{n} \cdot I$ ReCA cells to the readout nodes are set using a 
@@ -524,8 +527,8 @@ gives average CPU times to train and test elementary CA reservoirs of different
 (8,8) & 15.35 s \\ \hline
 \end{tabular}
 \caption{CPU time in seconds to train and test a reservoir using elementary 
-   rule 60 on the 5-bit task for different values of I and R. Times are 
-      averages of five test runs.}
+    rule 60 on the 5-bit task for different values of $I$ and $R$. Times are 
+        averages of five test runs.}
 \label{table:time}
 \end{table}
 
@@ -689,12 +692,12 @@ A non-uniform CA is one in which the cells don't all implement the same rule.
 
 \section{Results}\label{results}
 %\subsection{Elementary CA Results}
-From each of the types of rules that were investigated, the six most successful 
-   rules at performing the 5-bit benchmark task using reservoirs with 
-   parameters $(I, R, L_{d}) = (4, 8, 40)$ were selected for testing with 
-   smaller  reservoirs. Due to the length of the complex rules, these were 
-   given labels.  The best performing rules and their labels are shown in Table
-\ref{table:rules}. \par 
+From each category rules that were investigated, the six most successful rules 
+    at performing the 5-bit benchmark task using reservoirs with parameters 
+    $(I, R, L_{d}) = (4, 8, 40)$ were selected for testing with smaller  
+    reservoirs. Due to the length of the complex rules, these were given 
+    labels.  The best performing rules and their labels are shown in Table
+\ref{table:rules}. 
 
 
 \begin{table*}[!htbp] \centering
@@ -798,12 +801,13 @@ $S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
 \end{table*}
 
 
-The selected rules were then tested 100 times each with a range of the 
-   reservoir parameters $I$, $R$, and $L_{d}$.  The results are shown in Table 
-   \ref{table:results}. \par The labels for the most successful rules at the 
-   temporal density and temporal parity tasks are in Table 
-   \ref{table:rules_temp_dens}, and the results are found in Table 
-   \ref{table:results_temp_dens}.
+The selected rules were then further tested with a range of the reservoir 
+    parameters $I$, $R$, and $L_{d}$.  The results are shown in Table 
+    \ref{table:results}. \par For the temporal density and temporal parity 
+    tasks all of the rules were tested using the system parameters seen in 
+    Table \ref{table:temp_settings}. The labels for the most successful rules 
+    on each category are in Table \ref{table:rules_temp_dens}, and the results 
+    are found in Table \ref{table:results_temp_dens}.
 
 
 
@@ -919,8 +923,9 @@ $S5_{5}$ &
 $S5_{6}$ &
 \verb|3e5309a22ea94f23fd18365607c9c64e7201fa39ea33e4b7543332f59c6d43ed51317bbd5| 
 \\ \hline
-\multicolumn{2}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
-\multicolumn{2}{|l|}{$S3_{1} + N5_{1}$} \\ \hline 
+%\multicolumn{2}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
+%\multicolumn{2}{|l|}{$S3_{1} + N5_{1}$} \\ \hline 
+
 \end{tabular}
 \caption{The six best performing rules on the combined temporal density/parity 
    task from each CA rule category investigated.}
@@ -933,10 +938,12 @@ The qualities that cause a CA rule to produce a good reservoir were not the
    same for the two benchmarks investigated, and none of the rules that worked 
    well for one benchmark showed any success at the other. The increased 
    information that can be held by a complex rule proved helpful for the 5-bit 
-   memory task. As can be seen in Figure \ref{repeat}, a good reservoir for 
-   this task falls into one of number of possible  periodic attractors after 
-   each message is input. The particular basin of attraction encodes the 
-   message, which is output when the cue signal is given. 
+   memory task. As can be seen in Figure \ref{repeat}, the most successful 
+   reservoir for this task falls into one of number of possible  periodic 
+   attractors after each message is input. The particular basin of attraction 
+   encodes the message, which is output when the cue signal is given. In 
+   contrast, complex rules were not found to outperform the best elementary 
+   rules at the temporal density and temporal parity tasks.
    
    \subsection{5-bit Memory Task}
 While the best performing elementary rules required a reservoir of size $I \cdot R 
@@ -996,6 +1003,7 @@ remains an open question how common or rare they are.
 \end{figure}
 
 \subsection{Temporal Density and Temporal Parity}
+For this combiend task
 
 \iffalse
 
@@ -1067,7 +1075,7 @@ $S5_{4}$ & 16 & 38 & 38 \\ \hline
 $S5_{5}$ & 11 & 16 & 70 \\ \hline
 $S5_{6}$ & 9 & 15 & 48 \\ \hline
 \multicolumn{4}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
-$NU$ & 54 & 78 & 69 \\ \hline
+$S3_1 +  N5_1$ & 54 & 78 & 69 \\ \hline
 \end{tabular}
 \caption{Successful runs out of 100 on the temporal density and temporal parity 
    benchmarks as well as performing both tasks in tandem.
