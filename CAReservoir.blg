@@ -1,48 +1,46 @@
-This is BibTeX, Version 0.99d (TeX Live 2017/Debian)
-Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+This is BibTeX, Version 0.99d (TeX Live 2015/Debian)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: CAReservoir.aux
 The style file: ieeetr.bst
 Database file #1: CAReservoir.bib
-Warning--I didn't find a database entry for "mcdonald2017reservoir"
-You've used 19 entries,
+You've used 22 entries,
             1876 wiz_defined-function locations,
-            590 strings with 6794 characters,
-and the built_in function-call counts, 4308 in all, are:
-= -- 430
-> -- 149
+            604 strings with 7426 characters,
+and the built_in function-call counts, 5047 in all, are:
+= -- 497
+> -- 178
 < -- 0
-+ -- 59
-- -- 40
-* -- 284
-:= -- 631
-add.period$ -- 20
-call.type$ -- 19
-change.case$ -- 18
++ -- 70
+- -- 48
+* -- 334
+:= -- 734
+add.period$ -- 23
+call.type$ -- 22
+change.case$ -- 21
 chr.to.int$ -- 0
-cite$ -- 19
-duplicate$ -- 236
-empty$ -- 428
-format.name$ -- 40
-if$ -- 1050
+cite$ -- 22
+duplicate$ -- 280
+empty$ -- 509
+format.name$ -- 48
+if$ -- 1230
 int.to.chr$ -- 0
-int.to.str$ -- 19
-missing$ -- 18
-newline$ -- 61
-num.names$ -- 19
-pop$ -- 58
+int.to.str$ -- 22
+missing$ -- 21
+newline$ -- 70
+num.names$ -- 22
+pop$ -- 74
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 142
+skip$ -- 164
 stack$ -- 0
-substring$ -- 235
-swap$ -- 87
+substring$ -- 275
+swap$ -- 100
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 42
-width$ -- 21
-write$ -- 182
-(There was 1 warning)
+while$ -- 48
+width$ -- 24
+write$ -- 210

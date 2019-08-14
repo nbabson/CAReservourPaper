@@ -32,6 +32,8 @@
 %}
 
 %\captionsetup{font=footnotesize}
+
+
 \begin{document}
 
 \begin{frontmatter}
@@ -58,29 +60,26 @@ Reservoir Computing (RC) is a computational framework in which a dynamical syste
           high-dimensional space, and a trainable \textit{readout layer} 
           creates the output signal by extracting salient features from the 
           reservoir.
-A suitable reservoir  must possess the property of 
-\textit{fading memory} in order to process inputs. The foundations of RC are the 
-independently proposed Echo State Networks and Liquid State Machines, both of 
-which use a randomly connected artificial recurrent neural network as the 
-reservoir. Since the inception of the field, researchers have looked for ways 
-to optimize the selection of reservoir construction parameters. Hierarchical 
-reservoirs reimpose a degree of topological structure on reservoir connectivity 
-by breaking the monolithic reservoir into loosely connected sub-reservoirs. The 
-realization that dynamical systems besides neural networks could act as 
-reservoirs has caused increasing interest in alternative reservoir substrates 
-using biological, chemical, and physical dynamical systems. Several researchers 
+ Several researchers 
 have experimented with using the dynamical behavior of elementary Cellular 
-Automaton (CA) rules as reservoirs. The research described in this paper expands 
-this approach to CA with larger neighborhoods and/or more 
-states, which are termed complex, as opposed to the elementary rules. Results 
-show that some of these non-elementary cellular automaton rules outperform the 
-best elementary rules at the standard benchmark 5-bit memory task, requiring 
-half the reservoir size to produce comparable results.
+Automaton (CA) rules as reservoirs. CA reservoirs have the potential to reduce 
+the size, weight, and power (SWaP) required to perform complex computation by 
+orders of magnitude compared with traditional RC implementations. The research 
+described in this paper expands this approach to CA rules with larger 
+neighborhoods and/or more states, which are termed complex, as opposed to the 
+elementary rules.  Results show that some of these non-elementary cellular 
+automaton rules outperform the best elementary rules at the standard benchmark 
+5-bit memory task, requiring half the reservoir size to produce comparable 
+results, resulting in . This research is relevant to the design of  simple, 
+   small, and low-power systems capable of performing complex computation.
+
 \end{abstract}
 
+
 \begin{keyword}
-reservoir computing \sep
-cellular automata
+reservoir computing (RC) \sep
+cellular automata (CA) \sep
+cellular automata based reservoirs (ReCA)
 
 \end{keyword}
 
@@ -88,18 +87,36 @@ cellular automata
 
 
 \begin{multicols}{2}
+
 \section{Introduction}\label{introduction}
-The field of \textit{Cellular Automaton based Reservoir Computing} (ReCA) has 
-focused so far on the 256 elementary one-dimensional Cellular Automaton (CA) 
-    rules which have two states and a neighborhood of size three. This work 
-    expands ReCA to include one dimensional CA rules with larger neighborhoods 
-    and more states.
+ The foundations of \textit{Reservoir Computing} (RC) are the 
+independently proposed Echo State Networks and Liquid State Machines, both of 
+which use a randomly connected artificial recurrent neural network as the 
+reservoir. A suitable reservoir  must possess the property of \textit{fading 
+   memory} in order to process inputs. Since the inception of the field,  
+   researchers have looked for ways to optimize the selection of reservoir 
+      construction parameters. Hierarchical reservoirs reimpose a degree of 
+      topological structure on reservoir connectivity by breaking the 
+      monolithic reservoir into loosely connected sub-reservoirs. The 
+      realization that dynamical systems besides neural networks could act as 
+      reservoirs has caused increasing interest in alternative reservoir 
+      substrates using biological, chemical, and physical dynamical systems.  
+      \par
+The field of \textit{Cellular Automaton based Reservoir Computing} (ReCA) uses 
+\textit{Cellular Automaton} (CA) rules as the dynamical reservoir. ReCA has 
+focused so far on the 256 elementary one-dimensional CA rules which have two 
+states and a neighborhood of size three.  This work expands ReCA to include one 
+dimensional CA rules with larger neighborhoods and more states.
     These rules that are not part of the set of one-dimensional elementary 
-    rules will be referred to as \textit{complex} CA rules.  CA rule 
-    performance is tested on the 5-bit memory task that is standard in ReCA 
-    research. More expressive rules that outperform any of the elementary rules 
-    require a smaller CA reservoir, reducing the amount of computation required 
-    to train the output layer and to operate the reservoir.\par
+    rules will be referred to as \textit{complex} CA rules. \par CA rule 
+    performance was tested on the 5-bit memory task that is standard in ReCA 
+    research. More expressive rules were found that outperform any of the 
+    elementary rules, requiring a smaller CA reservoir. This reduces the amount 
+    of computation required to train the output layer and to operate the 
+    reservoir. \par These results were found to be task-dependent. Complex CA 
+    rules were not found that could solve the temporal density and temporal 
+    parity benchmark tasks with greater accuracy than the most successful 
+    elementary rules. \par
     \iffalse
     The remainder of the paper is organized as follows. Section 2 presents 
     background information on Reservoir Computing and Cellular Automata.  
@@ -109,29 +126,29 @@ focused so far on the 256 elementary one-dimensional Cellular Automaton (CA)
     provide results and discussion. Future work is discussed in Section 8, and 
     Section 9 concludes the paper. 
     \fi
-    \section{Background}\label{background}
+%    \section{Background}\label{background}
 \subsection{Reservoir Computing}
-\textit{Reservoir Computing} (RC) is a relatively new approach to machine learning in 
-which  the inner dynamics of a recurrently connected system, the 
-\textit{reservoir}, are harnessed to cast temporal inputs into a 
-high-dimensional space, enhancing their separability.  A \textit{readout layer} 
-generates the output from a linear combination of the states of reservoir 
-nodes. Figure \ref{reservoir_layout} shows the components of a reservoir 
-computing system. The idea of reservoirs as a new type of architecture for 
-\textit{Recurrent Neural Networks} (RNNs) was proposed independently in 2001, 
-   under the name \textit{Echo State Networks} (ESNs) \cite{jaeger2001echo}, 
-   and in 2002 as \textit{Liquid State Machines} (LSMs) \cite{maass2002real}.  
-      The recurrent connections of a RNN cycle information back to the internal 
-      nodes, allowing them to possess \textit{state}, or memory, which makes 
-      them suitable for sequential tasks such as speech recognition. Unlike 
-      traditional neural networks, the internal weights between the nodes of 
-      the reservoir used in RC are not trained.  Only the weights to the 
-      output, or readout, layer are trained, providing a substantial reduction 
-      in the amount of computation required for learning. \par  A reservoir 
-      capable of representing the inputs in its internal dynamics can perform 
-      multiple computation tasks, even simultaneous tasks, by training 
-      different readout layers to extract the output. In both the original ESN 
-      and LSM reservoir design
+ RC is a relatively new approach to machine learning in which  the inner 
+    dynamics of a recurrently connected system, the \textit{reservoir}, are 
+    harnessed to cast temporal inputs into a high-dimensional space, enhancing 
+    their separability.  A \textit{readout layer} generates the output from a 
+    linear combination of the states of reservoir nodes.  Figure 
+    \ref{reservoir_layout} shows the components of a reservoir computing 
+    system.  The idea of reservoirs as a new type of architecture for 
+    \textit{Recurrent Neural Networks} (RNNs) was proposed independently in 
+    2001, under the name \textit{Echo State Networks} (ESNs) 
+    \cite{jaeger2001echo}, and in 2002 as \textit{Liquid State Machines} (LSMs) 
+    \cite{maass2002real}.  The recurrent connections of a RNN cycle information 
+    back to the internal nodes, allowing them to possess \textit{state}, or 
+    memory, which makes them suitable for sequential tasks such as speech 
+    recognition. Unlike traditional neural networks, the internal weights 
+    between the nodes of the reservoir used in RC are not trained.  Only the 
+    weights to the output, or readout, layer are trained, providing a 
+    substantial reduction in the amount of computation required for learning.  
+    \par  A reservoir capable of representing the inputs in its internal 
+    dynamics can perform multiple computation tasks, even simultaneous tasks, 
+             by training different readout layers to extract the output. In 
+                both the original ESN and LSM reservoir design
 nodes are connected at random, but as reservoirs found a growing number of 
 successful applications, researchers examined alternate construction techniques 
 \cite{lukovsevicius2007overview} and showed that many types of system besides 
@@ -232,8 +249,8 @@ stable structures.  In Class IV rules "edge of chaos" behavior can develop,
 
 \subsection{Previous Work}
 
-The use of elementary CA rules for RC was 
-   first proposed by Yilmaz in 2014 \cite{yilmaz2014reservoir}
+The use of elementary CA rules for RC was first proposed by Yilmaz in 2014 
+   \cite{yilmaz2014reservoir}
 , showing that the framework was capable of 
    solving memory tasks using orders of magnitude less computation than an ESN.
    The name ReCA was introduced in 2016 by Margem 
@@ -250,7 +267,11 @@ demonstrated a ReCA system able classify medical images with accuracy on par
     with traditional methods McDonald \cite{mcdonald2017reservoir} used pairs 
     of elementary rules to implement a ReCA framework in which the reservoir 
     requirements of hyperdimensional projection and short term memory are 
-    explicitly separated into alternating modes of reservoir evolution.
+    explicitly separated into alternating modes of reservoir evolution.  
+    Mor{\'a}n et al. \cite{moran2018reservoir}
+demonstrated a hardware implementation of a ReCA 
+    system that performed pattern recognition on the handwritten numbers of the 
+    MNIST dataset.
  
 
 
@@ -486,7 +507,8 @@ In order to establish a baseline for the performance of the complex CA rules on
     \ref{table:elementary} shows the results for the most promising elementary 
     rules at different combinations of $I$ and $R$.  Table \ref{table:time} 
 gives average CPU times to train and test elementary CA reservoirs of different 
-   sizes, measured using the C standard library clock() function. The results 
+   sizes, measured using the C standard library clock() function. The CPU time 
+   can be seen to scale linearly with the size of the reservoir. The results 
    obtained here were somewhat worse for the smaller reservoir of $(I,R) = 
    (4,8)$ than in previous work using a similar system design  
    \cite{yilmaz2014reservoir}\cite{bye2016investigation}\cite{nichele2017reservoir}.  
@@ -580,38 +602,38 @@ Complex CA with more than three states have a vast rule space. For $(S,N) =
    This is because the vast majority of these rules are class III, too chaotic 
    to allow stable structures too persist and therefore unable to support 
    computation.\par
-In order to reduce the chaoticity, a \textit{Genetic Algorithm} (GA) was used 
-to evolve rules more likely to have class III behavior. The very chaotic rules 
-found by randomly generating a CA with $S > 3$ tend to have small contiguous 
-regions in their two dimensional representation of development in time, 
-        resembling television static.  The GA fitness function selects for 
-           rules more likely to have class IV behavior by maximizing the size 
-           of these contiguous regions, which allows for the possibility of 
-           developing stable localized structures. \par The GA algorithm starts 
-           with a randomly generated population of 32 rules. At each epoch the 
-           rule is applied for 200 iterations to an initial random 
-           configuration of 400 cells.  The fitness of each individual is 
-           evaluated using a "smallest-largest" rule.  The largest contiguous 
-           region of cells belonging to the same state, adjacent horizontally 
-           or vertically, is identified for each state $s \in S$. The fitness 
-           assigned to the rule is equal to the size of the smallest of these 
-           largest connected areas. Using the area for the state whose 
-           contiguous region is smallest ensures that all the states contribute 
-           to the dynamic behavior of the CA rule and prevents the tendency for 
-           the GA to evolve toward a uniform class I behavior.  \par The least 
-           fit half of the population are discarded and replaced by the next 
-           generation of offspring.  The fit half of the population forms eight 
-           pairs that each produce two new rules by separating at a randomly 
-           chosen location and recombining, as seen in Fig. \ref{GA}. Each new 
-           rule receives a single random mutation changing one digit of its 
-           rule.  Evolution continues for 200 generations or until the fitness 
-           of the best individual equals or exceeds 200, which rarely takes 
-           more than 150 generations.  \par Both the mating and the mutation 
-           portion of the algorithm were found to be necessary, with either one 
-           removed evolution happens much more slowly if at all. The fitness 
-           goal of at least 200, for both four state and five state rules, was 
-           chosen empirically as the point where the evolved rules were making 
-           the least incorrect predictions when given the 5-bit task. \par
+In order to reduce the chaoticity, a \textit{Genetic Algorithm} (GA) 
+\cite{mitchell1996evolving} was used to evolve rules more likely to have class 
+III behavior. The very chaotic rules found by randomly generating a CA with $S 
+> 3$ tend to have small contiguous regions in their two dimensional space-time 
+representation, resembling television static.  The GA fitness function selects 
+for rules more likely to have class IV behavior by maximizing the size of these 
+   contiguous regions, which allows for the possibility of developing stable 
+      localized structures. \par The GA algorithm starts with a randomly 
+      generated population of 32 rules. At each epoch the rule is applied for 
+      200 iterations to an initial random configuration of 400 cells.  The 
+      fitness of each individual is evaluated using a "smallest-largest" rule.  
+      The largest contiguous region of cells belonging to the same state, 
+          adjacent horizontally or vertically, is identified for each state $s 
+             \in S$. The fitness assigned to the rule is equal to the size of 
+             the smallest of these largest connected areas. Using the area for 
+             the state whose contiguous region is smallest ensures that all the 
+             states contribute to the dynamic behavior of the CA rule and 
+             prevents the tendency for the GA to evolve toward a uniform class 
+             I behavior.  \par The least fit half of the population are 
+             discarded and replaced by the next generation of offspring.  The 
+             fit half of the population forms eight pairs that each produce two 
+             new rules by separating at a randomly chosen location and 
+             recombining, as seen in Fig.  \ref{GA}. Each new rule receives a 
+             single random mutation changing one digit of its rule.  Evolution 
+             continues for 200 generations or until the fitness of the best 
+             individual equals or exceeds 200, which rarely takes more than 150 
+             generations.  \par Both the mating and the mutation portion of the 
+             algorithm were found to be necessary, with either one removed 
+             evolution happens much more slowly if at all. The fitness goal of 
+             at least 200, for both four state and five state rules, was chosen 
+             empirically as the point where the evolved rules were making the 
+             least incorrect predictions when given the 5-bit task.  \par
      The evolved four state rules passed the benchmark 2.5\% of the time and 
      the five state rules passed 1.1\%. Many more missed less than 10 
      predictions, which was not observed to happen with unevolved rules.
@@ -762,37 +784,40 @@ $S4_{6}$ &   \verb|73838653ccc875124f5b4658516662c3|\\
 \hline
 \multicolumn{2}{|l|}{\textbf{Five State Rules \boldmath$(S,N) = (5,3)$}} \\ 
 \hline
- $S5_{1}$ & %  {\begin{tabular}[c]{@{}l@{}}
+ $S5_{1}$ &   {\begin{tabular}[c]{@{}l@{}}
 %1301443104221322240300230403103441002312212144030011314304232243323124040221\\ 
     %    4204330141121024304340424234410332033014231100030\ \end{tabular}} \\ 
-    \verb|1871abdbbb1f751c5649ce2208abe0525e5e98543e527293d8fe32c1cbec8f9493da900dc| 
-    \\
+    \verb|1871abdbbb1f751c5649ce2208abe0525e5e9| \\
+    \verb|8543e527293d8fe32c1cbec8f9493da900dc| \end{tabular}} \\
     \hline
-    $S5_{2}$ & %{\begin{tabular}[c]{@{}l@{}}
-%1203233110034020231023234244243332104432100104440412333033104430212221401123
-%    4302014024200311301004200203233323023204121113342\ \end{tabular}} \\ ff 
-\verb|159b7bf409f219a835b7bbe69791bfa94432d737117268fff0b99044ac2ccbb513ca91456| 
-\\
+    $S5_{2}$ & {\begin{tabular}[c]{@{}l@{}}
+%1203233110034020231023234244243332104432100104440412333033104430212221401123\\
+ %   4302014024200311301004200203233323023204121113342\ \end{tabular}} \\       
+ \verb|159b7bf409f219a835b7bbe69791bfa94432d| \\
+ \verb|737117268fff0b99044ac2ccbb513ca91456| \end{tabular}} \\
 \hline
-$S5_{3}$ & %{\begin{tabular}[c]{@{}l@{}}
+$S5_{3}$ & {\begin{tabular}[c]{@{}l@{}}
 %1400243030402041101342340202043101140340113112143144030220022044324410141400
 %    1144040240413332111020130224434041240241032000030\ \end{tabular}}
-\verb|1b4cca207dfd49a79d60a0f0a36fda79a911db434135e22cd79e6e04c69f086c7aab1712a|
+\verb|1b4cca207dfd49a79d60a0f0a36fda79a911d| \\ 
+\verb|b434135e22cd79e6e04c69f086c7aab1712a| \end{tabular}}
 \\ \hline
-$S5_{4}$  & %{\begin{tabular}[c]{@{}l@{}}
+$S5_{4}$  & {\begin{tabular}[c]{@{}l@{}}
 %1421333424244211231320221124334213323140314040030314242321304343413222403434
 %    1443102441033314110213410404041140002414124400043\ \end{tabular}}
-\verb|1ca6bafcb8cc14e379373cb798461269c4d81258cc28720c74f12dd39b8e48d5863e176a9|
-\\ \hline
-$S5_{5}$ & %{\begin{tabular}[c]{@{}l@{}}
+\verb|1ca6bafcb8cc14e379373cb798461269c4d81| \\
+\verb|258cc28720c74f12dd39b8e48d5863e176a9| \end{tabular}} \\ \hline
+$S5_{5}$ & {\begin{tabular}[c]{@{}l@{}}
 %3420313303232322101243344342044403031133414314300043124201312322441210243102
 %    0012332434010222311113213123044310440203144333200\ \end{tabular}} 
-\verb|3ac662317b4445a8e63b425645228e27bfc4a0a388497b03a0adede89e87685b12977008f|
+\verb|3ac662317b4445a8e63b425645228e27bfc4a| \\
+\verb|0a388497b03a0adede89e87685b12977008f| \end{tabular}}
 \\ \hline
-$S5_{6}$ & %{\begin{tabular}[c]{@{}l@{}}
+$S5_{6}$ & {\begin{tabular}[c]{@{}l@{}}
 %0133104314321000400141320442032240002333312104040024401313033202213203300242
 %    3234304312240443431412304141033301200200241442030\ \end{tabular}} 
-\verb|053b86edcbce84369a1eeb58079725743b506f228e9459e488139f0763489461f3847c82a|
+\verb|053b86edcbce84369a1eeb58079725743b506| \\
+\verb|f228e9459e488139f0763489461f3847c82a| \end{tabular}}
 \\ \hline
 \end{tabular}
 \caption{The six best performing rules on the 5-bit memory task from each of 
@@ -866,7 +891,7 @@ $S5_{4}$ & 80 & 1 & 9 & 0 & 2 & 0 \\ \hline
 $S5_{5}$ & 84 & 17 & 7 & 0 & 2 & 0 \\ \hline
 $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 \end{tabular}
-\caption{Successful runs out of 101 on 5-bit task for elementary CA and five 
+\caption{Successful runs out of 100 on 5-bit task for elementary CA and five 
     types of complex CA rule.}
 \label{table:results}
 \end{table*}
@@ -874,7 +899,7 @@ $S5_{6}$ & 77 & 13 & 6 & 0 & 5 & 0 \\ \hline
 
 
 \begin{table*}[!htbp] \centering
-\small
+%\small
 \begin{tabular}{|p{2cm}|l|}
 \hline
 \multicolumn{2}{|l|}{\textbf{Three State Rules \boldmath$(S,N) = (3,3)$}} \\ 
@@ -904,29 +929,28 @@ $S4_{6}$ &   \verb|754f9cb2174a865262d53515310f1120| \\
 \hline
 \multicolumn{2}{|l|}{\textbf{Five State Rules \boldmath$(S,N) = (5,3)$}} \\ 
 \hline
- $S5_{1}$ &
-\verb|094edc5925c6beb872f42363fd4499effd7a06330439d82cd00064a42299880a06a6300f7|  
-\\
+ $S5_{1}$ & { \begin{tabular}[c]{@{}l@{}}
+\verb|094edc5925c6beb872f42363fd4499effd7a0| \\
+\verb|6330439d82cd00064a42299880a06a6300f7| \end{tabular}}  \\
     \hline
-    $S5_{2}$ &
-\verb|2e9ffae0f04c5a7902a36adca32e1aad8a22e5486eb074b92abcb17ef0e97f22ef3812276| 
-\\\hline
-$S5_{3}$ & 
-\verb|4a09ab57fa452402cda01dd88d4aa08f24b83f51a5c6a638ba703cbfc0e6d485e7cb98b3f| 
-\\ \hline
-$S5_{4}$  &
-\verb|04572ec6156d9dab4f6db2cda2bb51a94877dd8d554d71deb9e25698ec08cc0a95ca9ef65| 
-\\ \hline
-$S5_{5}$ &
-\verb|2c2b5702c45a01eccf1b8f8e29f2c4199f2ea0fa00c9c4e67e2579d1c7f20a770182cca6c| 
-\\ \hline
-$S5_{6}$ &
-\verb|3e5309a22ea94f23fd18365607c9c64e7201fa39ea33e4b7543332f59c6d43ed51317bbd5| 
-\\ \hline
+    $S5_{2}$ & {\begin{tabular}[c]{@{}l@{}}
+\verb|2e9ffae0f04c5a7902a36adca32e1aad8a22e| \\
+   \verb|5486eb074b92abcb17ef0e97f22ef3812276| \end{tabular}} \\\hline
+$S5_{3}$ &  {\begin{tabular}[c]{@{}l@{}}
+\verb|4a09ab57fa452402cda01dd88d4aa08f24b83| \\
+   \verb|f51a5c6a638ba703cbfc0e6d485e7cb98b3f| \end{tabular}} \\ \hline
+$S5_{4}$  & {\begin{tabular}[c]{@{}l@{}}
+\verb|04572ec6156d9dab4f6db2cda2bb51a94877dd8| \\
+   \verb|d554d71deb9e25698ec08cc0a95ca9ef65| \end{tabular}} \\ \hline
+$S5_{5}$ & {\begin{tabular}[c]{@{}l@{}}
+\verb|2c2b5702c45a01eccf1b8f8e29f2c4199f2ea| \\
+   \verb|0fa00c9c4e67e2579d1c7f20a770182cca6c| \end{tabular}} \\ \hline
+$S5_{6}$ & {\begin{tabular}[c]{@{}l@{}}
+\verb|3e5309a22ea94f23fd18365607c9c64e7201fa3| \\
+   \verb|9ea33e4b7543332f59c6d43ed51317bbd5| \end{tabular}} \\ \hline
+   \end{tabular}
 %\multicolumn{2}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
-%\multicolumn{2}{|l|}{$S3_{1} + N5_{1}$} \\ \hline 
-
-\end{tabular}
+%\multicolumn{2}{|l|}{$S3_{1} + N5_{1}$} \\ \hline \end{tabular}
 \caption{The six best performing rules on the combined temporal density/parity 
    task from each CA rule category investigated.}
 \label{table:rules_temp_dens}
@@ -1003,7 +1027,16 @@ remains an open question how common or rare they are.
 \end{figure}
 
 \subsection{Temporal Density and Temporal Parity}
-For this combiend task
+For the combined temporal density and temporal parity task the introduction of 
+complex rules did not improve reservoir performance over the most successful 
+elementary rules, demonstrating that the potential for time and power savings 
+with complex rules depends on the requirements of the particular task. One 
+non-uniform rule was found that combined two different categories of complex 
+rule in a single reservoir which outperformed either of the constituent rules 
+alone.
+
+
+
 
 \iffalse
 
@@ -1031,6 +1064,7 @@ rule could be discovered.
 
 
 \begin{table}[H] \centering
+\small
 \begin{tabular}{|l|l|l|l|}
 \hline
 \textbf{Rule} & \textbf{Combined} & \textbf{TD} & \textbf{TP} \\ \hline
@@ -1094,6 +1128,9 @@ benchmark. \par The six best rules from each of five categories of complex rule
 were tested and shown to require half of the reservoir size as the most 
 successful elementary rules to produce comparable results. This reduction in 
 reservoir size equals a saving in power and time when operating the reservoirs.  
+These result suggests that complex CA rules hold promise for the development of 
+low-power simple systems capable of performing other complex computational 
+tasks.  
 
 
 \section{Acknowledgment}
@@ -1102,6 +1139,5 @@ Semiconductor Research Corporation (SRC) program sponsored by DARPA.
 
 \bibliographystyle{ieeetr}
 \bibliography{CAReservoir}
-
 \end{multicols}
 \end{document}

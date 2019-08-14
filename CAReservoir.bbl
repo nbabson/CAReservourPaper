@@ -72,6 +72,16 @@ D.~Kleyko, S.~Khan, E.~Osipov, and S.-P. Yong, ``Modality classification of
   reservoir computing,'' in {\em 2017 IEEE 14th International Symposium on
   Biomedical Imaging (ISBI 2017)}, pp.~1053--1056, IEEE, 2017.
 
+\bibitem{mcdonald2017reservoir}
+N.~McDonald, ``Reservoir computing \& extreme learning machines using pairs of
+  cellular automata rules,'' in {\em 2017 International Joint Conference on
+  Neural Networks (IJCNN)}, pp.~2429--2436, IEEE, 2017.
+
+\bibitem{moran2018reservoir}
+A.~Mor{\'a}n, C.~F. Frasser, and J.~L. Rossell{\'o}, ``Reservoir computing
+  hardware with cellular automata,'' {\em arXiv preprint arXiv:1806.04932},
+  2018.
+
 \bibitem{yilmaz2015connectionist}
 O.~Yilmaz, ``Connectionist-symbolic machine intelligence using cellular
   automata based reservoir-hyperdimensional computing,'' {\em arXiv preprint
@@ -90,5 +100,11 @@ H.~Jaeger, ``Long short-term memory in echo state networks: Details of a
 D.~Snyder, A.~Goudarzi, and C.~Teuscher, ``Computational capabilities of random
   automata networks for reservoir computing,'' {\em Physical Review E},
   vol.~87, no.~4, p.~042808, 2013.
+
+\bibitem{mitchell1996evolving}
+M.~Mitchell, J.~P. Crutchfield, R.~Das, {\em et~al.}, ``Evolving cellular
+  automata with genetic algorithms: A review of recent work,'' in {\em
+  Proceedings of the First International Conference on Evolutionary Computation
+  and Its Applications (EvCA’96)}, vol.~8, Moscow, 1996.
 
 \end{thebibliography}
