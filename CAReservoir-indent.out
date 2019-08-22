@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{Reservoir Computing}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Cellular Automata}{section.1}% 3
+\BOOKMARK [2][-]{subsection.1.3}{Previous Work}{section.1}% 4
+\BOOKMARK [1][-]{section.2}{Method}{}% 5
+\BOOKMARK [2][-]{subsection.2.1}{ReCA System Design}{section.2}% 6
+\BOOKMARK [2][-]{subsection.2.2}{Readout Layer}{section.2}% 7
+\BOOKMARK [1][-]{section.3}{Benchmark Tests}{}% 8
+\BOOKMARK [2][-]{subsection.3.1}{Five Bit Memory Task}{section.3}% 9
+\BOOKMARK [2][-]{subsection.3.2}{Temporal Density and Temporal Parity}{section.3}% 10
+\BOOKMARK [1][-]{section.4}{Experiments}{}% 11
+\BOOKMARK [2][-]{subsection.4.1}{5-Bit Memory Task}{section.4}% 12
+\BOOKMARK [3][-]{subsubsection.4.1.1}{Three State CA Reservoir}{subsection.4.1}% 13
+\BOOKMARK [3][-]{subsubsection.4.1.2}{Neighborhood Five CA Reservoir}{subsection.4.1}% 14
+\BOOKMARK [3][-]{subsubsection.4.1.3}{Population Density Rules}{subsection.4.1}% 15
+\BOOKMARK [3][-]{subsubsection.4.1.4}{Evolving Complex CA Rules}{subsection.4.1}% 16
+\BOOKMARK [2][-]{subsection.4.2}{Temporal Density and Temporal Parity}{section.4}% 17
+\BOOKMARK [2][-]{subsection.4.3}{Non-Uniform Reservoir}{section.4}% 18
+\BOOKMARK [1][-]{section.5}{Results}{}% 19
+\BOOKMARK [1][-]{section.6}{Discussion}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{5-bit Memory Task}{section.6}% 21
+\BOOKMARK [2][-]{subsection.6.2}{Temporal Density and Temporal Parity}{section.6}% 22
+\BOOKMARK [1][-]{section.7}{Conclusion}{}% 23
+\BOOKMARK [1][-]{section.8}{Acknowledgment}{}% 24

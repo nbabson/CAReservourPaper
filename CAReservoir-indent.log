@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.20)  19 AUG 2019 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.20)  14 AUG 2019 16:30
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**CAReservoir
-(./CAReservoir.tex
+**CAReservoir-indent.tex
+(./CAReservoir-indent.tex
 LaTeX2e <2016/02/01>
 Babel <3.9q> and hyphenation patterns for 81 language(s) loaded.
 (./elsarticle.cls
@@ -78,7 +78,8 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \@sep=\skip43
 \@@sep=\skip44
 
-(./CAReservoir.spl) (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
+(./CAReservoir-indent.spl)
+(/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
 \bibhang=\skip45
 \bibsep=\skip46
@@ -86,10 +87,11 @@ LaTeX Info: Redefining \cite on input line 694.
 \c@NAT@ctr=\count94
 )
 \splwrite=\write3
-\openout3 = `CAReservoir.spl'.
+\openout3 = `CAReservoir-indent.spl'.
 
 \appnamewidth=\dimen109
-) (/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
+)
+(/usr/share/texlive/texmf-dist/tex/latex/booktabs/booktabs.sty
 Package: booktabs 2005/04/14 v1.61803 publication quality tables
 \heavyrulewidth=\dimen110
 \lightrulewidth=\dimen111
@@ -495,8 +497,8 @@ Package csquotes Info: Allocating character ".
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 
-(./CAReservoir.aux)
-\openout1 = `CAReservoir.aux'.
+(./CAReservoir-indent.aux)
+\openout1 = `CAReservoir-indent.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 37.
 LaTeX Font Info:    ... okay on input line 37.
@@ -594,9 +596,9 @@ LaTeX Info: Redefining \ref on input line 37.
 LaTeX Info: Redefining \pageref on input line 37.
 LaTeX Info: Redefining \nameref on input line 37.
 
-(./CAReservoir.out) (./CAReservoir.out)
+(./CAReservoir-indent.out) (./CAReservoir-indent.out)
 \@outlinefile=\write4
-\openout4 = `CAReservoir.out'.
+\openout4 = `CAReservoir-indent.out'.
 
 LaTeX Font Info:    Try loading font information for OT1+pcr on input line 86.
 
@@ -617,105 +619,248 @@ Overfull \hbox (2.22221pt too wide) has occurred while \output is active
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-<Reservoir2.pdf, id=120, 585.1789pt x 263.48328pt>
+
+Package natbib Warning: Citation `jaeger2001echo' on page 2 undefined on input 
+line 137.
+
+
+Package natbib Warning: Citation `maass2002real' on page 2 undefined on input l
+ine 138.
+
+
+Package natbib Warning: Citation `lukovsevicius2007overview' on page 2 undefine
+d on input line 151.
+
+
+Package natbib Warning: Citation `tanaka2018recent' on page 2 undefined on inpu
+t line 152.
+
+
+Package natbib Warning: Citation `jaeger2001echo' on page 2 undefined on input 
+line 159.
+
+
+Package natbib Warning: Citation `langton1990computation' on page 2 undefined o
+n input line 162.
+
+
+Package natbib Warning: Citation `legenstein2007edge' on page 2 undefined on in
+put line 162.
+
+<Reservoir2.pdf, id=113, 585.1789pt x 263.48328pt>
 File: Reservoir2.pdf Graphic file (type pdf)
  <use Reservoir2.pdf>
 Package pdftex.def Info: Reservoir2.pdf used on input line 166.
 (pdftex.def)             Requested size: 204.2548pt x 91.96722pt.
 
-<Rule90.pdf, id=122, 1140.95547pt x 224.77678pt>
+<Rule90.pdf, id=115, 1140.95547pt x 224.77678pt>
 File: Rule90.pdf Graphic file (type pdf)
  <use Rule90.pdf>
 Package pdftex.def Info: Rule90.pdf used on input line 197.
 (pdftex.def)             Requested size: 204.2548pt x 40.23856pt.
- [2 <./Reservoir2.pdf>] <class1.pdf, id=208, 361.35pt x 361.35pt>
-File: class1.pdf Graphic file (type pdf)
- <use class1.pdf>
-Package pdftex.def Info: class1.pdf used on input line 225.
+ [2 <./Reservoir2.pdf>]
+
+Package natbib Warning: Citation `wolfram2002new' on page 3 undefined on input 
+line 204.
+
+
+Package natbib Warning: Citation `wuensche1999classifying' on page 3 undefined 
+on input line 209.
+
+
+Package natbib Warning: Citation `cook2004universality' on page 3 undefined on 
+input line 219.
+
+<class1.png, id=190, 361.35pt x 361.35pt>
+File: class1.png Graphic file (type png)
+ <use class1.png>
+Package pdftex.def Info: class1.png used on input line 225.
 (pdftex.def)             Requested size: 94.50038pt x 94.50015pt.
 
-<class2.pdf, id=209, 361.35pt x 361.35pt>
-File: class2.pdf Graphic file (type pdf)
- <use class2.pdf>
-Package pdftex.def Info: class2.pdf used on input line 229.
+<class2.png, id=191, 361.35pt x 361.35pt>
+File: class2.png Graphic file (type png)
+ <use class2.png>
+Package pdftex.def Info: class2.png used on input line 229.
 (pdftex.def)             Requested size: 94.50038pt x 94.50015pt.
 
-<class3.pdf, id=210, 361.35pt x 361.35pt>
-File: class3.pdf Graphic file (type pdf)
- <use class3.pdf>
-Package pdftex.def Info: class3.pdf used on input line 234.
+<class3.png, id=192, 361.35pt x 361.35pt>
+File: class3.png Graphic file (type png)
+ <use class3.png>
+Package pdftex.def Info: class3.png used on input line 234.
 (pdftex.def)             Requested size: 94.50038pt x 94.50015pt.
 
-<class4.pdf, id=211, 361.35pt x 361.35pt>
-File: class4.pdf Graphic file (type pdf)
- <use class4.pdf>
-Package pdftex.def Info: class4.pdf used on input line 238.
+<class4.png, id=193, 361.35pt x 361.35pt>
+File: class4.png Graphic file (type png)
+ <use class4.png>
+Package pdftex.def Info: class4.png used on input line 238.
 (pdftex.def)             Requested size: 94.50038pt x 94.50015pt.
- [3 <./Rule90.pdf> <./class1.pdf> <./class2.pdf> <./class3.pdf> <./class4.pdf>]
 
-<Architecture.pdf, id=269, 611.73422pt x 418.2555pt>
+
+Package natbib Warning: Citation `yilmaz2014reservoir' on page 3 undefined on i
+nput line 250.
+
+
+Package natbib Warning: Citation `margem2017experimental' on page 3 undefined o
+n input line 254.
+
+
+Package natbib Warning: Citation `bye2016investigation' on page 3 undefined on 
+input line 254.
+
+
+Package natbib Warning: Citation `nichele2017reservoir' on page 3 undefined on 
+input line 259.
+
+
+Package natbib Warning: Citation `nichele2017deep' on page 3 undefined on input
+ line 260.
+
+
+Package natbib Warning: Citation `kleyko2017modality' on page 3 undefined on in
+put line 262.
+
+
+Package natbib Warning: Citation `mcdonald2017reservoir' on page 3 undefined on
+ input line 264.
+
+
+Package natbib Warning: Citation `moran2018reservoir' on page 3 undefined on in
+put line 268.
+
+
+Package natbib Warning: Citation `nichele2017deep' on page 3 undefined on input
+ line 282.
+
+
+Package natbib Warning: Citation `bye2016investigation' on page 3 undefined on 
+input line 282.
+
+[3 <./Rule90.pdf> <./class1.png> <./class2.png> <./class3.png> <./class4.png>]
+
+Package natbib Warning: Citation `yilmaz2014reservoir' on page 4 undefined on i
+nput line 288.
+
+
+Package natbib Warning: Citation `yilmaz2015connectionist' on page 4 undefined 
+on input line 313.
+
+<Architecture.pdf, id=215, 611.73422pt x 418.2555pt>
 File: Architecture.pdf Graphic file (type pdf)
  <use Architecture.pdf>
 Package pdftex.def Info: Architecture.pdf used on input line 330.
 (pdftex.def)             Requested size: 204.2548pt x 139.65216pt.
 
-[4 <./Architecture.pdf>] [5] [6] [7]
-<GA.pdf, id=321, 790.98662pt x 406.87442pt>
-File: GA.pdf Graphic file (type pdf)
- <use GA.pdf>
-Package pdftex.def Info: GA.pdf used on input line 639.
-(pdftex.def)             Requested size: 210.0023pt x 108.01987pt.
- [8 <./GA.pdf>]
-<rule48.jpg, id=334, 361.35pt x 361.35pt>
+[4 <./Architecture.pdf>]
+
+Package natbib Warning: Citation `nichele2017reservoir' on page 5 undefined on 
+input line 369.
+
+
+Package natbib Warning: Citation `hochreiter1997long' on page 5 undefined on in
+put line 375.
+
+
+Package natbib Warning: Citation `jaeger2012long' on page 5 undefined on input 
+line 375.
+
+
+Package natbib Warning: Citation `snyder2013computational' on page 5 undefined 
+on input line 455.
+
+
+Package natbib Warning: Citation `bye2016investigation' on page 5 undefined on 
+input line 456.
+
+[5]
+
+Package natbib Warning: Citation `bye2016investigation' on page 6 undefined on 
+input line 465.
+
+
+Package natbib Warning: Citation `yilmaz2014reservoir' on page 6 undefined on i
+nput line 497.
+
+
+Package natbib Warning: Citation `bye2016investigation' on page 6 undefined on 
+input line 497.
+
+
+Package natbib Warning: Citation `yilmaz2014reservoir' on page 6 undefined on i
+nput line 511.
+
+
+Package natbib Warning: Citation `bye2016investigation' on page 6 undefined on 
+input line 511.
+
+
+Package natbib Warning: Citation `nichele2017reservoir' on page 6 undefined on 
+input line 511.
+
+[6] [7]
+
+Package natbib Warning: Citation `mitchell1996evolving' on page 8 undefined on 
+input line 603.
+
+<GA.png, id=250, 720.6925pt x 342.27875pt>
+File: GA.png Graphic file (type png)
+ <use GA.png>
+Package pdftex.def Info: GA.png used on input line 643.
+(pdftex.def)             Requested size: 210.0023pt x 99.73355pt.
+ [8 <./GA.png>]
+
+Package natbib Warning: Citation `nichele2017reservoir' on page 9 undefined on 
+input line 688.
+
+
+Package natbib Warning: Citation `bye2016investigation' on page 9 undefined on 
+input line 691.
+
+<rule48.jpg, id=259, 361.35pt x 361.35pt>
 File: rule48.jpg Graphic file (type jpg)
  <use rule48.jpg>
-Package pdftex.def Info: rule48.jpg used on input line 693.
+Package pdftex.def Info: rule48.jpg used on input line 697.
 (pdftex.def)             Requested size: 99.75237pt x 99.74924pt.
 
-<rule48_reservoir.jpg, id=335, 361.35pt x 361.35pt>
+<rule48_reservoir.jpg, id=260, 361.35pt x 361.35pt>
 File: rule48_reservoir.jpg Graphic file (type jpg)
  <use rule48_reservoir.jpg>
-Package pdftex.def Info: rule48_reservoir.jpg used on input line 697.
+Package pdftex.def Info: rule48_reservoir.jpg used on input line 701.
 (pdftex.def)             Requested size: 99.75237pt x 99.74924pt.
 
 [9 <./rule48.jpg> <./rule48_reservoir.jpg>] [10] [11] [12]
-<RepeatMessage.pdf, id=368, 629.95348pt x 772.8875pt>
+
+Package natbib Warning: Citation `nichele2017reservoir' on page 13 undefined on
+ input line 998.
+
+<RepeatMessage.pdf, id=292, 629.95348pt x 772.8875pt>
 File: RepeatMessage.pdf Graphic file (type pdf)
  <use RepeatMessage.pdf>
-Package pdftex.def Info: RepeatMessage.pdf used on input line 1008.
+Package pdftex.def Info: RepeatMessage.pdf used on input line 1012.
 (pdftex.def)             Requested size: 204.2548pt x 250.5958pt.
 
-[13] [14 <./RepeatMessage.pdf>] (./CAReservoir.bbl
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ú in font cmr10!
-Missing character: There is no ‚ in font cmr10!
-Missing character: There is no Ä in font cmr10!
-Missing character: There is no ù in font cmr10!
- [15]
-Missing character: There is no ‚ in font cmti10!
-Missing character: There is no Ä in font cmti10!
-Missing character: There is no ô in font cmti10!
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1136.
- [16]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1136.
+[13] [14 <./RepeatMessage.pdf>]
+No file CAReservoir-indent.bbl.
 
-(./CAReservoir.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1136.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1136.
+Package natbib Warning: There were undefined citations.
 
-Package rerunfilecheck Info: File `CAReservoir.out' has not changed.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1140.
+[15]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1140.
+ (./CAReservoir-indent.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1140.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1140.
+
+Package rerunfilecheck Info: File `CAReservoir-indent.out' has not changed.
 (rerunfilecheck)             Checksum: F1FD509D4F5715646026BBF94D441A3D;1570.
  ) 
 Here is how much of TeX's memory you used:
- 10252 strings out of 493029
- 150070 string characters out of 6136233
- 320236 words of memory out of 5000000
- 13543 multiletter control sequences out of 15000+600000
+ 10177 strings out of 493029
+ 148225 string characters out of 6136233
+ 319946 words of memory out of 5000000
+ 13493 multiletter control sequences out of 15000+600000
  14648 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,18n,40p,817b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,18n,40p,828b,604s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texliv
 e/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></usr/share/texlive/texmf-dist/
@@ -737,10 +882,10 @@ lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on CAReservoir.pdf (16 pages, 882958 bytes).
+Output written on CAReservoir-indent.pdf (15 pages, 864411 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
+ 398 PDF objects out of 1000 (max. 8388607)
+ 313 compressed objects within 4 object streams
+ 56 named destinations out of 1000 (max. 500000)
  248 words of extra memory for PDF output out of 10000 (max. 10000000)
 
