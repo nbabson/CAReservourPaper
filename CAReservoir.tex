@@ -96,7 +96,7 @@
 	to optimize the selection of reservoir construction parameters. Hierarchical 
 	reservoirs reimpose a degree of topological structure on reservoir connectivity 
 	by breaking the monolithic reservoir into loosely connected sub-reservoirs. The 
-	realization that dynamical systems besides neural networks could act as 
+	realization that dynamical systems other than neural networks could act as 
 	reservoirs has caused increasing interest in alternative reservoir substrates 
 	using biological, chemical, and physical dynamical systems.  \par
 	The field of \textit{Cellular Automaton based Reservoir Computing} (ReCA) uses 
@@ -104,13 +104,13 @@
 	focused so far on the 256 elementary one-dimensional CA rules which have two 
 	states and a neighborhood of size three.  This work expands ReCA to include one 
 	dimensional CA rules with larger neighborhoods and more states.
-	These rules that are not part of the set of one-dimensional elementary 
-	rules will be referred to as \textit{complex} CA rules. \par CA rule 
+	These CA rules, which are not part of the set of one-dimensional elementary 
+	rules, will be referred to as \textit{complex}. \par CA rule 
 	performance was tested on the 5-bit memory task that is standard in ReCA 
 	research. More expressive rules were found that outperform any of the 
 	elementary rules, requiring a smaller CA reservoir. This reduces the amount 
 	of computation required to train the output layer and to operate the 
-	reservoir. \par These results were found to be task-dependent. Complex CA 
+	reservoir. \par Our results were found to be task-dependent. Complex CA 
 	rules were not found that could solve the temporal density and temporal 
 	parity benchmark tasks with greater accuracy than the most successful 
 	elementary rules. \par
@@ -247,12 +247,11 @@
 	\subsection{Previous Work}
 	
 	The use of elementary CA rules for RC was first proposed by Yilmaz in 2014 
-	\cite{yilmaz2014reservoir}
-	, showing that the framework was capable of 
+	\cite{yilmaz2014reservoir}, showing that the framework was capable of 
 	solving memory tasks using orders of magnitude less computation than an ESN.
 	The name ReCA was introduced in 2016 by Margem 
 	and Yilmaz \cite{margem2017experimental}. Bye \cite{bye2016investigation} investigated the performance 
-	of a ReCA system on the 30th order nonlinear autoregressive-moving-average 
+	of a ReCA system on the $30^{th}$ order nonlinear autoregressive-moving-average 
 	(NARMA) benchmark, the temporal bit parity and temporal bit density tasks, 
 	as well as classification of vowel sound clips.  
 	Non-uniform elementary CA reservoirs were used to solve the 5-bit memory 
@@ -272,12 +271,9 @@
 	
 	
 	
-	
-	
-	
 	\section{Method}\label{method}
 	The ReCA system described in this section was implemented by the author in a 
-	C++ framework which can be found at \url{https://github.com/nbabson/CAreservoir}. The 
+	C++ framework, which can be found at \url{https://github.com/nbabson/CAreservoir}. The 
 	architecture of the framework is similar to that used in  
 	\cite{nichele2017deep} and \cite{bye2016investigation}.
 	
@@ -366,10 +362,10 @@
 	allows the option of  using support vector machines (SVM) from the C++ Torch 
 	machine learning library as the classifier.  Nichele and 
 	Gunderson used SVM in their 2017 ReCA paper on non-uniform 
-	reservoirs\cite{nichele2017reservoir}.
+	reservoirs \cite{nichele2017reservoir}.
 	
 	\section{Benchmark Tests}\label{Benchmarks}
-	\subsection{Five Bit Memory Task}\label{5_bit}
+	\subsection{5-Bit Memory Task}\label{5_bit}
 	The 5-bit memory task benchmark tests a network's long-short-term-memory 
 	capability, and has been shown to be difficult for recurrent neural networks, 
 	including ESN \cite{hochreiter1997long}\cite{jaeger2012long}. All of the 
@@ -399,34 +395,34 @@
 	the task. With $T_d = 200$, that is $210 \cdot 32 \cdot 3 = 20,160$ accurate 
 	predictions.
 	
-        \begin{table*}[t]  \centering
+\begin{table*}[t]\centering
 		\small
 		\begin{tabular}{|c|l|l|l|l|l|l|l|l}
 			\cline{1-8}
-			\multicolumn{1}{|l|}{Time step} & \multicolumn{4}{l|}{Input} & \multicolumn{3}{l|}{Output} & \cellcolor[HTML]{FFFFFF}{\color[HTML]{333333} } \\ \hline
+			\multicolumn{1}{|l|}{Timestep}&\multicolumn{4}{l|}{Input}&\multicolumn{3}{l|}{Output}&\cellcolor[HTML]{FFFFFF}{\color[HTML]{333333}}\\\hline
 			
-			\iffalse   
-			1   & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			2   & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			3   & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			4   & \cellcolor[HTML]{96FFFB}0 & \cellcolor[HTML]{96FFFB}1 & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			5   & \cellcolor[HTML]{96FFFB}1 & \cellcolor[HTML]{96FFFB}0 & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Input      \\ message\end{tabular}}} \\ \hline
+			\iffalse
+			1&\cellcolor[HTML]{96FFFB}1&\cellcolor[HTML]{96FFFB}0&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			2&\cellcolor[HTML]{96FFFB}0&\cellcolor[HTML]{96FFFB}1&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			3&\cellcolor[HTML]{96FFFB}0&\cellcolor[HTML]{96FFFB}1&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			4&\cellcolor[HTML]{96FFFB}0&\cellcolor[HTML]{96FFFB}1&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			5&\cellcolor[HTML]{96FFFB}1&\cellcolor[HTML]{96FFFB}0&0&0&0&0&1&\multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Input\\message\end{tabular}}}\\\hline
 			\fi
 			
-			1   & \textbf{1}                & \textbf{0}                & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			2   & \textbf{0}                & \textbf{1}                & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			3   & \textbf{0}                & \textbf{1}                & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			4   & \textbf{0}                & \textbf{1}                & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			5   & \textbf{1}                & \textbf{0}                & 0 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Input      \\ message\end{tabular}}} \\ \hline
-			6   & 0                         & 0                         & 1 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			... & 0                         & 0                         & 1 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			204 & 0                         & 0                         & 1 & 0 & 0          & 0          & 1 & \multicolumn{1}{l|}{\multirow{-3}{*}{\begin{tabular}[c]{@{}l@{}}Distractor \\ period\end{tabular}}} \\ \hline
-			205 & 0                         & 0                         & 0 & 1 & 0          & 0          & 1 & \multicolumn{1}{l|}{Cue signal}                                            \\ \hline
-			206 & 0                         & 0                         & 1 & 0 & \textbf{1} & \textbf{0} & 0 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			207 & 0                         & 0                         & 1 & 0 & \textbf{0} & \textbf{1} & 0 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			208 & 0                         & 0                         & 1 & 0 & \textbf{0} & \textbf{1} & 0 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			209 & 0                         & 0                         & 1 & 0 & \textbf{0} & \textbf{1} & 0 & \multicolumn{1}{l|}{}                                                      \\ \cline{1-8}
-			210 & 0                         & 0                         & 1 & 0 & \textbf{1} & \textbf{0} & 0 & \multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Repeat     \\ message\end{tabular}}} \\ \hline
+			1&\textbf{1}&\textbf{0}&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			2&\textbf{0}&\textbf{1}&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			3&\textbf{0}&\textbf{1}&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			4&\textbf{0}&\textbf{1}&0&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			5&\textbf{1}&\textbf{0}&0&0&0&0&1&\multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Input\\message\end{tabular}}}\\\hline
+			6&0&0&1&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			...&0&0&1&0&0&0&1&\multicolumn{1}{l|}{}\\\cline{1-8}
+			204&0&0&1&0&0&0&1&\multicolumn{1}{l|}{\multirow{-3}{*}{\begin{tabular}[c]{@{}l@{}}Distractor\\period\end{tabular}}}\\\hline
+			205&0&0&0&1&0&0&1&\multicolumn{1}{l|}{Cue signal}\\\hline
+			206&0&0&1&0&\textbf{1}&\textbf{0}&0&\multicolumn{1}{l|}{}\\\cline{1-8}
+			207&0&0&1&0&\textbf{0}&\textbf{1}&0&\multicolumn{1}{l|}{}\\\cline{1-8}
+			208&0&0&1&0&\textbf{0}&\textbf{1}&0&\multicolumn{1}{l|}{}\\\cline{1-8}
+			209&0&0&1&0&\textbf{0}&\textbf{1}&0&\multicolumn{1}{l|}{}\\\cline{1-8}
+			210&0&0&1&0&\textbf{1}&\textbf{0}&0&\multicolumn{1}{l|}{\multirow{-5}{*}{\begin{tabular}[c]{@{}l@{}}Repeat\\message\end{tabular}}}\\\hline
 		\end{tabular}
 		\caption{Run 17 of 32 of the 5-bit memory task.}
 		\label{table:5_bit}
@@ -443,7 +439,7 @@
 	\fi
 	
 	\subsection{Temporal Density and Temporal Parity}
-	For both the temporal density and the temporal parity classification tasks the 
+	For both the temporal density and the temporal parity classification tasks, the 
 	reservoir receives a single input stream of bits. The reservoirs were 
 	tested on both tasks simultaneously using the same input stream. These two 
 	tasks were used by Snyder et al. to test the performance of a 
@@ -567,7 +563,7 @@
 	generated rules were discarded as class I or II.
 	
 	\subsubsection{Neighborhood Five CA Reservoir}
-	Two state neighborhood five rules have a rule space of $2^32 \approx 4.3 \cdot 
+	Two state neighborhood five rules have a rule space of $2^{32} \approx 4.3 \cdot 
 	10^9$. As with the three state rules, this space was searched 
 	stochastically, with class I and class II rules ignored. Rules for 
 	reservoirs that pass the 5-bit memory task are saved and tested on 100 
@@ -630,8 +626,6 @@
 	The evolved four state rules passed the benchmark 2.5\% of the time and 
 	the five state rules passed 1.1\%. Many more missed less than 10 
 	predictions, which was not observed to happen with unevolved rules.
-	
-	
 	
 	
 	\begin{figure}[H]
@@ -922,7 +916,7 @@
 			\hline
 			\multicolumn{2}{|l|}{\textbf{Five State Rules \boldmath$(S,N) = (5,3)$}} \\ 
 			\hline
-			$S5_{1}$ & { \begin{tabular}[c]{@{}l@{}}           
+			$S5_{1}$ & {\begin{tabular}[c]{@{}l@{}}           
 			\verb|094edc5925c6beb872f42363fd4499effd7a0| \\
 			\verb|6330439d82cd00064a42299880a06a6300f7| \end{tabular}}  \\
 			\hline
@@ -933,14 +927,14 @@
 			\verb|4a09ab57fa452402cda01dd88d4aa08f24b83| \\
 			\verb|f51a5c6a638ba703cbfc0e6d485e7cb98b3f| \end{tabular}} \\ \hline
 			$S5_{4}$ & {\begin{tabular}[c]{@{}l@{}}            
-			\verb|04572ec6156d9dab4f6db2cda2bb51a94877dd8| \\
-			\verb|d554d71deb9e25698ec08cc0a95ca9ef65| \end{tabular}} \\ \hline
+			\verb|04572ec6156d9dab4f6db2cda2bb51a94877d| \\
+			\verb|d8d554d71deb9e25698ec08cc0a95ca9ef65| \end{tabular}} \\ \hline
 			$S5_{5}$ & {\begin{tabular}[c]{@{}l@{}}            
 			\verb|2c2b5702c45a01eccf1b8f8e29f2c4199f2ea| \\
 			\verb|0fa00c9c4e67e2579d1c7f20a770182cca6c| \end{tabular}} \\ \hline
 			$S5_{6}$ & {\begin{tabular}[c]{@{}l@{}}            
-			\verb|3e5309a22ea94f23fd18365607c9c64e7201fa3| \\
-			\verb|9ea33e4b7543332f59c6d43ed51317bbd5| \end{tabular}} \\ \hline
+			\verb|3e5309a22ea94f23fd18365607c9c64e7201f| \\
+			\verb|a39ea33e4b7543332f59c6d43ed51317bbd5| \end{tabular}} \\ \hline
 		\end{tabular}
 		%\multicolumn{2}{|l|}{\textbf{Non-uniform Rule}} \\ \hline
 		%\multicolumn{2}{|l|}{$S3_{1} + N5_{1}$} \\ \hline \end{tabular}
@@ -956,7 +950,7 @@
 	well for one benchmark showed any success at the other. The increased 
 	information that can be held by a complex rule proved helpful for the 5-bit 
 	memory task. As can be seen in Figure \ref{repeat}, the most successful 
-	reservoir for this task falls into one of number of possible  periodic 
+	reservoir for this task falls into one of a number of possible  periodic 
 	attractors after each message is input. The particular basin of attraction 
 	encodes the message, which is output when the cue signal is given. In 
 	contrast, complex rules were not found to outperform the best elementary 
@@ -968,10 +962,10 @@
 	5-bit memory task, each of the five categories of complex CA rule investigated 
 	here produced a rule capable of achieving 99\% or 100\% success on a reservoir 
 	of half that size, $I \cdot R \cdot L_{d} = 4 \cdot 8 \cdot 40 = 1280$ cells. The best 
-	performing rules discovered were three state neighborhood three. One of these 
+	performing rules which were discovered were three state neighborhood three. One of these 
 	was able to produce 100\% correct results using a reservoir of size $I \cdot R \cdot 
 	L_{d} = 4 \cdot 6 \cdot 40 = 960$ cells. Only the neighborhood five population density 
-	rules were investigated exhaustively.  For the other rule categories continued 
+	rules were investigated exhaustively.  For the other rule categories, continued 
 	searching would yield a virtually infinite number of similarly successful 
 	rules. \par Rule performance correlates broadly with reservoir size, but the 
 	ability of the ReCA system to  pass the benchmark falls at different rates 
@@ -988,6 +982,12 @@
 	reduced iterations. When the reservoir size was halved from 1,280 to 640  
 	cells, the majority of the complex rules were unable to to complete any 
 	successful runs of the task, and the average success rate was only 1.9\%. \par 
+
+        \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.475\textwidth]{bar.pdf}
+        \end{figure}
+
 	An attempt was made to find pairs of rules that would complement each other in 
 	a non-uniform reservoir, performing better than either rule would alone, as has 
 	been shown to sometimes occur with pairs of elementary rules 
@@ -1007,7 +1007,7 @@
 		\centering
 		\includegraphics[width=0.475\textwidth]{RepeatMessage.pdf}
 		\caption{A segment of the history of a reservoir using rule $S3_{1}$ on the 
-			5-bit task with $I=4, R=6, and D_{L}=30$. Each four horizontal lines is one 
+			5-bit task with $I=4, R=6,$ and $D_{L}=30$. Each four horizontal lines is one 
 			reservoir timestep. At the top of the image is the end of the distractor 
 			period after the input message 00000. The reservoir has fallen into a 
 			stable repeating pattern with a period of eight generations. After the 

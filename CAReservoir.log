@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.20)  19 AUG 2019 23:18
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2018.11.20)  23 AUG 2019 11:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -656,36 +656,42 @@ Package pdftex.def Info: class4.pdf used on input line 238.
 <Architecture.pdf, id=269, 611.73422pt x 418.2555pt>
 File: Architecture.pdf Graphic file (type pdf)
  <use Architecture.pdf>
-Package pdftex.def Info: Architecture.pdf used on input line 330.
+Package pdftex.def Info: Architecture.pdf used on input line 326.
 (pdftex.def)             Requested size: 204.2548pt x 139.65216pt.
 
 [4 <./Architecture.pdf>] [5] [6] [7]
 <GA.pdf, id=321, 790.98662pt x 406.87442pt>
 File: GA.pdf Graphic file (type pdf)
  <use GA.pdf>
-Package pdftex.def Info: GA.pdf used on input line 639.
+Package pdftex.def Info: GA.pdf used on input line 633.
 (pdftex.def)             Requested size: 210.0023pt x 108.01987pt.
  [8 <./GA.pdf>]
 <rule48.jpg, id=334, 361.35pt x 361.35pt>
 File: rule48.jpg Graphic file (type jpg)
  <use rule48.jpg>
-Package pdftex.def Info: rule48.jpg used on input line 693.
+Package pdftex.def Info: rule48.jpg used on input line 687.
 (pdftex.def)             Requested size: 99.75237pt x 99.74924pt.
 
 <rule48_reservoir.jpg, id=335, 361.35pt x 361.35pt>
 File: rule48_reservoir.jpg Graphic file (type jpg)
  <use rule48_reservoir.jpg>
-Package pdftex.def Info: rule48_reservoir.jpg used on input line 697.
+Package pdftex.def Info: rule48_reservoir.jpg used on input line 691.
 (pdftex.def)             Requested size: 99.75237pt x 99.74924pt.
 
 [9 <./rule48.jpg> <./rule48_reservoir.jpg>] [10] [11] [12]
-<RepeatMessage.pdf, id=368, 629.95348pt x 772.8875pt>
+<bar.pdf, id=367, 462.52798pt x 346.89601pt>
+File: bar.pdf Graphic file (type pdf)
+ <use bar.pdf>
+Package pdftex.def Info: bar.pdf used on input line 988.
+(pdftex.def)             Requested size: 204.2548pt x 153.19049pt.
+
+<RepeatMessage.pdf, id=369, 629.95348pt x 772.8875pt>
 File: RepeatMessage.pdf Graphic file (type pdf)
  <use RepeatMessage.pdf>
 Package pdftex.def Info: RepeatMessage.pdf used on input line 1008.
 (pdftex.def)             Requested size: 204.2548pt x 250.5958pt.
 
-[13] [14 <./RepeatMessage.pdf>] (./CAReservoir.bbl
+[13 <./bar.pdf>] [14 <./RepeatMessage.pdf>] (./CAReservoir.bbl
 Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no œ in font cmr10!
@@ -706,13 +712,13 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1136.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1136.
 
 Package rerunfilecheck Info: File `CAReservoir.out' has not changed.
-(rerunfilecheck)             Checksum: F1FD509D4F5715646026BBF94D441A3D;1570.
+(rerunfilecheck)             Checksum: A7C4878336F22C189D21B8061BAB29D7;1567.
  ) 
 Here is how much of TeX's memory you used:
- 10252 strings out of 493029
- 150070 string characters out of 6136233
- 320236 words of memory out of 5000000
- 13543 multiletter control sequences out of 15000+600000
+ 10257 strings out of 493029
+ 150138 string characters out of 6136233
+ 320235 words of memory out of 5000000
+ 13547 multiletter control sequences out of 15000+600000
  14648 words of font info for 52 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  42i,18n,40p,817b,696s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -737,10 +743,10 @@ lic/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
 sfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
 cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmt
 i8.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb>
-Output written on CAReservoir.pdf (16 pages, 882958 bytes).
+Output written on CAReservoir.pdf (16 pages, 900483 bytes).
 PDF statistics:
- 483 PDF objects out of 1000 (max. 8388607)
- 394 compressed objects within 4 object streams
- 80 named destinations out of 1000 (max. 500000)
- 248 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 531 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
+ 81 named destinations out of 1000 (max. 500000)
+ 253 words of extra memory for PDF output out of 10000 (max. 10000000)
 
