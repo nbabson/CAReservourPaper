@@ -832,12 +832,12 @@
 			\\ \hline
 			\multicolumn{7}{|l|}{\textbf{Elementary Rules \boldmath$(S,N) = (2,3)$}} \\ 
 			\hline
-			60       & 9   & -   & -   & -  & -  & -  \\ \hline
-			90       & 0   & -   & -   & -  & -  & -  \\ \hline
-			102      & 9   & -   & -   & -  & -  & -  \\ \hline
-			153      & 6   & -   & -   & -  & -  & -  \\ \hline
-			195      & 6   & -   & -   & -  & -  & -  \\ \hline
-			210      & 6   & -   & -   & -  & -  & -  \\ \hline
+			60       & 9   & 0   & 0   & 0  & 0  & 0  \\ \hline
+			90       & 0   & 0   & 0   & 0  & 0  & 0  \\ \hline
+			102      & 9   & 0   & 0   & 0  & 0  & 0  \\ \hline
+			153      & 6   & 0   & 0   & 0  & 0  & 0  \\ \hline
+			195      & 6   & 0   & 0   & 0  & 0  & 0  \\ \hline
+			210      & 6   & 0   & 0   & 0  & 0  & 0  \\ \hline
 			\multicolumn{7}{|l|}{\textbf{Three State Rules \boldmath$(S,N) = (3,3)$}} \\ 
 			\hline
 			$S3_{1}$ & 100 & 100 & 100 & 0  & 25 & 10 \\ \hline
@@ -873,8 +873,8 @@
 			\hline
 			$S5_{1}$ & 95  & 50  & 42  & 8  & 15 & 0  \\ \hline
 			$S5_{2}$ & 95  & 76  & 70  & 0  & 7  & 0  \\ \hline
-			$S5_{3}$ & 98  & 74  & 51  & 0  & 24 & 0  \\ \hline
-			$S5_{4}$ & 80  & 1   & 9   & 0  & 2  & 0  \\ \hline
+                        $S5_{3}$ & 99  & 74  & 51  & 0  & 24 & 0  \\ \hline
+                        $S5_{4}$ & 80  & 1   & 9   & 0  & 2  & 0  \\ \hline
 			$S5_{5}$ & 84  & 17  & 7   & 0  & 2  & 0  \\ \hline
 			$S5_{6}$ & 77  & 13  & 6   & 0  & 5  & 0  \\ \hline
 		\end{tabular}
@@ -944,118 +944,6 @@
 	\end{table*}
 	
 	
-	\section{Discussion}\label{discussion}
-	The qualities that cause a CA rule to produce a good reservoir were not the 
-	same for the two benchmarks investigated, and none of the rules that worked 
-	well for one benchmark showed any success at the other. The increased 
-	information that can be held by a complex rule proved helpful for the 5-bit 
-	memory task. As can be seen in Figure \ref{repeat}, the most successful 
-	reservoir for this task falls into one of a number of possible  periodic 
-	attractors after each message is input. The particular basin of attraction 
-	encodes the message, which is output when the cue signal is given. In 
-	contrast, complex rules were not found to outperform the best elementary 
-	rules at the temporal density and temporal parity tasks.
-	
-	\subsection{5-bit Memory Task}
-	While the best performing elementary rules required a reservoir of size $I \cdot R 
-	\cdot L_{d} = 8 \cdot 8 \cdot 40 = 2560$ cells in order to achieve 99\% success on the 
-	5-bit memory task, each of the five categories of complex CA rule investigated 
-	here produced a rule capable of achieving 99\% or 100\% success on a reservoir 
-	of half that size, $I \cdot R \cdot L_{d} = 4 \cdot 8 \cdot 40 = 1280$ cells. The best 
-	performing rules which were discovered were three state neighborhood three. One of these 
-	was able to produce 100\% correct results using a reservoir of size $I \cdot R \cdot 
-	L_{d} = 4 \cdot 6 \cdot 40 = 960$ cells. Only the neighborhood five population density 
-	rules were investigated exhaustively.  For the other rule categories, continued 
-	searching would yield a virtually infinite number of similarly successful 
-	rules. \par Rule performance correlates broadly with reservoir size, but the 
-	ability of the ReCA system to  pass the benchmark falls at different rates 
-	depending on which of the reservoir parameters $I$, $R$, or $L_{d}$ is lowered.  
-	The 30 complex rules average 91.7\% correct test runs on the 1,280 cell 
-	reservoir.  Reducing the reservoir size by 1/4 by lowering the diffusion length 
-	to 30 caused the least performance degradation, with the average success rate 
-	at 56.6\%. Reducing the reservoir size by cutting the number of sub-reservoirs 
-	from eight to six had a slightly larger effect on the average reservoir 
-	performance, which fell to 45.9\%.  Finally, when the reservoir size was 
-	reduced to 960 cells by lowering the number of iterations, $I$, from four to 
-	three, the average success rate was only 11.0\%, with 11 rules achieving zero 
-	correct runs, while a  couple of rules were  relatively resilient to the 
-	reduced iterations. When the reservoir size was halved from 1,280 to 640  
-	cells, the majority of the complex rules were unable to to complete any 
-	successful runs of the task, and the average success rate was only 1.9\%. \par 
-
-        \begin{figure}[H]
-                \centering
-                \includegraphics[width=0.475\textwidth]{bar.pdf}
-        \end{figure}
-
-	An attempt was made to find pairs of rules that would complement each other in 
-	a non-uniform reservoir, performing better than either rule would alone, as has 
-	been shown to sometimes occur with pairs of elementary rules 
-	\cite{nichele2017reservoir}. The six rules of each complex rule type can form 
-	75 combinations of same-type rules each of which can be used as a non-uniform 
-	reservoir for  any setting of the reservoir size parameters. Of these 
-	possibilities, 20 combinations were tested with 100 runs of the benchmark.  
-	Pairs of rules were selected that performed well individually with the same 
-	reservoir parameters.  None of these pairs performed better than the more 
-	successful of the two in a uniform reservoir, 11 of the pairings performing 
-	significantly worse than either rule tested alone. While it seems very likely 
-	that complex CA non-uniform pairings exist which do work well together, it 
-	remains an open question how common or rare they are.
-	
-	
-	\begin{figure}[H]
-		\centering
-		\includegraphics[width=0.475\textwidth]{RepeatMessage.pdf}
-		\caption{A segment of the history of a reservoir using rule $S3_{1}$ on the 
-			5-bit task with $I=4, R=6,$ and $D_{L}=30$. Each four horizontal lines is one 
-			reservoir timestep. At the top of the image is the end of the distractor 
-			period after the input message 00000. The reservoir has fallen into a 
-			stable repeating pattern with a period of eight generations. After the 
-			cue signal is received the reservoir "remembers" the message that was 
-			encoded in the repeating pattern. After the next message 00001 is input 
-			the reservoir quickly falls into another stable pattern that encodes the 
-		new message.} 
-		
-		\label{repeat}
-	\end{figure}
-	
-	\subsection{Temporal Density and Temporal Parity}
-	For the combined temporal density and temporal parity task the introduction of 
-	complex rules did not improve reservoir performance over the most successful 
-	elementary rules, demonstrating that the potential for time and power savings 
-	with complex rules depends on the requirements of the particular task. One 
-	non-uniform rule was found that combined two different categories of complex 
-	rule in a single reservoir which outperformed either of the constituent rules 
-	alone.
-	
-	
-	
-	
-	\iffalse
-	
-	\section{Future Work}\label{future_work}
-	The next step in investigating complex CA rules for ReCA would be to measure 
-	the chaoticity of the most successful rules in comparison to the average, using 
-	measures such as Shannon entropy, Langton's $\lambda$ parameter, and the 
-	Lyapunov exponent. It would be interesting to see whether the successful rules 
-	do tend to cluster in an "edge of chaos" region of complexity, and whether this
-	is true for different benchmark tasks. \par Other fitness functions could be 
-	explored for evolving CA rules towards a desired chaoticity. The existence of 
-	an "edge of chaos" region of complexity densely populated with successful rules 
-	would mean that reservoir rules could be constructed with the requisite degree 
-	of complexity at lower computational cost and greater accuracy than being 
-	evolved.  \par Further examination of non-uniform complex ReCA reservoirs could 
-	apply different types of rules in parallel i.e.  rules with different 
-	neighborhood size or number of states.  Different types of rules may exhibit 
-	differing behaviors that in some circumstances synergistically combine in a 
-	beneficial manner.  Measurements of rule chaoticity might also be able to shed 
-	some light on why certain combinations are complementary. It is also possible 
-	that given one successful rule, techniques for constructing a complementary 
-	rule could be discovered.
-	
-	\fi
-	
-	
 	\begin{table}[H] \centering
 		\small
 		\begin{tabular}{|l|l|l|l|}
@@ -1110,9 +998,132 @@
 		\label{table:results_temp_dens}
 	\end{table}
 	
-	\section{Conclusion}\label{conclusion}
+	
+	\section{Discussion}\label{discussion}
+	The qualities that cause a CA rule to produce a good reservoir were not the 
+	same for the two benchmarks investigated, and none of the rules that worked 
+	well for one benchmark showed any success at the other. The increased 
+	information that can be held by a complex rule proved helpful for the 5-bit 
+	memory task. As can be seen in Figure \ref{repeat}, the most successful 
+	reservoir for this task falls into one of a number of possible  periodic 
+	attractors after each message is input. The particular basin of attraction 
+	encodes the message, which is output when the cue signal is given. In 
+	contrast, complex rules were not found to outperform the best elementary 
+	rules at the temporal density and temporal parity tasks.
+	
+	
+        \begin{figure}[H]
+		\centering
+                \includegraphics[width=0.475\textwidth]{RepeatMessage.pdf}
+		\caption{A segment of the history of a reservoir using rule $S3_{1}$ on the 
+			5-bit task with $I=4, R=6,$ and $D_{L}=30$. Each four horizontal lines is one 
+			reservoir timestep. At the top of the image is the end of the distractor 
+			period after the input message 00000. The reservoir has fallen into a 
+			stable repeating pattern with a period of eight generations. After the 
+                        cue signal is received the reservoir "remembers" the 
+                        message that was encoded in the repeating pattern. 
+                        After the next message 00001 is input, the reservoir 
+                        quickly falls into another stable pattern that encodes 
+                        the new message.} 
+		
+		\label{repeat}
+	\end{figure}
+
+	\subsection{5-bit Memory Task}
+	While the best performing elementary rules required a reservoir of size $I \cdot R 
+	\cdot L_{d} = 8 \cdot 8 \cdot 40 = 2560$ cells in order to achieve 99\% success on the 
+	5-bit memory task, each of the five categories of complex CA rule investigated 
+	here produced a rule capable of achieving 99\% or 100\% success on a reservoir 
+	of half that size, $I \cdot R \cdot L_{d} = 4 \cdot 8 \cdot 40 = 1280$ cells. The best 
+	performing rules which were discovered were three state neighborhood three. One of these 
+	was able to produce 100\% correct results using a reservoir of size $I \cdot R \cdot 
+	L_{d} = 4 \cdot 6 \cdot 40 = 960$ cells. Only the neighborhood five population density 
+	rules were investigated exhaustively.  For the other rule categories, continued 
+	searching would yield a virtually infinite number of similarly successful 
+	rules. \par Rule performance correlates broadly with reservoir size, but the 
+	ability of the ReCA system to  pass the benchmark falls at different rates 
+	depending on which of the reservoir parameters $I$, $R$, or $L_{d}$ is lowered.  
+	The 30 complex rules average 91.7\% correct test runs on the 1,280 cell 
+	reservoir.  Reducing the reservoir size by 1/4 by lowering the diffusion length 
+	to 30 caused the least performance degradation, with the average success rate 
+	at 56.6\%. Reducing the reservoir size by cutting the number of sub-reservoirs 
+	from eight to six had a slightly larger effect on the average reservoir 
+	performance, which fell to 45.9\%.  Finally, when the reservoir size was 
+	reduced to 960 cells by lowering the number of iterations, $I$, from four to 
+	three, the average success rate was only 11.0\%, with 11 rules achieving zero 
+	correct runs, while a  couple of rules were  relatively resilient to the 
+	reduced iterations. When the reservoir size was halved from 1,280 to 640  
+        cells, the majority of the complex rules were unable to to complete any 
+        successful runs of the task, and the average success rate was only 
+        1.9\%. \par Figure \ref{figure:bar_graph} plots the average performance 
+        by reservoir category for different sizes of reservoir. At 1280 cells 
+        the worst performing category of complex rule passed the task on 88.2\% 
+        of trials compared to 6.0\% for the elementary rules. For reservoirs 
+        smaller than 1280 cells elementary rules achieved 0.0\% success. 
+	
+
+	An attempt was made to find pairs of rules that would complement each other in 
+	a non-uniform reservoir, performing better than either rule would alone, as has 
+	been shown to sometimes occur with pairs of elementary rules 
+	\cite{nichele2017reservoir}. The six rules of each complex rule type can form 
+	75 combinations of same-type rules each of which can be used as a non-uniform 
+	reservoir for  any setting of the reservoir size parameters. Of these 
+	possibilities, 20 combinations were tested with 100 runs of the benchmark.  
+	Pairs of rules were selected that performed well individually with the same 
+	reservoir parameters.  None of these pairs performed better than the more 
+	successful of the two in a uniform reservoir, 11 of the pairings performing 
+	significantly worse than either rule tested alone. While it seems very likely 
+	that complex CA non-uniform pairings exist which do work well together, it 
+	remains an open question how common or rare they are.
+	
+
+        \begin{figure}[H]
+                \centering
+                \includegraphics[width=0.475\textwidth]{bar.pdf}
+                \caption{5-bit memory task. Averaged performance of the six 
+                   most successful rules in each category versus size of the 
+                      reservoir in number of cells. }
+                \label{figure:bar_graph}
+        \end{figure}
+	
+        \subsection{Temporal Density and Temporal Parity}
+	For the combined temporal density and temporal parity task the introduction of 
+	complex rules did not improve reservoir performance over the most successful 
+	elementary rules, demonstrating that the potential for time and power savings 
+	with complex rules depends on the requirements of the particular task. One 
+	non-uniform rule was found that combined two different categories of complex 
+	rule in a single reservoir which outperformed either of the constituent rules 
+	alone.
+	
+	
+	
+	\iffalse
+	
+	\section{Future Work}\label{future_work}
+	The next step in investigating complex CA rules for ReCA would be to measure 
+	the chaoticity of the most successful rules in comparison to the average, using 
+	measures such as Shannon entropy, Langton's $\lambda$ parameter, and the 
+	Lyapunov exponent. It would be interesting to see whether the successful rules 
+	do tend to cluster in an "edge of chaos" region of complexity, and whether this
+	is true for different benchmark tasks. \par Other fitness functions could be 
+	explored for evolving CA rules towards a desired chaoticity. The existence of 
+	an "edge of chaos" region of complexity densely populated with successful rules 
+	would mean that reservoir rules could be constructed with the requisite degree 
+	of complexity at lower computational cost and greater accuracy than being 
+	evolved.  \par Further examination of non-uniform complex ReCA reservoirs could 
+	apply different types of rules in parallel i.e.  rules with different 
+	neighborhood size or number of states.  Different types of rules may exhibit 
+	differing behaviors that in some circumstances synergistically combine in a 
+	beneficial manner.  Measurements of rule chaoticity might also be able to shed 
+	some light on why certain combinations are complementary. It is also possible 
+	that given one successful rule, techniques for constructing a complementary 
+	rule could be discovered.
+	
+	\fi
+	
+        \section{Conclusion}\label{conclusion}
 	A reservoir computing with cellular automata (ReCA) framework has been 
-	implemented which expands the field of ReCA research from the 256 elementary 
+	implemented, which expands the field of ReCA research from the 256 elementary 
 	cellular automata rules to investigate rules with larger neighborhoods and more 
 	states, here called \textit{complex} CA rules. A genetic algorithm was used to 
 	reduce the chaoticity of the four state and five state rule space, in order to 
