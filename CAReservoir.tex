@@ -612,17 +612,17 @@
 	I behavior.  \par The least fit half of the population are 
 	discarded and replaced by the next generation of offspring.  The 
 	fit half of the population forms eight pairs that each produce two 
-	new rules by separating at a randomly chosen location and 
-	recombining, as seen in Fig.  \ref{GA}. Each new rule receives a 
-	single random mutation changing one digit of its rule.  Evolution 
-	continues for 200 generations or until the fitness of the best 
-	individual equals or exceeds 200, which rarely takes more than 150 
-	generations.  \par Both the mating and the mutation portion of the 
-	algorithm were found to be necessary, with either one removed 
-	evolution happens much more slowly if at all. The fitness goal of 
-	at least 200, for both four state and five state rules, was chosen 
-	empirically as the point where the evolved rules were making the 
-	least incorrect predictions when given the 5-bit task.  \par
+        new rules by separating at a randomly chosen location and recombining, 
+        as seen in Fig.  \ref{GA}. Each offspring receives a single random 
+            mutation changing one digit of its rule.  Evolution continues for 
+            200 generations or until the fitness of the best individual equals 
+            or exceeds 200, which rarely takes more than 150 generations.  \par 
+            Both the mating and the mutation portion of the algorithm were 
+            found to be necessary, with either one removed evolution happens 
+            much more slowly if at all. The fitness goal of at least 200, for 
+            both four state and five state rules, was chosen empirically as the 
+            point where the evolved rules were making the least incorrect 
+            predictions when given the 5-bit task.  \par
 	The evolved four state rules passed the benchmark 2.5\% of the time and 
 	the five state rules passed 1.1\%. Many more missed less than 10 
 	predictions, which was not observed to happen with unevolved rules.
@@ -1001,15 +1001,16 @@
 	
 	\section{Discussion}\label{discussion}
 	The qualities that cause a CA rule to produce a good reservoir were not the 
-	same for the two benchmarks investigated, and none of the rules that worked 
-	well for one benchmark showed any success at the other. The increased 
-	information that can be held by a complex rule proved helpful for the 5-bit 
-	memory task. As can be seen in Figure \ref{repeat}, the most successful 
-	reservoir for this task falls into one of a number of possible  periodic 
-	attractors after each message is input. The particular basin of attraction 
-	encodes the message, which is output when the cue signal is given. In 
-	contrast, complex rules were not found to outperform the best elementary 
-	rules at the temporal density and temporal parity tasks.
+        same for the two benchmarks investigated, and none of the rules that 
+        worked well for one benchmark showed particular success at the other.  
+        The increased information that can be held by a complex rule proved 
+        helpful for the 5-bit memory task. As can be seen in Figure 
+        \ref{repeat}, the most successful reservoir for this task falls into 
+        one of a number of possible  periodic attractors after each message is 
+        input. The particular basin of attraction encodes the message, which is 
+        output when the cue signal is given. In contrast, complex rules were 
+        not found to outperform the best elementary rules at the temporal 
+        density and temporal parity tasks.
 	
 	
         \begin{figure}[H]
@@ -1070,11 +1071,12 @@
 	reservoir for  any setting of the reservoir size parameters. Of these 
 	possibilities, 20 combinations were tested with 100 runs of the benchmark.  
 	Pairs of rules were selected that performed well individually with the same 
-	reservoir parameters.  None of these pairs performed better than the more 
-	successful of the two in a uniform reservoir, 11 of the pairings performing 
-	significantly worse than either rule tested alone. While it seems very likely 
-	that complex CA non-uniform pairings exist which do work well together, it 
-	remains an open question how common or rare they are.
+        reservoir parameters.  None of these pairs performed better than the 
+        more successful of the two in a uniform reservoir, 11 of the pairings 
+        performing significantly worse than either rule tested alone.  While it 
+        seems very likely that complex CA non-uniform pairings exist which do 
+        work well together, it remains an open question how common or rare they 
+        are.
 	
 
         \begin{figure}[H]
